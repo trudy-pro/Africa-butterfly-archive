@@ -1,4 +1,4 @@
-# East Africa Butterfly Archive 🦋
+# African butterfly Archive 🦋
 
 **Historical development archive — final source not yet uploaded.**
 
