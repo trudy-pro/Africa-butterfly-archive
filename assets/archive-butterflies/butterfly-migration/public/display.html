@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Butterfly Migration Atlas</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+    html, body {
+      width:100vw; height:100vh; overflow:hidden;
+      background:#fff;
+      font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+      user-select:none;
+      color:#111827;
+    }
+
+    /* ── Nav ── */
+    #nav {
+      position:fixed; top:0; left:0; right:0; height:106px;
+      background:rgba(255,255,255,0.94); border-bottom:1px solid rgba(17,24,39,0.08);
+      display:grid; grid-template-columns:330px 1fr 250px; align-items:center;
+      gap:22px;
+      padding:0 50px; z-index:200;
+      backdrop-filter:blur(10px);
+    }
+    #nav-brand {
+      position:relative;
+      display:grid; grid-template-columns:58px 1fr; align-items:center;
+      gap:14px;
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:29px; letter-spacing:0; text-transform:none;
+      color:#111; padding:0;
+      border-right:0;
+      margin-right:0; white-space:nowrap; flex-shrink:0;
+      font-weight:700;
+    }
+    #nav-brand::before {
+      content:"";
+      grid-row:1 / span 2;
+      width:54px; height:48px;
+      background:#4b6e40;
+      clip-path:polygon(50% 38%,61% 17%,76% 8%,86% 14%,95% 7%,88% 28%,100% 43%,82% 50%,94% 66%,70% 63%,58% 86%,50% 72%,42% 86%,30% 63%,6% 66%,18% 50%,0 43%,12% 28%,5% 7%,14% 14%,24% 8%,39% 17%);
+    }
+    #nav-brand::after {
+      content:"East Africa";
+      grid-column:2;
+      margin-top:-4px;
+      font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size:18px;
+      font-weight:800;
+      color:#4b6e40;
+    }
+    #nav-tabs {
+      display:flex; align-items:center; justify-content:center; gap:18px;
+      min-width:0;
+    }
+    .nav-tab {
+      min-width:220px; height:64px;
+      display:flex; align-items:center; gap:16px; padding:0 22px;
+      font-size:17px; letter-spacing:0; text-transform:none;
+      color:#1f2328; cursor:pointer;
+      background:#f7f7f7;
+      border:1px solid rgba(17,24,39,0.07);
+      border-radius:18px;
+      box-shadow:0 12px 28px rgba(15,23,42,0.035);
+      transition:color 0.2s, background 0.2s, transform 0.16s, box-shadow 0.2s;
+      white-space:nowrap;
+      font-weight:600;
+    }
+    .nav-tab img {
+      width:46px; height:46px; border-radius:50%;
+      object-fit:cover;
+      border:1px solid rgba(17,24,39,0.08);
+      flex:0 0 auto;
+    }
+    .nav-tab:hover:not(.active) { color:#4b6e40; background:#f1f7ef; }
+    .nav-tab:active { transform:scale(0.97); }
+    .nav-tab.active {
+      color:#fff;
+      background:linear-gradient(180deg,#5f844f,#4b6e40);
+      border-color:rgba(16,138,44,0.2);
+      box-shadow:0 14px 30px rgba(16,138,44,0.22);
+    }
+    .archive-back {
+      justify-self:end;
+      width:248px; height:62px;
+      display:flex; align-items:center; justify-content:center; gap:14px;
+      border:0; border-radius:17px;
+      background:#eef6eb;
+      color:#4b6e40;
+      font-size:18px;
+      font-weight:800;
+      cursor:pointer;
+      transition:transform 0.16s, background 0.2s;
+    }
+    .archive-back:hover { background:#e5f1e1; }
+    .archive-back:active { transform:scale(0.97); }
+    .archive-back span:first-child { font-size:34px; line-height:1; font-weight:300; }
+
+    /* ── Content area ── */
+    #content {
+      position:fixed; top:106px; left:0; right:0; bottom:0;
+    }
+
+    /* ── Section ── */
+    .section {
+      position:absolute; inset:0;
+      opacity:0; pointer-events:none;
+      transition:opacity 0.5s ease;
+    }
+    .section.active { opacity:1; pointer-events:all; }
+
+    /* ── Map fills entire section ── */
+    .map-area {
+      position:absolute; inset:0;
+    }
+
+    .map-img {
+      position:absolute;
+      top:44%; left:50%;
+      transform:translate(-50%, -50%);
+      max-width:72%; max-height:74%;
+      object-fit:contain;
+      opacity:0.15;
+      pointer-events:none;
+    }
+    .map-img.map-nw { max-width:78%; max-height:74%; opacity:0.16; }
+    .map-img.map-north { max-width:78%; max-height:74%; opacity:0.16; }
+
+    .blob-cv {
+      position:absolute; top:0; left:0;
+      pointer-events:none;
+    }
+
+    .cloud-veil {
+      position:absolute; inset:0;
+      background:rgba(210,218,230,0);
+      pointer-events:none;
+      transition:background 2s ease; z-index:8;
+    }
+    .cloud-veil.on { background:rgba(210,218,230,0.22); }
+
+    /* ── LEFT INFO PANEL (floating) ── */
+    .info-panel {
+      position:absolute;
+      top:38px; left:54px;
+      width:420px;
+      z-index:20; pointer-events:none;
+    }
+
+    .info-label {
+      font-size:11px; letter-spacing:0.22em; text-transform:uppercase;
+      color:#b8ada7; margin-bottom:18px; display:block;
+      font-weight:800;
+    }
+
+    .phase-name-el {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:22px; font-weight:700; color:#111;
+      margin-bottom:12px; line-height:1.12;
+      white-space:nowrap;
+    }
+    .phase-period-el {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:21px; color:#4b6e40; margin-bottom:24px;
+      font-weight:700;
+    }
+    .phase-desc-el {
+      max-width:350px;
+      font-size:18px; line-height:2.05; color:#596273; font-weight:400;
+    }
+
+    /* ── BOTTOM TIMELINE (floating) ── */
+    .tl-wrap {
+      position:absolute;
+      bottom:56px;
+      left:318px; right:110px; transform:none;
+      width:auto;
+      max-width:none;
+      z-index:20;
+    }
+
+    .tl-track-outer {
+      position:relative; height:54px; cursor:pointer;
+      display:flex; align-items:center;
+    }
+
+    .tl-line-bg {
+      position:absolute; left:0; right:0; top:50%;
+      height:3px; background:rgba(126,184,130,0.42);
+      transform:translateY(-50%); border-radius:999px;
+      pointer-events:none;
+    }
+
+    .tl-progress-el {
+      position:absolute; left:0; top:50%;
+      height:3px; background:rgba(126,184,130,0.42);
+      transform:translateY(-50%); border-radius:999px;
+      pointer-events:none;
+    }
+
+    .tl-handle-el {
+      position:absolute; top:50%;
+      transform:translate(-50%,-50%);
+      width:44px; height:44px; border-radius:50%;
+      background:#4b6e40; cursor:grab; z-index:4;
+      border:3px solid #4b6e40;
+      box-shadow:0 8px 18px rgba(23,141,45,0.22);
+      transition:transform 0.15s;
+    }
+    .tl-handle-el::before {
+      content:"";
+      position:absolute; inset:-18px;
+      border-radius:50%;
+      background:rgba(235,239,151,0.58);
+      z-index:-1;
+    }
+    .tl-handle-el.dragging {
+      cursor:grabbing;
+      transform:translate(-50%,-50%) scale(1.3);
+    }
+
+    .tl-node-el {
+      position:absolute; top:50%;
+      transform:translate(-50%,-50%);
+      width:46px; height:46px; border-radius:50%;
+      background:#fff; border:3px solid #4b6e40;
+      pointer-events:none; z-index:2;
+      box-shadow:0 5px 14px rgba(15,23,42,0.08);
+      transition:background 0.3s, box-shadow 0.3s;
+    }
+    .tl-node-el.on { background:#fff; }
+    .tl-node-el.active {
+      background:#4b6e40;
+      box-shadow:0 8px 18px rgba(23,141,45,0.22);
+    }
+
+    .tl-labels-el {
+      position:relative; height:56px; margin-top:2px;
+    }
+
+    .tl-lbl-el {
+      position:absolute; top:0;
+      transform:translateX(-50%);
+      text-align:center;
+    }
+    .tl-lbl-name {
+      display:block; font-size:14px; color:#111827;
+      transition:color 0.3s; white-space:nowrap;
+      font-weight:700;
+    }
+    .tl-lbl-date {
+      display:block; font-size:13px; color:#6b7280; margin-top:10px;
+      white-space:nowrap;
+    }
+    .tl-lbl-el.active .tl-lbl-name { color:#4b6e40; font-weight:800; }
+    .tl-lbl-el.active .tl-lbl-date { color:#4b5563; }
+    .timeline-hint {
+      position:absolute;
+      left:50%; bottom:-36px;
+      transform:translateX(-50%);
+      display:flex; align-items:center; gap:16px;
+      color:#6b7280;
+      font-size:13px;
+      white-space:nowrap;
+      pointer-events:none;
+    }
+    .timeline-hint .hand { font-size:30px; color:#9ca3af; }
+    .timeline-hint .arrows { font-size:26px; color:#b5bdc8; letter-spacing:6px; }
+
+    @media (max-width: 760px) {
+      .tl-wrap {
+        left:50%;
+        width:calc(100% - 48px);
+      }
+      .tl-track-outer { height:58px; }
+      .tl-node-el { width:36px; height:36px; border-width:2.5px; }
+      .tl-handle-el { width:34px; height:34px; border-width:2.5px; }
+      .tl-handle-el::before { inset:-14px; }
+      .tl-lbl-name { font-size:8px; }
+      .tl-lbl-date { font-size:7px; }
+    }
+
+    /* ── WEATHER BUTTON — bottom right ── */
+    .weather-btn-el {
+      position:absolute;
+      right:110px; bottom:176px;
+      z-index:20;
+      width:96px; height:96px; border-radius:50%;
+      background:rgba(255,255,255,0.92);
+      border:1px solid rgba(0,0,0,0.09);
+      box-shadow:0 10px 28px rgba(0,0,0,0.10);
+      display:flex; align-items:center; justify-content:center;
+      font-size:46px; cursor:pointer;
+      transition:transform 0.16s, box-shadow 0.18s;
+    }
+    .weather-btn-el:hover { box-shadow:0 4px 24px rgba(0,0,0,0.13); }
+    .weather-btn-el:active { transform:scale(0.88); }
+
+    /* ── BUTTERFLY IMAGE — top right ── */
+    .butterfly-area {
+      position:absolute;
+      top:22px; right:72px;
+      z-index:20;
+      width:280px;
+      display:flex; flex-direction:column; align-items:center; gap:12px;
+    }
+
+    .butterfly-img-btn {
+      width:190px; height:190px;
+      border-radius:50%;
+      overflow:hidden;
+      cursor:pointer;
+      transition:transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+      background:#fff;
+      border:12px solid #ff8500;
+      box-shadow:0 10px 26px rgba(0,0,0,0.10);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .butterfly-img-btn:hover { box-shadow:0 14px 34px rgba(0,0,0,0.14); }
+    .butterfly-img-btn:active { transform:scale(0.94); }
+    .butterfly-img-btn img {
+      width:100%; height:100%; object-fit:cover; padding:0;
+    }
+    /* placeholder if no image */
+    .butterfly-placeholder {
+      font-size:48px; line-height:1;
+    }
+
+    .butterfly-tap-hint {
+      font-size:13px; letter-spacing:0.22em; text-transform:uppercase;
+      color:#b8ada7; text-align:center; max-width:220px; line-height:1.5;
+      font-weight:800;
+      margin-top:4px;
+    }
+    .species-name {
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:21px;
+      line-height:1.12;
+      font-weight:700;
+      color:#111;
+      text-align:center;
+    }
+    .species-pill {
+      display:inline-flex; align-items:center; gap:8px;
+      min-height:31px; padding:0 15px;
+      border-radius:999px;
+      background:#eef6eb;
+      color:#4b6e40;
+      font-size:13px;
+      font-weight:800;
+    }
+    .species-pill::before {
+      content:"";
+      width:10px; height:10px;
+      border-radius:50%;
+      background:#4b6e40;
+    }
+
+    /* ── AFRICA LOCATOR — bottom left ── */
+    .locator-wrap {
+      position:absolute;
+      top:500px; left:54px;
+      z-index:20;
+      display:flex; flex-direction:column; gap:8px;
+    }
+
+    .locator-label {
+      display:none;
+      font-size:11px; letter-spacing:0.22em; text-transform:uppercase;
+      color:#b8ada7;
+      font-weight:800;
+      margin-bottom:4px;
+    }
+
+    .locator-map {
+      width:256px; height:256px;
+      border:0;
+      border-radius:0;
+      background:transparent;
+      position:relative; overflow:hidden;
+      padding:0;
+    }
+
+    .locator-map svg {
+      width:100%; height:100%;
+    }
+    .locator-map img {
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+    .locator-place {
+      display:none;
+      color:#4b6e40;
+      font-size:18px;
+      font-weight:800;
+      margin:6px 4px 0;
+    }
+    .locator-coords {
+      display:none;
+      color:#6b7280;
+      font-size:17px;
+      font-weight:500;
+      margin:10px 4px 0;
+    }
+
+    /* highlight rect on locator */
+    .locator-highlight {
+      position:absolute;
+      background:rgba(244,162,97,0.35);
+      border:1.5px solid rgba(244,162,97,0.7);
+      border-radius:2px;
+      transition:all 0.4s;
+    }
+
+    @media (max-width: 1500px) {
+      #nav {
+        grid-template-columns:280px 1fr 210px;
+        gap:16px;
+        padding:0 34px;
+      }
+      #nav-brand { font-size:24px; grid-template-columns:48px 1fr; }
+      #nav-brand::before { width:40px; height:32px; }
+      #nav-brand::after { font-size:16px; }
+      #nav-tabs { gap:12px; }
+      .nav-tab {
+        min-width:176px;
+        height:58px;
+        gap:12px;
+        padding:0 16px;
+        font-size:14px;
+      }
+      .nav-tab img { width:40px; height:40px; }
+      .archive-back {
+        width:206px;
+        height:58px;
+        font-size:15px;
+      }
+      .info-panel { left:34px; width:360px; }
+      .phase-name-el { font-size:20px; }
+      .species-name { font-size:19px; }
+      .phase-desc-el { font-size:16px; line-height:1.9; }
+      .locator-wrap { left:34px; }
+      .locator-map { width:210px; height:210px; }
+      .locator-map svg,
+      .locator-map img { height:100%; }
+      .butterfly-area { right:42px; width:240px; }
+      .butterfly-img-btn { width:160px; height:160px; }
+      .tl-wrap { left:284px; right:84px; }
+      .weather-btn-el {
+        right:84px;
+        bottom:168px;
+        width:84px;
+        height:84px;
+        font-size:40px;
+      }
+    }
+
+    /* ── POPUP CARD ── */
+    .popup-overlay {
+      position:fixed; inset:0;
+      background:rgba(0,0,0,0.18);
+      z-index:300; opacity:0; pointer-events:none;
+      transition:opacity 0.3s;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .popup-overlay.visible { opacity:1; pointer-events:all; }
+
+    .popup-card {
+      background:#fff; border-radius:12px;
+      padding:36px 40px;
+      max-width:480px; width:90%;
+      box-shadow:0 12px 48px rgba(0,0,0,0.15);
+      transform:translateY(12px); transition:transform 0.3s;
+      position:relative;
+    }
+    .popup-overlay.visible .popup-card { transform:translateY(0); }
+
+    .popup-close {
+      position:absolute; top:16px; right:20px;
+      font-size:22px; color:#bbb; cursor:pointer; line-height:1;
+      background:none; border:none;
+    }
+    .popup-close:hover { color:#555; }
+
+    .popup-img {
+      width:120px; height:120px; object-fit:cover;
+      float:right; margin:0 0 12px 20px;
+      background:#f8f6f2;
+      border:1px solid rgba(0,0,0,0.09);
+      border-radius:4px; padding:0;
+      cursor:zoom-in;
+      display:block;
+    }
+
+    .image-overlay {
+      position:fixed; inset:0;
+      background:rgba(0,0,0,0.72);
+      z-index:420; opacity:0; pointer-events:none;
+      transition:opacity 0.25s;
+      display:flex; align-items:center; justify-content:center;
+      padding:34px;
+    }
+    .image-overlay.visible { opacity:1; pointer-events:all; }
+    .image-viewer-img {
+      max-width:min(88vw, 1100px);
+      max-height:86vh;
+      object-fit:contain;
+      background:#fff;
+      border-radius:8px;
+      box-shadow:0 18px 64px rgba(0,0,0,0.34);
+    }
+    .image-viewer-close {
+      position:absolute; top:24px; right:28px;
+      width:38px; height:38px; border-radius:50%;
+      border:1px solid rgba(255,255,255,0.28);
+      background:rgba(255,255,255,0.12);
+      color:#fff; font-size:24px; line-height:1;
+      cursor:pointer;
+    }
+
+    .popup-species {
+      font-size:10px; letter-spacing:2px; text-transform:uppercase;
+      color:#b8b0a8; margin-bottom:8px;
+    }
+    .popup-name {
+      font-size:22px; font-weight:500; color:#1a1a1a;
+      margin-bottom:4px; font-style:italic;
+    }
+    .popup-common {
+      font-size:13px; color:#888; margin-bottom:20px;
+    }
+    .popup-divider {
+      height:1px; background:rgba(0,0,0,0.07); margin:16px 0;
+    }
+    .popup-row {
+      display:flex; gap:8px; margin-bottom:10px; align-items:baseline;
+    }
+    .popup-row-label {
+      font-size:9px; letter-spacing:2px; text-transform:uppercase;
+      color:#b8b0a8; width:88px; flex-shrink:0;
+    }
+    .popup-row-val {
+      font-size:12.5px; color:#555; line-height:1.6;
+    }
+
+    /* ── Placeholder sections ── */
+    .ph-wrap {
+      position:absolute; inset:0;
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center; gap:12px;
+    }
+    .ph-region  { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:#d4cec8; }
+    .ph-species { font-size:30px; font-weight:300; font-style:italic; color:#e0dbd6; }
+    .ph-soon    { font-size:9px; letter-spacing:2px; text-transform:uppercase; color:#e8e4e0; margin-top:8px; }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<div id="nav">
+  <div id="nav-brand">Butterfly Archive</div>
+  <div id="nav-tabs">
+    <div class="nav-tab active" onclick="switchTo(0)">
+      <img src="Catopsilia florella.jpg" alt="">
+      <span>Catopsilia florella</span>
+    </div>
+    <div class="nav-tab" onclick="switchTo(1)">
+      <img src="Belenois aurota.jpg" alt="">
+      <span>Belenois aurota</span>
+    </div>
+    <div class="nav-tab" onclick="switchTo(2)">
+      <img src="Danaus chrysippus.jpg" alt="">
+      <span>Danaus chrysippus</span>
+    </div>
+    <div class="nav-tab" onclick="switchTo(3)">
+      <img src="Vanessa cardui.jpg" alt="">
+      <span>Vanessa cardui</span>
+    </div>
+  </div>
+  <button class="archive-back" type="button" onclick="window.top.location.href=location.pathname.includes('/assets/')?'../../../../index.html':'/archive/index.html'">
+    <span aria-hidden="true">←</span>
+    <span>Back to Archive</span>
+  </button>
+</div>
+
+<div id="content">
+
+<!-- ══════════════════════════════════════════
+     SECTION 0 — Catopsilia florella
+══════════════════════════════════════════ -->
+<div class="section active" id="s0">
+  <div class="map-area" id="map-area-0">
+    <img class="map-img" src="map.png" alt="Botswana">
+    <canvas class="blob-cv" id="blob-cv-0"></canvas>
+    <div class="cloud-veil" id="cloud-veil-0"></div>
+  </div>
+
+  <!-- Left info -->
+  <div class="info-panel">
+    <span class="info-label">Phase</span>
+    <div class="phase-name-el"   id="pname-0"></div>
+    <div class="phase-period-el" id="pperiod-0"></div>
+    <div class="phase-desc-el"   id="pdesc-0"></div>
+  </div>
+
+  <!-- Bottom timeline -->
+  <div class="tl-wrap" id="tl-wrap-0">
+    <div class="tl-track-outer" id="tl-track-0">
+      <div class="tl-line-bg"></div>
+      <div class="tl-progress-el" id="tl-prog-0"></div>
+      <div class="tl-handle-el"   id="tl-hdl-0"></div>
+    </div>
+    <div class="tl-labels-el" id="tl-lbls-0"></div>
+    <div class="timeline-hint"><span class="hand">☝</span><span class="arrows">← →</span><span>Drag the timeline to explore migration phases</span></div>
+  </div>
+
+  <!-- Weather btn -->
+  <div class="weather-btn-el" id="wx-btn-0" onclick="toggleWeather(0)">☀️</div>
+
+  <!-- Butterfly -->
+  <div class="butterfly-area">
+    <div class="butterfly-img-btn" onclick="openPopup(0)">
+      <img src="Catopsilia florella.jpg" alt="Catopsilia florella">
+    </div>
+    <div class="species-name">Catopsilia florella</div>
+    <div class="species-pill">Migration</div>
+    <div class="butterfly-tap-hint">Tap to learn more</div>
+  </div>
+
+  <!-- Africa locator -->
+  <div class="locator-wrap">
+    <div class="locator-label">Location in Africa</div>
+    <div class="locator-map" id="locator-0">
+      <img src="africa-location-map.svg" alt="Africa map with East Africa location marker">
+      <div class="locator-place">East Africa</div>
+      <div class="locator-coords">1.29° S, 36.82° E</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SECTION 1 — Belenois aurota
+══════════════════════════════════════════ -->
+<div class="section" id="s1">
+  <div class="map-area" id="map-area-1">
+    <img class="map-img" src="sa-map.png" alt="South Africa"
+         style="opacity:0.13; max-width:72%; max-height:74%;">
+    <canvas class="blob-cv" id="blob-cv-1"></canvas>
+    <div class="cloud-veil" id="cloud-veil-1"></div>
+  </div>
+
+  <div class="info-panel">
+    <span class="info-label">Phase</span>
+    <div class="phase-name-el"   id="pname-1"></div>
+    <div class="phase-period-el" id="pperiod-1"></div>
+    <div class="phase-desc-el"   id="pdesc-1"></div>
+  </div>
+
+  <div class="tl-wrap" id="tl-wrap-1">
+    <div class="tl-track-outer" id="tl-track-1">
+      <div class="tl-line-bg"></div>
+      <div class="tl-progress-el" id="tl-prog-1"></div>
+      <div class="tl-handle-el"   id="tl-hdl-1"></div>
+    </div>
+    <div class="tl-labels-el" id="tl-lbls-1"></div>
+    <div class="timeline-hint"><span class="hand">☝</span><span class="arrows">← →</span><span>Drag the timeline to explore migration phases</span></div>
+  </div>
+
+  <div class="weather-btn-el" id="wx-btn-1" onclick="toggleWeather(1)">☀️</div>
+
+  <div class="butterfly-area">
+    <div class="butterfly-img-btn" onclick="openPopup(1)">
+      <img src="Belenois aurota.jpg" alt="Belenois aurota">
+    </div>
+    <div class="species-name">Belenois aurota</div>
+    <div class="species-pill">Migration</div>
+    <div class="butterfly-tap-hint">Tap to learn more</div>
+  </div>
+
+  <div class="locator-wrap">
+    <div class="locator-label">Location in Africa</div>
+    <div class="locator-map">
+      <img src="africa-location-map.svg" alt="Africa map with East Africa location marker">
+      <div class="locator-place">East Africa</div>
+      <div class="locator-coords">1.29° S, 36.82° E</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SECTION 2 — Danaus chrysippus
+══════════════════════════════════════════ -->
+<div class="section" id="s2">
+  <div class="map-area" id="map-area-2">
+    <img class="map-img map-nw" src="nw-africa.png" alt="Northwest Africa">
+    <canvas class="blob-cv" id="blob-cv-2"></canvas>
+    <div class="cloud-veil" id="cloud-veil-2"></div>
+  </div>
+
+  <div class="info-panel">
+    <span class="info-label">Phase</span>
+    <div class="phase-name-el"   id="pname-2"></div>
+    <div class="phase-period-el" id="pperiod-2"></div>
+    <div class="phase-desc-el"   id="pdesc-2"></div>
+  </div>
+
+  <div class="tl-wrap" id="tl-wrap-2">
+    <div class="tl-track-outer" id="tl-track-2">
+      <div class="tl-line-bg"></div>
+      <div class="tl-progress-el" id="tl-prog-2"></div>
+      <div class="tl-handle-el"   id="tl-hdl-2"></div>
+    </div>
+    <div class="tl-labels-el" id="tl-lbls-2"></div>
+    <div class="timeline-hint"><span class="hand">☝</span><span class="arrows">← →</span><span>Drag the timeline to explore migration phases</span></div>
+  </div>
+
+  <div class="weather-btn-el" id="wx-btn-2" onclick="toggleWeather(2)">☀️</div>
+
+  <div class="butterfly-area">
+    <div class="butterfly-img-btn" onclick="openPopup(2)">
+      <img src="Danaus chrysippus.jpg" alt="Danaus chrysippus">
+    </div>
+    <div class="species-name">Danaus chrysippus</div>
+    <div class="species-pill">Migration</div>
+    <div class="butterfly-tap-hint">Tap to learn more</div>
+  </div>
+
+  <div class="locator-wrap">
+    <div class="locator-label">Location in Africa</div>
+    <div class="locator-map">
+      <img src="africa-location-map.svg" alt="Africa map">
+      <div class="locator-place">Western Africa</div>
+      <div class="locator-coords">20.25° N, 10.25° W</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SECTION 3 — Vanessa cardui
+══════════════════════════════════════════ -->
+<div class="section" id="s3">
+  <div class="map-area" id="map-area-3">
+    <img class="map-img map-north" src="n-africa.png" alt="Europe and North Africa">
+    <canvas class="blob-cv" id="blob-cv-3"></canvas>
+    <div class="cloud-veil" id="cloud-veil-3"></div>
+  </div>
+
+  <div class="info-panel">
+    <span class="info-label">Phase</span>
+    <div class="phase-name-el"   id="pname-3"></div>
+    <div class="phase-period-el" id="pperiod-3"></div>
+    <div class="phase-desc-el"   id="pdesc-3"></div>
+  </div>
+
+  <div class="tl-wrap" id="tl-wrap-3">
+    <div class="tl-track-outer" id="tl-track-3">
+      <div class="tl-line-bg"></div>
+      <div class="tl-progress-el" id="tl-prog-3"></div>
+      <div class="tl-handle-el"   id="tl-hdl-3"></div>
+    </div>
+    <div class="tl-labels-el" id="tl-lbls-3"></div>
+    <div class="timeline-hint"><span class="hand">☝</span><span class="arrows">← →</span><span>Drag the timeline to explore migration phases</span></div>
+  </div>
+
+  <div class="weather-btn-el" id="wx-btn-3" onclick="toggleWeather(3)">☀️</div>
+
+  <div class="butterfly-area">
+    <div class="butterfly-img-btn" onclick="openPopup(3)">
+      <img src="Vanessa cardui.jpg" alt="Vanessa cardui">
+    </div>
+    <div class="species-name">Vanessa cardui</div>
+    <div class="species-pill">Migration</div>
+    <div class="butterfly-tap-hint">Tap to learn more</div>
+  </div>
+
+  <div class="locator-wrap">
+    <div class="locator-label">Migration region</div>
+    <div class="locator-map">
+      <img src="africa-location-map.svg" alt="Africa map">
+      <div class="locator-place">North Africa</div>
+      <div class="locator-coords">23.42° N, 25.66° E</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<!-- ══════════════════════════════════════════
+     POPUP CARDS
+══════════════════════════════════════════ -->
+<div class="popup-overlay" id="popup-overlay" onclick="closePopupOutside(event)">
+  <div class="popup-card" id="popup-card">
+    <button class="popup-close" onclick="closePopup()">×</button>
+    <div id="popup-content"></div>
+  </div>
+</div>
+
+<div class="image-overlay" id="image-overlay" onclick="closeImageViewerOutside(event)">
+  <button class="image-viewer-close" onclick="closeImageViewer()">×</button>
+  <img class="image-viewer-img" id="image-viewer-img" alt="">
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════════
+// BUTTERFLY INFO DATA
+// ══════════════════════════════════════════════════════════
+const BUTTERFLY_INFO = [
+  {
+    species:    'Catopsilia florella',
+    common:     'African Emigrant',
+    imgSrc:     'Catopsilia florella.jpg',
+    region:     'Sub-Saharan Africa · Botswana',
+    season:     'February – April',
+    direction:  'West to ENE',
+    pattern:    'Mass directional migration',
+    morph:      'White morph females predominate',
+    note:       'Migration pauses completely on cloudy days and resumes when sunny — one of the clearest examples of weather-dependent butterfly migration recorded in Africa.',
+  },
+  {
+    species:    'Belenois aurota',
+    common:     'Brown-veined White',
+    imgSrc:     'Belenois aurota.jpg',
+    region:     'South Africa → Mozambique',
+    season:     'December – February',
+    direction:  'West to East (Atlantic → Indian Ocean)',
+    pattern:    'Burst migration, weather-driven',
+    morph:      'White with brown veining',
+    note:       'Nearly all individuals die attempting to cross the Indian Ocean to Madagascar. The migration has shifted ~2.9 days earlier per decade, linked to rising temperatures — a documented climate signal.',
+  },
+  {
+    species:    'Danaus chrysippus',
+    common:     'African Monarch',
+    imgSrc:     'Danaus chrysippus.jpg',
+    region:     'Western Africa · Mauritania and Sahel',
+    season:     'February – April',
+    direction:  'Diffuse northward dispersal',
+    pattern:    'Opportunistic movement around host plants',
+    morph:      'f. alcippus noted in Mauritania',
+    note:       'Dispersal is variable rather than corridor-bound. The species can cross deserts and large water bodies, but settlement follows milkweed host plants and suitable breeding conditions.',
+  },
+  {
+    species:    'Vanessa cardui',
+    common:     'Painted Lady',
+    imgSrc:     'Vanessa cardui.jpg',
+    region:     'Europe · Mediterranean · North and Tropical Africa',
+    season:     'July – May',
+    direction:  'Autumn southward; spring northward',
+    pattern:    'Annual multi-generation migration',
+    morph:      'Orange and black painted lady pattern',
+    note:       'Autumn migrants move from Europe across the Mediterranean, Sahara and Sahel into tropical Africa. Spring generations return northward, with journeys exceeding 4,000 km in a single generation.',
+  },
+];
+
+// ══════════════════════════════════════════════════════════
+// SECTION DATA
+// ══════════════════════════════════════════════════════════
+const S0 = {
+  id: 0,
+  initialPhase: 2,
+  phases: [
+    { name:'Early Aggregation', period:'Feb 11 – Feb 28',
+      desc:'Non-migratory individuals gather in large numbers in wetlands along the southern border of Botswana. White morph females predominate.' },
+    { name:'Initiation',        period:'Mar 1',
+      desc:'Oriented flight begins to appear in Mabuasehube Protected Area. Direction is unstable, gradually aligning toward ENE.' },
+    { name:'Peak Migration',    period:'Mar 2 – Mar 22',
+      desc:'Optimal conditions for long-distance movement across East Africa. Migration peaks on cloudy days with favorable winds and abundant resources.' },
+    { name:'Decline',           period:'Apr 1 – Apr 21',
+      desc:'Main migration concludes in early April. Sporadic activity continues in the northern regions until late April.' },
+  ],
+  tlData: [
+    { pct:0,    name:'Early Aggregation', date:'Feb 11–28' },
+    { pct:33.3, name:'Initiation',        date:'Mar 1' },
+    { pct:66.6, name:'Peak Migration',    date:'Mar 2–22' },
+    { pct:100,  name:'Decline',           date:'Apr 1–21' },
+  ],
+  blobPhases: [
+    [
+      { fx:0.22, fy:0.78, r:90, h:340, s:72, l:70, a:0.28 },
+      { fx:0.29, fy:0.72, r:72, h:320, s:65, l:73, a:0.22 },
+      { fx:0.25, fy:0.84, r:62, h:355, s:60, l:68, a:0.18 },
+      { fx:0.26, fy:0.79, r:16, h:340, s:50, l:75, a:0.04 },
+      { fx:0.31, fy:0.74, r:13, h:330, s:50, l:75, a:0.03 },
+      { fx:0.24, fy:0.82, r:11, h:345, s:50, l:75, a:0.02 },
+      { fx:0.23, fy:0.80, r:9,  h:340, s:50, l:75, a:0.02 },
+      { fx:0.27, fy:0.77, r:8,  h:340, s:50, l:75, a:0.02 },
+      { fx:0.24, fy:0.81, r:7,  h:340, s:50, l:75, a:0.01 },
+      { fx:0.26, fy:0.83, r:6,  h:340, s:50, l:75, a:0.01 },
+    ],
+    [
+      { fx:0.60, fy:0.74, r:85, h:42, s:82, l:66, a:0.26 },
+      { fx:0.66, fy:0.68, r:68, h:50, s:78, l:68, a:0.20 },
+      { fx:0.54, fy:0.78, r:58, h:38, s:75, l:70, a:0.17 },
+      { fx:0.25, fy:0.79, r:40, h:42, s:60, l:72, a:0.09 },
+      { fx:0.29, fy:0.83, r:30, h:48, s:55, l:74, a:0.06 },
+      { fx:0.63, fy:0.71, r:24, h:45, s:70, l:70, a:0.09 },
+      { fx:0.57, fy:0.75, r:18, h:40, s:65, l:72, a:0.06 },
+      { fx:0.65, fy:0.76, r:14, h:42, s:60, l:73, a:0.05 },
+      { fx:0.51, fy:0.72, r:11, h:38, s:55, l:74, a:0.04 },
+      { fx:0.67, fy:0.73, r:9,  h:45, s:55, l:74, a:0.03 },
+    ],
+    [
+      { fx:0.68, fy:0.50, r:95, h:25, s:88, l:63, a:0.28 },
+      { fx:0.74, fy:0.40, r:78, h:30, s:85, l:65, a:0.24 },
+      { fx:0.63, fy:0.59, r:70, h:20, s:90, l:62, a:0.22 },
+      { fx:0.71, fy:0.31, r:63, h:28, s:85, l:64, a:0.19 },
+      { fx:0.79, fy:0.28, r:56, h:22, s:82, l:65, a:0.16 },
+      { fx:0.65, fy:0.65, r:48, h:32, s:80, l:66, a:0.13 },
+      { fx:0.72, fy:0.46, r:42, h:18, s:85, l:63, a:0.12 },
+      { fx:0.76, fy:0.37, r:35, h:26, s:80, l:65, a:0.10 },
+      { fx:0.68, fy:0.55, r:27, h:22, s:78, l:66, a:0.08 },
+      { fx:0.73, fy:0.50, r:20, h:28, s:75, l:67, a:0.06 },
+    ],
+    [
+      { fx:0.52, fy:0.12, r:85, h:200, s:52, l:68, a:0.24 },
+      { fx:0.57, fy:0.08, r:66, h:210, s:48, l:70, a:0.18 },
+      { fx:0.47, fy:0.16, r:54, h:195, s:45, l:72, a:0.14 },
+      { fx:0.53, fy:0.11, r:26, h:205, s:42, l:73, a:0.07 },
+      { fx:0.50, fy:0.14, r:18, h:200, s:40, l:74, a:0.05 },
+      { fx:0.52, fy:0.12, r:12, h:205, s:38, l:75, a:0.03 },
+      { fx:0.51, fy:0.13, r:9,  h:200, s:38, l:75, a:0.02 },
+      { fx:0.53, fy:0.11, r:8,  h:200, s:38, l:75, a:0.02 },
+      { fx:0.52, fy:0.14, r:7,  h:200, s:38, l:75, a:0.01 },
+      { fx:0.50, fy:0.12, r:6,  h:200, s:38, l:75, a:0.01 },
+    ],
+  ],
+};
+
+const S1 = {
+  id: 1,
+  phases: [
+    { name:'West Coast Initiation', period:'December',
+      desc:'Rising butterfly numbers trigger collective restlessness along South Africa\'s Atlantic west coast. Flight shifts from calm to erratic. Coastal colonies join inland populations forming large-scale movement.' },
+    { name:'Inland Surge',          period:'December – January',
+      desc:'Butterflies travel eastward along three primary inland routes through the Northern and Western Cape, converging toward Gauteng, the Free State, and KwaZulu-Natal.' },
+    { name:'Peak — Sea of White',   period:'January – February',
+      desc:'Vast numbers stream through Gauteng and Mpumalanga, creating a spectacular "sea of white butterflies." Strongly affected by weather — burst events follow warm sunny days.' },
+    { name:'Ocean Crossing Attempt', period:'February',
+      desc:'Most individuals reach Mozambique and fly east into the Indian Ocean attempting to reach Madagascar. Nearly all perish mid-ocean from dehydration — an example of population-scale natural mortality.' },
+  ],
+  tlData: [
+    { pct:0,    name:'Initiation',     date:'Dec' },
+    { pct:33.3, name:'Inland Surge',   date:'Dec–Jan' },
+    { pct:66.6, name:'Peak',           date:'Jan–Feb' },
+    { pct:100,  name:'Ocean Crossing', date:'Feb' },
+  ],
+  blobPhases: [
+    [
+      { fx:0.10, fy:0.45, r:85, h:280, s:68, l:68, a:0.26 },
+      { fx:0.14, fy:0.60, r:68, h:265, s:62, l:70, a:0.20 },
+      { fx:0.08, fy:0.55, r:58, h:295, s:65, l:66, a:0.17 },
+      { fx:0.12, fy:0.70, r:38, h:270, s:58, l:72, a:0.12 },
+      { fx:0.06, fy:0.48, r:30, h:285, s:60, l:70, a:0.09 },
+      { fx:0.11, fy:0.52, r:20, h:275, s:55, l:73, a:0.06 },
+      { fx:0.13, fy:0.64, r:15, h:280, s:52, l:74, a:0.04 },
+      { fx:0.09, fy:0.58, r:11, h:270, s:50, l:75, a:0.03 },
+      { fx:0.15, fy:0.68, r:9,  h:280, s:50, l:75, a:0.02 },
+      { fx:0.07, fy:0.62, r:7,  h:275, s:50, l:75, a:0.02 },
+    ],
+    [
+      { fx:0.32, fy:0.38, r:78, h:60,  s:75, l:68, a:0.24 },
+      { fx:0.42, fy:0.52, r:70, h:55,  s:70, l:66, a:0.22 },
+      { fx:0.28, fy:0.62, r:62, h:65,  s:72, l:70, a:0.18 },
+      { fx:0.38, fy:0.30, r:50, h:50,  s:68, l:68, a:0.15 },
+      { fx:0.48, fy:0.60, r:44, h:58,  s:65, l:70, a:0.12 },
+      { fx:0.22, fy:0.55, r:35, h:62,  s:62, l:72, a:0.10 },
+      { fx:0.36, fy:0.45, r:26, h:55,  s:60, l:71, a:0.08 },
+      { fx:0.46, fy:0.35, r:20, h:58,  s:58, l:72, a:0.06 },
+      { fx:0.30, fy:0.68, r:15, h:60,  s:55, l:73, a:0.05 },
+      { fx:0.52, fy:0.48, r:11, h:55,  s:52, l:74, a:0.04 },
+    ],
+    [
+      { fx:0.65, fy:0.32, r:92, h:38,  s:85, l:65, a:0.28 },
+      { fx:0.72, fy:0.48, r:76, h:42,  s:80, l:63, a:0.24 },
+      { fx:0.60, fy:0.55, r:70, h:35,  s:82, l:66, a:0.22 },
+      { fx:0.68, fy:0.24, r:62, h:45,  s:78, l:64, a:0.18 },
+      { fx:0.76, fy:0.58, r:55, h:40,  s:76, l:65, a:0.15 },
+      { fx:0.63, fy:0.40, r:46, h:38,  s:80, l:66, a:0.12 },
+      { fx:0.74, fy:0.38, r:38, h:42,  s:75, l:65, a:0.10 },
+      { fx:0.68, fy:0.62, r:30, h:36,  s:78, l:66, a:0.08 },
+      { fx:0.72, fy:0.30, r:22, h:40,  s:72, l:67, a:0.06 },
+      { fx:0.66, fy:0.50, r:16, h:38,  s:70, l:68, a:0.05 },
+    ],
+    [
+      { fx:0.88, fy:0.38, r:72, h:195, s:50, l:72, a:0.20 },
+      { fx:0.93, fy:0.30, r:56, h:205, s:45, l:74, a:0.14 },
+      { fx:0.86, fy:0.48, r:48, h:188, s:48, l:73, a:0.12 },
+      { fx:0.91, fy:0.24, r:36, h:200, s:42, l:75, a:0.09 },
+      { fx:0.95, fy:0.42, r:28, h:210, s:40, l:76, a:0.07 },
+      { fx:0.89, fy:0.35, r:20, h:195, s:38, l:77, a:0.05 },
+      { fx:0.94, fy:0.50, r:14, h:200, s:36, l:77, a:0.04 },
+      { fx:0.92, fy:0.28, r:10, h:205, s:35, l:78, a:0.03 },
+      { fx:0.97, fy:0.38, r:7,  h:200, s:34, l:78, a:0.02 },
+      { fx:0.90, fy:0.44, r:5,  h:195, s:33, l:78, a:0.01 },
+    ],
+  ],
+};
+
+const S2 = {
+  id: 2,
+  phases: [
+    { name:'Early Aggregation', period:'Feb 11 – Feb 28',
+      desc:'Large numbers gather around wetlands and milkweed-rich habitats in western Africa, especially where host plants are abundant.' },
+    { name:'Initiation', period:'Mar 1',
+      desc:'Northward dispersal begins. Movement is irregular at first and individual directions remain unstable.' },
+    { name:'Peak Period', period:'Mar 2 – Mar 22',
+      desc:'Wide northward expansion spreads across Mauritania and surrounding regions. Danaus chrysippus f. alcippus disperses broadly, with no stable corridor observed.' },
+    { name:'Decline Period', period:'Apr 1 – Apr 21',
+      desc:'Movement decreases and butterflies scatter into suitable habitats where milkweed host plants support breeding and settlement.' },
+  ],
+  tlData: [
+    { pct:0,    name:'Aggregation', date:'Feb 11–28' },
+    { pct:33.3, name:'Initiation',  date:'Mar 1' },
+    { pct:66.6, name:'Peak Period', date:'Mar 2–22' },
+    { pct:100,  name:'Decline',     date:'Apr 1–21' },
+  ],
+  blobPhases: [
+    [
+      { fx:0.27, fy:0.70, r:76, h:18, s:88, l:64, a:0.24 },
+      { fx:0.32, fy:0.65, r:68, h:24, s:86, l:66, a:0.21 },
+      { fx:0.24, fy:0.76, r:56, h:14, s:88, l:65, a:0.17 },
+      { fx:0.36, fy:0.58, r:46, h:28, s:80, l:68, a:0.12 },
+      { fx:0.30, fy:0.73, r:32, h:20, s:76, l:70, a:0.09 },
+      { fx:0.22, fy:0.68, r:28, h:16, s:74, l:70, a:0.07 },
+      { fx:0.34, fy:0.71, r:18, h:24, s:70, l:72, a:0.05 },
+      { fx:0.28, fy:0.62, r:15, h:20, s:68, l:73, a:0.04 },
+      { fx:0.25, fy:0.72, r:10, h:18, s:64, l:74, a:0.03 },
+      { fx:0.31, fy:0.66, r:8,  h:22, s:62, l:75, a:0.02 },
+    ],
+    [
+      { fx:0.36, fy:0.61, r:82, h:22, s:90, l:63, a:0.25 },
+      { fx:0.42, fy:0.54, r:72, h:18, s:88, l:64, a:0.22 },
+      { fx:0.30, fy:0.66, r:58, h:28, s:85, l:66, a:0.18 },
+      { fx:0.46, fy:0.48, r:52, h:16, s:86, l:65, a:0.15 },
+      { fx:0.38, fy:0.70, r:42, h:24, s:80, l:68, a:0.12 },
+      { fx:0.50, fy:0.58, r:36, h:20, s:78, l:69, a:0.10 },
+      { fx:0.33, fy:0.55, r:26, h:26, s:74, l:70, a:0.07 },
+      { fx:0.44, fy:0.64, r:20, h:18, s:72, l:72, a:0.05 },
+      { fx:0.48, fy:0.52, r:14, h:24, s:70, l:73, a:0.04 },
+      { fx:0.39, fy:0.58, r:10, h:20, s:68, l:74, a:0.03 },
+    ],
+    [
+      { fx:0.42, fy:0.53, r:96, h:20, s:92, l:61, a:0.28 },
+      { fx:0.55, fy:0.46, r:86, h:18, s:90, l:62, a:0.25 },
+      { fx:0.32, fy:0.62, r:78, h:26, s:90, l:63, a:0.23 },
+      { fx:0.48, fy:0.68, r:70, h:24, s:86, l:64, a:0.20 },
+      { fx:0.62, fy:0.58, r:64, h:16, s:86, l:65, a:0.18 },
+      { fx:0.38, fy:0.74, r:54, h:30, s:82, l:66, a:0.15 },
+      { fx:0.58, fy:0.38, r:48, h:18, s:80, l:67, a:0.12 },
+      { fx:0.46, fy:0.48, r:38, h:22, s:78, l:68, a:0.10 },
+      { fx:0.52, fy:0.61, r:28, h:20, s:74, l:70, a:0.08 },
+      { fx:0.35, fy:0.57, r:20, h:24, s:72, l:71, a:0.06 },
+    ],
+    [
+      { fx:0.30, fy:0.66, r:70, h:28, s:78, l:68, a:0.20 },
+      { fx:0.44, fy:0.58, r:64, h:22, s:76, l:69, a:0.18 },
+      { fx:0.57, fy:0.52, r:58, h:18, s:74, l:70, a:0.16 },
+      { fx:0.68, fy:0.62, r:50, h:26, s:72, l:70, a:0.13 },
+      { fx:0.40, fy:0.76, r:46, h:30, s:72, l:71, a:0.11 },
+      { fx:0.24, fy:0.72, r:36, h:24, s:70, l:72, a:0.09 },
+      { fx:0.52, fy:0.70, r:30, h:20, s:68, l:73, a:0.07 },
+      { fx:0.62, fy:0.44, r:24, h:18, s:66, l:74, a:0.05 },
+      { fx:0.34, fy:0.52, r:18, h:26, s:64, l:74, a:0.04 },
+      { fx:0.48, fy:0.62, r:12, h:22, s:62, l:75, a:0.03 },
+    ],
+  ],
+};
+
+const S3 = {
+  id: 3,
+  phases: [
+    { name:'Early Aggregation', period:'Jul – Aug',
+      desc:'Large breeding populations grow across Europe and the Mediterranean region during summer.' },
+    { name:'Initiation', period:'Sep – Oct',
+      desc:'Southward migration begins in autumn. Butterflies leave Europe and cross the Mediterranean Sea and the mountains of North Africa.' },
+    { name:'Peak Period', period:'Oct – Nov',
+      desc:'Mass migration crosses the Sahara and Sahel. Migrants continue into tropical Africa and may travel over 4,000 km in a single generation.' },
+    { name:'Decline / Breeding', period:'Dec – Feb',
+      desc:'Migration slows as butterflies breed abundantly across tropical savannahs and highlands.' },
+    { name:'Return Migration', period:'Mar – May',
+      desc:'New generations move northward with warming conditions, crossing the Sahel, Sahara and Mediterranean to Europe.' },
+  ],
+  tlData: [
+    { pct:0,   name:'Aggregation', date:'Jul–Aug' },
+    { pct:25,  name:'Initiation',  date:'Sep–Oct' },
+    { pct:50,  name:'Peak Period', date:'Oct–Nov' },
+    { pct:75,  name:'Breeding',    date:'Dec–Feb' },
+    { pct:100, name:'Return',      date:'Mar–May' },
+  ],
+  blobPhases: [
+    [
+      { fx:0.43, fy:0.26, r:82, h:282, s:58, l:62, a:0.22 },
+      { fx:0.52, fy:0.22, r:78, h:286, s:60, l:64, a:0.24 },
+      { fx:0.61, fy:0.25, r:74, h:276, s:56, l:64, a:0.20 },
+      { fx:0.49, fy:0.31, r:58, h:288, s:54, l:66, a:0.17 },
+      { fx:0.68, fy:0.29, r:48, h:280, s:52, l:67, a:0.13 },
+      { fx:0.36, fy:0.33, r:42, h:284, s:50, l:68, a:0.11 },
+      { fx:0.56, fy:0.34, r:30, h:278, s:48, l:69, a:0.08 },
+      { fx:0.45, fy:0.20, r:22, h:286, s:46, l:70, a:0.06 },
+      { fx:0.63, fy:0.21, r:16, h:280, s:44, l:72, a:0.04 },
+      { fx:0.50, fy:0.27, r:12, h:284, s:42, l:73, a:0.03 },
+    ],
+    [
+      { fx:0.38, fy:0.37, r:86, h:282, s:68, l:58, a:0.25 },
+      { fx:0.48, fy:0.40, r:82, h:286, s:66, l:59, a:0.24 },
+      { fx:0.58, fy:0.41, r:78, h:276, s:65, l:60, a:0.23 },
+      { fx:0.67, fy:0.43, r:70, h:280, s:62, l:61, a:0.20 },
+      { fx:0.43, fy:0.51, r:58, h:288, s:60, l:62, a:0.17 },
+      { fx:0.55, fy:0.55, r:52, h:282, s:58, l:64, a:0.14 },
+      { fx:0.63, fy:0.53, r:42, h:278, s:56, l:65, a:0.11 },
+      { fx:0.35, fy:0.45, r:34, h:286, s:54, l:66, a:0.09 },
+      { fx:0.71, fy:0.48, r:24, h:280, s:52, l:67, a:0.07 },
+      { fx:0.50, fy:0.46, r:18, h:284, s:50, l:68, a:0.05 },
+    ],
+    [
+      { fx:0.38, fy:0.58, r:94, h:282, s:70, l:56, a:0.27 },
+      { fx:0.50, fy:0.60, r:90, h:286, s:68, l:57, a:0.26 },
+      { fx:0.62, fy:0.60, r:86, h:278, s:66, l:58, a:0.24 },
+      { fx:0.72, fy:0.62, r:78, h:280, s:64, l:59, a:0.21 },
+      { fx:0.44, fy:0.71, r:70, h:28,  s:88, l:62, a:0.18 },
+      { fx:0.56, fy:0.73, r:64, h:30,  s:84, l:64, a:0.16 },
+      { fx:0.68, fy:0.72, r:58, h:26,  s:82, l:65, a:0.14 },
+      { fx:0.32, fy:0.65, r:46, h:282, s:58, l:64, a:0.12 },
+      { fx:0.76, fy:0.56, r:34, h:276, s:56, l:65, a:0.09 },
+      { fx:0.51, fy:0.66, r:22, h:288, s:54, l:66, a:0.07 },
+    ],
+    [
+      { fx:0.34, fy:0.76, r:88, h:28, s:88, l:62, a:0.24 },
+      { fx:0.45, fy:0.80, r:82, h:30, s:86, l:63, a:0.23 },
+      { fx:0.57, fy:0.78, r:78, h:24, s:82, l:64, a:0.21 },
+      { fx:0.68, fy:0.75, r:72, h:26, s:80, l:65, a:0.19 },
+      { fx:0.76, fy:0.72, r:60, h:22, s:78, l:66, a:0.15 },
+      { fx:0.50, fy:0.88, r:54, h:32, s:76, l:67, a:0.12 },
+      { fx:0.62, fy:0.86, r:46, h:24, s:74, l:68, a:0.10 },
+      { fx:0.40, fy:0.70, r:34, h:30, s:72, l:69, a:0.08 },
+      { fx:0.70, fy:0.82, r:26, h:26, s:70, l:70, a:0.06 },
+      { fx:0.54, fy:0.75, r:18, h:28, s:68, l:71, a:0.05 },
+    ],
+    [
+      { fx:0.36, fy:0.66, r:82, h:104, s:58, l:52, a:0.22 },
+      { fx:0.46, fy:0.58, r:78, h:108, s:56, l:53, a:0.21 },
+      { fx:0.57, fy:0.54, r:74, h:100, s:54, l:54, a:0.20 },
+      { fx:0.67, fy:0.50, r:68, h:106, s:52, l:55, a:0.18 },
+      { fx:0.42, fy:0.44, r:56, h:110, s:50, l:56, a:0.15 },
+      { fx:0.52, fy:0.39, r:50, h:104, s:48, l:57, a:0.13 },
+      { fx:0.62, fy:0.38, r:44, h:100, s:46, l:58, a:0.11 },
+      { fx:0.48, fy:0.30, r:34, h:108, s:44, l:59, a:0.09 },
+      { fx:0.58, fy:0.28, r:26, h:104, s:42, l:60, a:0.07 },
+      { fx:0.39, fy:0.55, r:18, h:106, s:40, l:61, a:0.05 },
+    ],
+  ],
+};
+
+const SECTIONS = [S0, S1, S2, S3];
+
+// ══════════════════════════════════════════════════════════
+// RUNTIME STATE
+// ══════════════════════════════════════════════════════════
+const rt = {};
+const TRANS_DUR = 1400;
+function ease(t){ return t<0.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2; }
+function lerp(a,b,t){ return a+(b-a)*t; }
+
+function getPhaseBlobs(S, pi, cloudy){
+  return S.blobPhases[pi].map(b=>({
+    ...b,
+    r: cloudy?b.r*0.62:b.r,
+    a: cloudy?b.a*0.68:b.a,
+  }));
+}
+
+function startTransition(sid, pi, cloudy){
+  const r=rt[sid];
+  r.fromStates = r.blobStates?r.blobStates.map(b=>({...b})):getPhaseBlobs(SECTIONS[sid],pi,cloudy);
+  r.toStates   = getPhaseBlobs(SECTIONS[sid],pi,cloudy);
+  r.transStart = null; r.isTransitioning=true;
+}
+
+// ══════════════════════════════════════════════════════════
+// DRAW BLOBS
+// ══════════════════════════════════════════════════════════
+function drawBlobs(sid, now){
+  const r=rt[sid]; if(!r)return;
+  const cv=document.getElementById(`blob-cv-${sid}`);
+  const ctx=cv.getContext('2d');
+  const {W,H}=r;
+  ctx.clearRect(0,0,W,H);
+  if(!r.blobStates)return;
+
+  if(r.isTransitioning){
+    if(r.transStart===null) r.transStart=now;
+    const t=ease(Math.min((now-r.transStart)/TRANS_DUR,1));
+    r.blobStates=r.fromStates.map((f,i)=>{
+      const to=r.toStates[i];
+      return{fx:lerp(f.fx,to.fx,t),fy:lerp(f.fy,to.fy,t),
+             r:lerp(f.r,to.r,t),h:lerp(f.h,to.h,t),
+             s:lerp(f.s,to.s,t),l:lerp(f.l,to.l,t),a:lerp(f.a,to.a,t)};
+    });
+    if(now-r.transStart>=TRANS_DUR){r.isTransitioning=false;r.blobStates=r.toStates.map(b=>({...b}));}
+  }
+
+  r.blobStates.forEach((b,i)=>{
+    if(b.r<1||b.a<0.005)return;
+    const minDim=Math.min(W,H);
+    const rPx=b.r/100*minDim*0.18;
+    const breathe=Math.sin(now*0.00052+i*1.1)*0.055;
+    const wx=Math.sin(now*0.00035+i*0.9)*0.003*W;
+    const wy=Math.cos(now*0.00042+i*1.3)*0.003*H;
+    const px=b.fx*W+wx, py=b.fy*H+wy;
+    const rad=rPx*(1+breathe);
+    [[1.0,b.a],[0.65,b.a*0.5],[0.38,b.a*0.2]].forEach(([sc,al])=>{
+      const gr=ctx.createRadialGradient(px,py,0,px,py,rad*sc);
+      gr.addColorStop(0,   `hsla(${b.h},${b.s}%,${b.l}%,${al})`);
+      gr.addColorStop(0.4, `hsla(${b.h},${b.s}%,${b.l+4}%,${al*0.5})`);
+      gr.addColorStop(0.75,`hsla(${b.h},${b.s-8}%,${b.l+8}%,${al*0.15})`);
+      gr.addColorStop(1,   `hsla(${b.h},${b.s}%,${b.l}%,0)`);
+      ctx.beginPath();ctx.arc(px,py,rad*sc,0,Math.PI*2);
+      ctx.fillStyle=gr;ctx.fill();
+    });
+  });
+}
+
+// ══════════════════════════════════════════════════════════
+// UI UPDATE
+// ══════════════════════════════════════════════════════════
+function updateUI(S){
+  const sid=S.id, r=rt[sid];
+  const p=S.phases[r.phase];
+  document.getElementById(`pname-${sid}`).textContent   =p.name;
+  document.getElementById(`pperiod-${sid}`).textContent =p.period;
+  document.getElementById(`pdesc-${sid}`).textContent   =p.desc;
+  const cloudy=r.weather==='cloudy';
+  document.getElementById(`wx-btn-${sid}`).textContent  =cloudy?'☁️':'☀️';
+  document.getElementById(`cloud-veil-${sid}`).className='cloud-veil'+(cloudy?' on':'');
+  syncTimeline(S,r.phase);
+}
+
+// ══════════════════════════════════════════════════════════
+// WEATHER
+// ══════════════════════════════════════════════════════════
+function toggleWeather(sid){
+  const S=SECTIONS[sid],r=rt[sid];
+  r.weather=r.weather==='sunny'?'cloudy':'sunny';
+  updateUI(S); startTransition(sid,r.phase,r.weather==='cloudy');
+}
+
+// ══════════════════════════════════════════════════════════
+// TIMELINE
+// ══════════════════════════════════════════════════════════
+function buildTimeline(S){
+  const sid=S.id;
+  const track=document.getElementById(`tl-track-${sid}`);
+  const lbls =document.getElementById(`tl-lbls-${sid}`);
+  S.tlData.forEach((p,i)=>{
+    const nd=document.createElement('div');
+    nd.className='tl-node-el'; nd.id=`tln-${sid}-${i}`;
+    nd.style.left=p.pct+'%'; track.appendChild(nd);
+    const lb=document.createElement('div');
+    lb.className='tl-lbl-el'; lb.id=`tll-${sid}-${i}`;
+    lb.style.left=p.pct+'%';
+    lb.innerHTML=`<span class="tl-lbl-name">${p.name}</span><span class="tl-lbl-date">${p.date}</span>`;
+    lbls.appendChild(lb);
+  });
+}
+
+function syncTimeline(S,phase,snap=true){
+  const sid=S.id, pct=S.tlData[phase].pct;
+  document.getElementById(`tl-prog-${sid}`).style.width=pct+'%';
+  const h=document.getElementById(`tl-hdl-${sid}`);
+  if(snap){
+    h.style.transition='left 0.65s cubic-bezier(0.4,0,0.2,1)';
+    setTimeout(()=>{h.style.transition='left 0s';},700);
+  }
+  h.style.left=pct+'%';
+  S.tlData.forEach((_,i)=>{
+    document.getElementById(`tln-${sid}-${i}`).classList.toggle('on',    i<=phase);
+    document.getElementById(`tln-${sid}-${i}`).classList.toggle('active',i===phase);
+    document.getElementById(`tll-${sid}-${i}`).classList.toggle('active',i===phase);
+  });
+}
+
+function pctToPhase(tlData,pct){
+  const n=tlData.length, step=100/(n-1);
+  return Math.min(n-1,Math.max(0,Math.round(pct/step)));
+}
+
+function clientToTrackPct(trackId,clientX){
+  const r=document.getElementById(trackId).getBoundingClientRect();
+  return Math.max(0,Math.min(100,(clientX-r.left)/r.width*100));
+}
+
+function initTimelineDrag(S){
+  const sid=S.id;
+  const handle=document.getElementById(`tl-hdl-${sid}`);
+  const track =document.getElementById(`tl-track-${sid}`);
+  let dragging=false, dragPhase=0;
+
+  function onDragMove(clientX){
+    const pct=clientToTrackPct(`tl-track-${sid}`,clientX);
+    document.getElementById(`tl-hdl-${sid}`).style.left=pct+'%';
+    document.getElementById(`tl-prog-${sid}`).style.width=pct+'%';
+    const np=pctToPhase(S.tlData,pct);
+    S.tlData.forEach((_,i)=>{
+      document.getElementById(`tln-${sid}-${i}`).classList.toggle('on',    i<=np);
+      document.getElementById(`tln-${sid}-${i}`).classList.toggle('active',i===np);
+      document.getElementById(`tll-${sid}-${i}`).classList.toggle('active',i===np);
+    });
+    if(np!==dragPhase){
+      dragPhase=np;
+      const r2=rt[sid];
+      if(np!==r2.phase){
+        r2.phase=np;
+        const p=S.phases[np];
+        document.getElementById(`pname-${sid}`).textContent  =p.name;
+        document.getElementById(`pperiod-${sid}`).textContent=p.period;
+        document.getElementById(`pdesc-${sid}`).textContent  =p.desc;
+        startTransition(sid,r2.phase,r2.weather==='cloudy');
+      }
+    }
+  }
+
+  function onDragEnd(){
+    dragging=false; handle.classList.remove('dragging');
+    syncTimeline(S,rt[sid].phase);
+    document.removeEventListener('mousemove',mmH);
+    document.removeEventListener('mouseup',muH);
+    document.removeEventListener('touchmove',tmH);
+    document.removeEventListener('touchend',teH);
+  }
+
+  const mmH=e=>{if(dragging)onDragMove(e.clientX);};
+  const muH=()=>{if(dragging)onDragEnd();};
+  const tmH=e=>{if(dragging&&e.touches[0]){e.preventDefault();onDragMove(e.touches[0].clientX);}};
+  const teH=()=>{if(dragging)onDragEnd();};
+
+  handle.addEventListener('mousedown',e=>{e.preventDefault();dragging=true;dragPhase=rt[sid].phase;handle.style.transition='left 0s';handle.classList.add('dragging');document.addEventListener('mousemove',mmH);document.addEventListener('mouseup',muH);document.addEventListener('touchmove',tmH,{passive:false});document.addEventListener('touchend',teH);});
+  handle.addEventListener('touchstart',e=>{e.preventDefault();dragging=true;dragPhase=rt[sid].phase;handle.style.transition='left 0s';handle.classList.add('dragging');document.addEventListener('mousemove',mmH);document.addEventListener('mouseup',muH);document.addEventListener('touchmove',tmH,{passive:false});document.addEventListener('touchend',teH);},{passive:false});
+
+  track.addEventListener('click',e=>{
+    if(dragging)return;
+    const np=pctToPhase(S.tlData,clientToTrackPct(`tl-track-${sid}`,e.clientX));
+    const r2=rt[sid];
+    if(np!==r2.phase){r2.phase=np;updateUI(S);startTransition(sid,r2.phase,r2.weather==='cloudy');}
+  });
+}
+
+// ══════════════════════════════════════════════════════════
+// POPUP
+// ══════════════════════════════════════════════════════════
+function openPopup(sid){
+  const info=BUTTERFLY_INFO[sid];
+  const imgTag=`<img class="popup-img" src="${info.imgSrc}"
+    onclick="openImageViewer('${info.imgSrc}', '${info.species}')"
+    onerror="this.style.display='none'" alt="${info.species}">`;
+  document.getElementById('popup-content').innerHTML=`
+    ${imgTag}
+    <div class="popup-species">${info.region}</div>
+    <div class="popup-name">${info.species}</div>
+    <div class="popup-common">${info.common}</div>
+    <div class="popup-divider"></div>
+    <div class="popup-row">
+      <span class="popup-row-label">Season</span>
+      <span class="popup-row-val">${info.season}</span>
+    </div>
+    <div class="popup-row">
+      <span class="popup-row-label">Direction</span>
+      <span class="popup-row-val">${info.direction}</span>
+    </div>
+    <div class="popup-row">
+      <span class="popup-row-label">Pattern</span>
+      <span class="popup-row-val">${info.pattern}</span>
+    </div>
+    <div class="popup-row">
+      <span class="popup-row-label">Morph</span>
+      <span class="popup-row-val">${info.morph}</span>
+    </div>
+    <div class="popup-divider"></div>
+    <div class="popup-row-val" style="font-size:12px;color:#999;line-height:1.8">${info.note}</div>
+  `;
+  document.getElementById('popup-overlay').classList.add('visible');
+}
+
+function closePopup(){
+  document.getElementById('popup-overlay').classList.remove('visible');
+}
+
+function closePopupOutside(e){
+  if(e.target===document.getElementById('popup-overlay')) closePopup();
+}
+
+function openImageViewer(src, alt){
+  const img=document.getElementById('image-viewer-img');
+  img.src=src;
+  img.alt=alt;
+  document.getElementById('image-overlay').classList.add('visible');
+}
+
+function closeImageViewer(){
+  document.getElementById('image-overlay').classList.remove('visible');
+}
+
+function closeImageViewerOutside(e){
+  if(e.target===document.getElementById('image-overlay')) closeImageViewer();
+}
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape') closeImageViewer();
+});
+
+// ══════════════════════════════════════════════════════════
+// NAV
+// ══════════════════════════════════════════════════════════
+function switchTo(idx){
+  document.querySelectorAll('.section').forEach((s,i)=>s.classList.toggle('active',i===idx));
+  document.querySelectorAll('.nav-tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
+}
+
+// ══════════════════════════════════════════════════════════
+// RESIZE & INIT
+// ══════════════════════════════════════════════════════════
+function resizeSection(S){
+  const sid=S.id;
+  const area=document.getElementById(`map-area-${sid}`);
+  if(!area)return;
+  const W=area.clientWidth, H=area.clientHeight;
+  rt[sid].W=W; rt[sid].H=H;
+  const cv=document.getElementById(`blob-cv-${sid}`);
+  cv.width=W; cv.height=H;
+  const r=rt[sid];
+  r.blobStates=getPhaseBlobs(S,r.phase,r.weather==='cloudy').map(b=>({...b}));
+  r.isTransitioning=false;
+}
+
+function initSection(S){
+  const sid=S.id;
+  rt[sid]={phase:S.initialPhase || 0,weather:'sunny',blobStates:null,fromStates:null,
+           toStates:null,transStart:null,isTransitioning:false,W:0,H:0};
+  buildTimeline(S);
+  initTimelineDrag(S);
+  resizeSection(S);
+  updateUI(S);
+}
+
+function animate(now){
+  SECTIONS.forEach(S=>drawBlobs(S.id,now));
+  requestAnimationFrame(animate);
+}
+
+window.addEventListener('resize',()=>SECTIONS.forEach(S=>resizeSection(S)));
+SECTIONS.forEach(S=>initSection(S));
+requestAnimationFrame(animate);
+</script>
+</body>
+</html>

@@ -1,67 +1,45 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>East Africa Butterfly Archive</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <main class="app">
-    <header class="topbar">
-      <div class="brand">Butterfly archive</div>
-      <div class="section-title">Natural History</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>East Africa Butterfly Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      .butterfly-bounce {
+        animation: butterfly-bounce var(--bounce-duration, 1.6s) ease-in-out var(--bounce-delay, 0s) infinite;
+        display: block;
+        will-change: transform;
+      }
 
-      <div class="top-actions">
-        <label class="search-field">
-          <span class="search-icon" aria-hidden="true"></span>
-          <input id="searchInput" type="search" placeholder="Search species, habitat..." aria-label="Search species or habitat" />
-        </label>
+      @keyframes butterfly-bounce {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
 
-        <button id="resetFilterButton" class="active-filter-pill" type="button" aria-label="Reset filters">All</button>
+        42% {
+          transform: translateY(calc(var(--bounce-distance, 12px) * -1)) scale(1.04);
+        }
 
-        <button id="openFilterButton" class="round-action green" type="button" aria-label="Open filters">
-          <span class="sliders-icon" aria-hidden="true"></span>
-        </button>
-      </div>
-    </header>
+        68% {
+          transform: translateY(calc(var(--bounce-distance, 12px) * 0.32)) scale(0.98);
+        }
+      }
 
-    <div class="species-count">70 Species</div>
-
-    <section class="archive-stage" aria-label="Interactive butterfly archive map">
-      <div id="trailLayer" class="trail-layer"></div>
-      <div id="previewLayer" class="preview-layer"></div>
-      <div id="nodeLayer" class="node-layer"></div>
-    </section>
-
-    <div class="bottom-left">
-      <button id="openAboutButton" class="floating-pill" type="button">
-        <span class="pill-icon dark">i</span>
-        About the archive
-      </button>
-    </div>
-
-    <div class="trail-control" role="status" aria-live="polite">
-      <button id="openTrailButton" class="trail-status" type="button" aria-label="Open navigation trail">
-        <span id="trailDots" class="trail-status-dots" aria-hidden="true"></span>
-        <span id="trailText">Touch butterflies to build a trail</span>
-      </button>
-
-      <button id="clearTrailButton" class="clear-button" type="button" disabled>
-        Clear trail
-      </button>
-    </div>
-
-    <div class="bottom-right">
-      <button id="openKeyButton" class="floating-pill" type="button">
-        <span class="pill-icon dark key-mark" aria-hidden="true"></span>
-        Visual key
-      </button>
-    </div>
-
-    <div id="modalRoot"></div>
-  </main>
-
-  <script src="script.js"></script>
-</body>
+      body {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel" src="./assets/archive-butterflies/app.jsx?v=migration-files-connected-20260522"></script>
+  </body>
 </html>

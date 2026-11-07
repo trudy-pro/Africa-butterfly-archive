@@ -1,0 +1,8 @@
+.git
+.DS_Store
+**/.DS_Store
+node_modules
+**/node_modules
+assets/archive-butterflies/butterfly-migration/package-lock.json
+assets/archive-butterflies/butterfly-migration/package.json
+assets/archive-butterflies/butterfly-migration/server.js

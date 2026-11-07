@@ -1,8 +1,8 @@
-# East Africa Butterfly Archive — Version 1
+# East Africa Butterfly Archive — Version 2
 
 **Historical development snapshot — not the final release.**
 
-Initial prototype using HTML, CSS and JavaScript.
+React/JSX specimen archive with migration content and image assets.
 
 ## Running this snapshot
 
