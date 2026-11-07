@@ -1,6 +1,6 @@
 # Design and engineering evolution
 
-This document records four labelled historical stages of the **East Africa Butterfly Archive**. The version labels represent archived source snapshots, **not** the dates the work was originally created or committed to GitHub.
+This document records five labelled historical stages of the **East Africa Butterfly Archive**. The version labels represent archived source snapshots, **not** the dates the work was originally created or committed to GitHub.
 
 The currently deployed final application has **not yet been added** to this repository. The `main` branch contains the Version 3 application code plus documentation.
 
@@ -73,6 +73,14 @@ The uploaded archive contains butterfly assets and supporting code under `archiv
 
 [Browse Version 4](../../tree/version-4)
 
+## Version 5 — Supporting source and assets snapshot
+
+**Source:** `assets.zip`, preserved on the [`version-5`](../../tree/version-5) branch. The original [`experiment-assets-snapshot`](../../tree/experiment-assets-snapshot) branch remains available for traceability.
+
+This snapshot contains supplementary frontend code and assets. It is now labelled **Version 5** in the archive. Its completeness and precise code differences from Version 4 have not been established, so the documentation does not claim new functionality or a verified chronological progression.
+
+[Browse Version 5](../../tree/version-5)
+
 ## Current `main` branch
 
 The application code on `main` matches Version 3. Its additional changes are documentation files, including this history and a source inventory.
@@ -81,12 +89,12 @@ The application code on `main` matches Version 3. Its additional changes are doc
 
 ## Additional experimental snapshots
 
-The `assets.zip` upload remains on a separate experimental branch. The `archive-butterflies.zip` upload has now been designated Version 4 by the project creator. Its original experimental branch is retained for traceability.
+The two additional archives are labelled: `archive-butterflies.zip` as Version 4 and `assets.zip` as Version 5. Their original experimental branches remain for traceability.
 
-- [Experimental assets snapshot](../../tree/experiment-assets-snapshot)
+- [Version 5 source archive (original branch)](../../tree/experiment-assets-snapshot)
 - [Version 4 source archive (original branch)](../../tree/experiment-archive-assets)
 
-Version 5 has not yet been identified. Version 4's exact code differences and chronological relationship to Version 3 still require verification.
+The exact code differences and chronological relationships of Versions 4 and 5 to earlier versions still require verification.
 
 ## What comes next
 
