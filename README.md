@@ -1,24 +1,46 @@
-# East Africa Butterfly Archive — Version 3
+# East Africa Butterfly Archive 🦋
 
-**Historical development snapshot — not the final release.**
+**Historical development archive — final source not yet uploaded.**
 
-Refined browser-based interactive butterfly archive, including expanded specimen interactions and migration assets.
+This repository preserves successive prototype implementations of an interactive East African butterfly archive. The final published website is at [Africa Butterfly Archive](https://africa-butterfly-archive.netlify.app/), but the matching final source code has not yet been included.
 
-## Running this snapshot
+## Browse development versions
 
-This is an archived source snapshot. Some later versions load React/JSX directly in the browser using an external runtime. Serve the project directory over HTTP instead of opening `index.html` as a file:
+| Version | What it documents | Source |
+|---|---|---|
+| [Version 1](../../tree/version-1) | Initial HTML/CSS/JavaScript prototype | Historical snapshot |
+| [Version 2](../../tree/version-2) | React-based archive, migration work and assets | Historical snapshot |
+| [Version 3](../../tree/version-3) | Refined archive and migration-related UI | Historical snapshot |
+| Version 4 / 5 | Not yet established as distinct complete versions | Pending review |
+| Version 6 — final | Actual deployed application source | Not yet uploaded |
+
+The tags preserve original snapshot contents. Compare them with GitHub's **Compare** view; they were committed retrospectively and do not claim original development timestamps.
+
+## Supporting experiments
+
+- [`experiment-assets-snapshot`](../../tree/experiment-assets-snapshot) — supplied small supporting assets/source archive.
+- [`experiment-archive-assets`](../../tree/experiment-archive-assets) — supplied standalone butterfly assets/code archive.
+
+These branches have substantial overlap with numbered versions; they are separate so that we do not misrepresent them as successive stages.
+
+## Run locally
+
+Use one version by checking out its Git tag:
 
 ```bash
+git checkout version-3
 python3 -m http.server 8080
 ```
 
-Then visit http://localhost:8080/. Full functionality depends on the bundled assets and any referenced services.
+Then open http://localhost:8080/. Some features may rely on external services; local verification is still required.
 
-## Project history
+## Documentation
 
-- `version-1`: Initial HTML/CSS/JavaScript experiment.
-- `version-2`: React/JSX archive and migration exploration.
-- `version-3`: Later refined version from the third dated upload.
-- **Final application: not yet uploaded.** The finished public example can be viewed at https://africa-butterfly-archive.netlify.app/, but this snapshot is not claimed to be its source.
+- [Development history](docs/EVOLUTION.md)
+- [Source inventory](docs/SOURCES.md)
 
-Source dates are archival labels, not the dates of these Git commits.
+## Status
+
+**Archive in progress.** The final Netlify source will be added to `main` after it is supplied and verified. For now `main` contains the Version 3 snapshot plus this documentation.
+
+This is a source and design archive, not a claim that every snapshot is production-ready.
