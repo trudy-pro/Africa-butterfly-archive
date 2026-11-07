@@ -376,7 +376,7 @@ const migrationOptions = [
   { label: "Partial Migrant", icon: "↔" },
 ];
 
-const butterflyMigrationInteractivePath = "./assets/archive-butterflies/butterfly-migration/public/display.html";
+const butterflyMigrationInteractivePath = "/assets/archive-butterflies/revised%20migration/display.html";
 
 const positions = [
   [24, 23, 42], [21, 31, 54], [26, 38, 34], [22, 47, 36], [28, 55, 38],
@@ -398,86 +398,86 @@ const positions = [
 ];
 
 const numberedButterflyWingColours = [
-  { image: "assets/archive-butterflies/butterfly-01.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-01.jpg", wingColour: "Blue" },
   { image: "assets/archive-butterflies/butterfly-02.jpg", wingColour: "Orange" },
-  { image: "assets/archive-butterflies/butterfly-03.jpg", wingColour: "White" },
-  { image: "assets/archive-butterflies/butterfly-04.jpg", wingColour: "Black" },
-  { image: "assets/archive-butterflies/butterfly-05.jpg", wingColour: "Yellow" },
+  { image: "assets/archive-butterflies/butterfly-03.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-04.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-05.jpg", wingColour: "Black" },
   { image: "assets/archive-butterflies/butterfly-06.jpg", wingColour: "White" },
-  { image: "assets/archive-butterflies/butterfly-07.jpg", wingColour: "White" },
-  { image: "assets/archive-butterflies/butterfly-08.jpg", wingColour: "White" },
-  { image: "assets/archive-butterflies/butterfly-09.jpg", wingColour: "Blue" },
-  { image: "assets/archive-butterflies/butterfly-10.jpg", wingColour: "Yellow" },
-  { image: "assets/archive-butterflies/butterfly-11.jpg", wingColour: "White" },
-  { image: "assets/archive-butterflies/butterfly-12.jpg", wingColour: "Orange" },
-  { image: "assets/archive-butterflies/butterfly-13.jpg", wingColour: "Green" },
-  { image: "assets/archive-butterflies/butterfly-14.jpg", wingColour: "Black" },
-  { image: "assets/archive-butterflies/butterfly-15.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-16.jpg", wingColour: "Black" },
-  { image: "assets/archive-butterflies/butterfly-17.jpg", wingColour: "Black" },
-  { image: "assets/archive-butterflies/butterfly-18.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-19.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-20.jpg", wingColour: "Green" },
-  { image: "assets/archive-butterflies/butterfly-21.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-07.jpg", wingColour: "Brown" },
+  { image: "assets/archive-butterflies/butterfly-08.jpg", wingColour: "Red" },
+  { image: "assets/archive-butterflies/butterfly-09.jpg", wingColour: "Coloured" },
+  { image: "assets/archive-butterflies/butterfly-10.jpg", wingColour: "White" },
+  { image: "assets/archive-butterflies/butterfly-11.jpg", wingColour: "Coloured" },
+  { image: "assets/archive-butterflies/butterfly-12.jpg", wingColour: "Brown" },
+  { image: "assets/archive-butterflies/butterfly-13.jpg", wingColour: "Yellow" },
+  { image: "assets/archive-butterflies/butterfly-14.jpg", wingColour: "Yellow" },
+  { image: "assets/archive-butterflies/butterfly-15.jpg", wingColour: "Brown" },
+  { image: "assets/archive-butterflies/butterfly-16.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-17.jpg", wingColour: "Green" },
+  { image: "assets/archive-butterflies/butterfly-18.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-19.jpg", wingColour: "Yellow" },
+  { image: "assets/archive-butterflies/butterfly-20.jpg", wingColour: "Brown" },
+  { image: "assets/archive-butterflies/butterfly-21.jpg", wingColour: "Coloured" },
   { image: "assets/archive-butterflies/butterfly-22.jpg", wingColour: "Brown" },
-  { image: "assets/archive-butterflies/butterfly-23.png", wingColour: "Green" },
-  { image: "assets/archive-butterflies/butterfly-24.png", wingColour: "White" },
-  { image: "assets/archive-butterflies/butterfly-25.png", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-26.png", wingColour: "Orange" },
-  { image: "assets/archive-butterflies/butterfly-27.png", wingColour: "White" },
-  { image: "assets/archive-butterflies/butterfly-28.png", wingColour: "Green" },
-  { image: "assets/archive-butterflies/butterfly-29.png", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-30.png", wingColour: "Orange" },
-  { image: "assets/archive-butterflies/butterfly-31.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-32.jpg", wingColour: "Purple" },
-  { image: "assets/archive-butterflies/butterfly-33.jpg", wingColour: "Green" },
-  { image: "assets/archive-butterflies/butterfly-34.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-35.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-36.jpg", wingColour: "Orange" },
-  { image: "assets/archive-butterflies/butterfly-37.jpg", wingColour: "Red" },
-  { image: "assets/archive-butterflies/butterfly-38.jpg", wingColour: "White" },
-  { image: "assets/archive-butterflies/butterfly-39.jpg", wingColour: "Orange" },
-  { image: "assets/archive-butterflies/butterfly-40.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-41.jpg", wingColour: "Yellow" },
-  { image: "assets/archive-butterflies/butterfly-42.jpg", wingColour: "Coloured" },
+  { image: "assets/archive-butterflies/butterfly-23.jpg", wingColour: "Blue" },
+  { image: "assets/archive-butterflies/butterfly-24.jpg", wingColour: "Coloured" },
+  { image: "assets/archive-butterflies/butterfly-25.jpg", wingColour: "Brown" },
+  { image: "assets/archive-butterflies/butterfly-26.jpg", wingColour: "Green" },
+  { image: "assets/archive-butterflies/butterfly-27.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-28.jpg", wingColour: "Green" },
+  { image: "assets/archive-butterflies/butterfly-29.jpg", wingColour: "Red" },
+  { image: "assets/archive-butterflies/butterfly-30.jpg", wingColour: "Coloured" },
+  { image: "assets/archive-butterflies/butterfly-31.jpg", wingColour: "White" },
+  { image: "assets/archive-butterflies/butterfly-32.jpg", wingColour: "Red" },
+  { image: "assets/archive-butterflies/butterfly-33.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-34.jpg", wingColour: "Brown" },
+  { image: "assets/archive-butterflies/butterfly-35.jpg", wingColour: "White" },
+  { image: "assets/archive-butterflies/butterfly-36.jpg", wingColour: "White" },
+  { image: "assets/archive-butterflies/butterfly-37.jpg", wingColour: "Green" },
+  { image: "assets/archive-butterflies/butterfly-38.jpg", wingColour: "Blue" },
+  { image: "assets/archive-butterflies/butterfly-39.jpg", wingColour: "Purple" },
+  { image: "assets/archive-butterflies/butterfly-40.jpg", wingColour: "Red" },
+  { image: "assets/archive-butterflies/butterfly-41.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-42.jpg", wingColour: "Green" },
   { image: "assets/archive-butterflies/butterfly-43.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-44.jpg", wingColour: "Blue" },
-  { image: "assets/archive-butterflies/butterfly-45.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-46.jpg", wingColour: "Blue" },
+  { image: "assets/archive-butterflies/butterfly-44.jpg", wingColour: "White" },
+  { image: "assets/archive-butterflies/butterfly-45.jpg", wingColour: "Blue" },
+  { image: "assets/archive-butterflies/butterfly-46.jpg", wingColour: "Brown" },
   { image: "assets/archive-butterflies/butterfly-47.jpg", wingColour: "White" },
   { image: "assets/archive-butterflies/butterfly-48.jpg", wingColour: "Blue" },
-  { image: "assets/archive-butterflies/butterfly-49.jpg", wingColour: "Yellow" },
-  { image: "assets/archive-butterflies/butterfly-50.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-51.jpg", wingColour: "Red" },
-  { image: "assets/archive-butterflies/butterfly-52.png", wingColour: "Blue" },
-  { image: "assets/archive-butterflies/butterfly-53.jpg", wingColour: "White" },
-  { image: "assets/archive-butterflies/butterfly-54.png", wingColour: "Orange" },
-  { image: "assets/archive-butterflies/butterfly-55.png", wingColour: "Purple" },
-  { image: "assets/archive-butterflies/butterfly-56.jpg", wingColour: "Green" },
-  { image: "assets/archive-butterflies/butterfly-57.jpg", wingColour: "Yellow" },
-  { image: "assets/archive-butterflies/butterfly-58.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-59.jpg", wingColour: "Orange" },
-  { image: "assets/archive-butterflies/butterfly-60.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-61.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-62.jpg", wingColour: "White" },
-  { image: "assets/archive-butterflies/butterfly-63.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-64.jpg", wingColour: "Yellow" },
-  { image: "assets/archive-butterflies/butterfly-65.jpg", wingColour: "Red" },
-  { image: "assets/archive-butterflies/butterfly-66.jpg", wingColour: "Yellow" },
-  { image: "assets/archive-butterflies/butterfly-67.jpg", wingColour: "Orange" },
-  { image: "assets/archive-butterflies/butterfly-68.jpg", wingColour: "Green" },
+  { image: "assets/archive-butterflies/butterfly-49.jpg", wingColour: "Coloured" },
+  { image: "assets/archive-butterflies/butterfly-50.jpg", wingColour: "Purple" },
+  { image: "assets/archive-butterflies/butterfly-51.jpg", wingColour: "Blue" },
+  { image: "assets/archive-butterflies/butterfly-52.jpg", wingColour: "White" },
+  { image: "assets/archive-butterflies/butterfly-53.jpg", wingColour: "Brown" },
+  { image: "assets/archive-butterflies/butterfly-54.jpg", wingColour: "Red" },
+  { image: "assets/archive-butterflies/butterfly-55.jpg", wingColour: "Purple" },
+  { image: "assets/archive-butterflies/butterfly-56.jpg", wingColour: "Red" },
+  { image: "assets/archive-butterflies/butterfly-57.jpg", wingColour: "Black" },
+  { image: "assets/archive-butterflies/butterfly-58.jpg", wingColour: "Blue" },
+  { image: "assets/archive-butterflies/butterfly-59.jpg", wingColour: "Blue" },
+  { image: "assets/archive-butterflies/butterfly-60.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-61.jpg", wingColour: "Black" },
+  { image: "assets/archive-butterflies/butterfly-62.jpg", wingColour: "Yellow" },
+  { image: "assets/archive-butterflies/butterfly-63.jpg", wingColour: "Yellow" },
+  { image: "assets/archive-butterflies/butterfly-64.jpg", wingColour: "Black" },
+  { image: "assets/archive-butterflies/butterfly-65.jpg", wingColour: "Brown" },
+  { image: "assets/archive-butterflies/butterfly-66.jpg", wingColour: "Green" },
+  { image: "assets/archive-butterflies/butterfly-67.jpg", wingColour: "Black" },
+  { image: "assets/archive-butterflies/butterfly-68.jpg", wingColour: "White" },
   { image: "assets/archive-butterflies/butterfly-69.jpg", wingColour: "Orange" },
-  { image: "assets/archive-butterflies/butterfly-70.jpg", wingColour: "Yellow" },
+  { image: "assets/archive-butterflies/butterfly-70.jpg", wingColour: "Brown" },
   { image: "assets/archive-butterflies/butterfly-71.jpg", wingColour: "Red" },
-  { image: "assets/archive-butterflies/butterfly-72.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-73.jpg", wingColour: "Yellow" },
-  { image: "assets/archive-butterflies/butterfly-74.jpg", wingColour: "Brown" },
-  { image: "assets/archive-butterflies/butterfly-75.jpg", wingColour: "Black" },
-  { image: "assets/archive-butterflies/butterfly-76.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-77.jpg", wingColour: "Coloured" },
-  { image: "assets/archive-butterflies/butterfly-78.jpg", wingColour: "Black" },
-  { image: "assets/archive-butterflies/butterfly-79.jpg", wingColour: "Orange" },
-  { image: "assets/archive-butterflies/butterfly-80.jpg", wingColour: "Green" },
+  { image: "assets/archive-butterflies/butterfly-72.jpg", wingColour: "Black" },
+  { image: "assets/archive-butterflies/butterfly-73.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-74.jpg", wingColour: "White" },
+  { image: "assets/archive-butterflies/butterfly-75.jpg", wingColour: "Green" },
+  { image: "assets/archive-butterflies/butterfly-76.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-77.jpg", wingColour: "Red" },
+  { image: "assets/archive-butterflies/butterfly-78.jpg", wingColour: "Orange" },
+  { image: "assets/archive-butterflies/butterfly-79.jpg", wingColour: "White" },
+  { image: "assets/archive-butterflies/butterfly-80.jpg", wingColour: "White" },
 ];
 
 const uploadNamePools = {
@@ -517,86 +517,86 @@ const uploadColourPatterns = {
 };
 
 const namedButterflyDetails = [
-  { name: "Monarch Flower", latinName: "Danaus reference form", habitat: "Garden", wingPattern: "Stripes" },
-  { name: "Golden Leafwing", latinName: "Cethosia reference form", habitat: "Forest", wingPattern: "Stripes" },
-  { name: "Amber Leafwing", latinName: "Anaea reference form", habitat: "Forest", wingPattern: "Eyespots" },
-  { name: "Map Hairstreak", latinName: "Cigaritis reference form", habitat: "Meadow", wingPattern: "Stripes" },
-  { name: "White Grass Jewel", latinName: "Leptosia reference form", habitat: "Wetland", wingPattern: "Stripes" },
-  { name: "Scarlet Mosaic", latinName: "Telipna reference form", habitat: "Forest", wingPattern: "Spots" },
-  { name: "Slate Charaxes", latinName: "Charaxes reference form", habitat: "Mountain", wingPattern: "Eyespots" },
-  { name: "Black Pie", latinName: "Taraka reference form", habitat: "Forest", wingPattern: "Spots" },
-  { name: "Lemon Emigrant", latinName: "Catopsilia reference form", habitat: "Garden", wingPattern: "Spots" },
-  { name: "Brown Pansy", latinName: "Junonia reference form", habitat: "Forest", wingPattern: "Scales" },
-  { name: "Dead Leaf", latinName: "Kallima reference form", habitat: "Forest", wingPattern: "Solid" },
-  { name: "Tailed Charaxes", latinName: "Polyura reference form", habitat: "Forest", wingPattern: "Eyespots" },
-  { name: "Prism Skipper", latinName: "Nexus prismata", habitat: "Garden", wingPattern: "Scales" },
-  { name: "Blue Pansy", latinName: "Junonia orithya reference form", habitat: "Garden", wingPattern: "Eyespots" },
-  { name: "Rock Ringlet", latinName: "Erebia reference form", habitat: "Mountain", wingPattern: "Eyespots" },
-  { name: "Wood Emperor", latinName: "Apatura reference form", habitat: "Mountain", wingPattern: "Eyespots" },
-  { name: "Lime Swallowtail", latinName: "Papilio reference form", habitat: "Garden", wingPattern: "Spots" },
-  { name: "Clouded Yellow", latinName: "Colias reference form", habitat: "Meadow", wingPattern: "Spots" },
-  { name: "Meadow Brown", latinName: "Maniola reference form", habitat: "Meadow", wingPattern: "Solid" },
-  { name: "Great Eggfly", latinName: "Hypolimnas reference form", habitat: "Garden", wingPattern: "Spots" },
-  { name: "Plain Tiger Pair", latinName: "Danaus reference pair", habitat: "Garden", wingPattern: "Spots" },
-  { name: "Pale Sergeant", latinName: "Athyma reference form", habitat: "Forest", wingPattern: "Stripes" },
-  { name: "Desert White", latinName: "Pontia reference form", habitat: "Mountain", wingPattern: "Spots" },
-  { name: "Purple Emperor", latinName: "Apatura reference form", habitat: "Forest", wingPattern: "Eyespots" },
-  { name: "Mud-Puddling Whites", latinName: "Pieridae reference group", habitat: "Wetland", wingPattern: "Stripes" },
-  { name: "Tiny Pierrot", latinName: "Tarucus reference form", habitat: "Mountain", wingPattern: "Spots" },
-  { name: "White Orange-tip", latinName: "Hebomoia reference form", habitat: "Garden", wingPattern: "Stripes" },
-  { name: "Yellow Jezebel", latinName: "Delias reference form", habitat: "Garden", wingPattern: "Spots" },
-  { name: "Common Crow", latinName: "Euploea reference form", habitat: "Forest", wingPattern: "Spots" },
-  { name: "Psyche White", latinName: "Leptosia reference form", habitat: "Wetland", wingPattern: "Solid" },
-  { name: "Meadow Ringlet", latinName: "Ypthima reference form", habitat: "Meadow", wingPattern: "Eyespots" },
-  { name: "Silver Pearl", latinName: "Argynnis luna", habitat: "Wetland", wingPattern: "Spots" },
-  { name: "Velvet Skipper", latinName: "Hesperia veluta", habitat: "Forest", wingPattern: "Stripes" },
-  { name: "Dappled Fritillary", latinName: "Speyeria maculata", habitat: "Meadow", wingPattern: "Spots" },
-  { name: "Ember Glider", latinName: "Pyris ignitus", habitat: "Garden", wingPattern: "Scales" },
-  { name: "Golden Sapphire", latinName: "Celastrina aurea", habitat: "Mountain", wingPattern: "Eyespots" },
-  { name: "Azure Admiral", latinName: "Limenitis azura", habitat: "Forest", wingPattern: "Stripes" },
-  { name: "Forest Sailor", latinName: "Pachliopta silva", habitat: "Forest", wingPattern: "Solid" },
-  { name: "Coral Moon", latinName: "Actias corallina", habitat: "Garden", wingPattern: "Scales" },
-  { name: "Jade Crescent", latinName: "Danais viridis", habitat: "Meadow", wingPattern: "Spots" },
-  { name: "Sunset Seraph", latinName: "Heliconius vespera", habitat: "Forest", wingPattern: "Stripes" },
-  { name: "Amber Dazzler", latinName: "Papilio fulgens", habitat: "Garden", wingPattern: "Scales" },
-  { name: "Orchard Lace", latinName: "Euphaedra orchida", habitat: "Wetland", wingPattern: "Spots" },
-  { name: "Twilight Skipper", latinName: "Carcharodus vesper", habitat: "Mountain", wingPattern: "Stripes" },
-  { name: "Meadow Mirage", latinName: "Colias mirage", habitat: "Meadow", wingPattern: "Solid" },
-  { name: "Orchid Spinner", latinName: "Papilio orchis", habitat: "Garden", wingPattern: "Scales" },
-  { name: "Sunbeam Darter", latinName: "Junonia solis", habitat: "Meadow", wingPattern: "Stripes" },
-  { name: "Moonlit Breeze", latinName: "Kallima luna", habitat: "Wetland", wingPattern: "Solid" },
-  { name: "Prairie Flame", latinName: "Asterocampa ignis", habitat: "Meadow", wingPattern: "Spots" },
-  { name: "Sapphire Wisp", latinName: "Celastrina vapor", habitat: "Mountain", wingPattern: "Eyespots" },
-  { name: "Citrine Drift", latinName: "Gonepteryx citrina", habitat: "Garden", wingPattern: "Stripes" },
-  { name: "Crimson Lantern", latinName: "Talides rubra", habitat: "Forest", wingPattern: "Spots" },
-  { name: "Obsidian Shade", latinName: "Papilio obsidianus", habitat: "Mountain", wingPattern: "Solid" },
-  { name: "Pearl Mist", latinName: "Leptidia perla", habitat: "Wetland", wingPattern: "Spots" },
-  { name: "Verdant Haze", latinName: "Miletus virens", habitat: "Forest", wingPattern: "Scales" },
-  { name: "Copper Crown", latinName: "Argynnis cuprum", habitat: "Garden", wingPattern: "Stripes" },
-  { name: "Ruby Quill", latinName: "Papilio rubra", habitat: "Forest", wingPattern: "Scales" },
-  { name: "Forest Ember", latinName: "Charaxes ember", habitat: "Forest", wingPattern: "Eyespots" },
-  { name: "Ocean Whisper", latinName: "Colias marina", habitat: "Wetland", wingPattern: "Stripes" },
-  { name: "Dawn Tapestry", latinName: "Heliconius aurora", habitat: "Garden", wingPattern: "Scales" },
-  { name: "Storm Petal", latinName: "Vanessa tempestatis", habitat: "Mountain", wingPattern: "Spots" },
-  { name: "Amber Kite", latinName: "Papilio kitesa", habitat: "Garden", wingPattern: "Stripes" },
-  { name: "Snow Leaf", latinName: "Leptidea nivis", habitat: "Mountain", wingPattern: "Solid" },
-  { name: "Bronze Warden", latinName: "Nymphalis aeneus", habitat: "Forest", wingPattern: "Scales" },
-  { name: "Twilight Monarch", latinName: "Danaus vesper", habitat: "Garden", wingPattern: "Stripes" },
-  { name: "Jade Echo", latinName: "Papilio echo", habitat: "Wetland", wingPattern: "Eyespots" },
-  { name: "Ember Crest", latinName: "Charaxes emberis", habitat: "Forest", wingPattern: "Scales" },
-  { name: "Vale Dancer", latinName: "Miletus vallis", habitat: "Meadow", wingPattern: "Stripes" },
-  { name: "Meadow Flicker", latinName: "Colias flickera", habitat: "Meadow", wingPattern: "Spots" },
-  { name: "Verdant Gleam", latinName: "Pieris viridia", habitat: "Forest", wingPattern: "Scales" },
-  { name: "Arctic Shine", latinName: "Colias borealis", habitat: "Mountain", wingPattern: "Solid" },
-  { name: "Scarlet Comet", latinName: "Vanessa cometa", habitat: "Garden", wingPattern: "Stripes" },
-  { name: "Golden Arrow", latinName: "Papilio sagittus", habitat: "Meadow", wingPattern: "Stripes" },
-  { name: "Prairie Pearl", latinName: "Argynnis prairia", habitat: "Meadow", wingPattern: "Spots" },
-  { name: "Crystal Wing", latinName: "Himalia crystalla", habitat: "Forest", wingPattern: "Scales" },
-  { name: "Carbon Shadow", latinName: "Charaxes carbonis", habitat: "Mountain", wingPattern: "Solid" },
-  { name: "Highland Azure", latinName: "Polyura alticola", habitat: "Mountain", wingPattern: "Eyespots" },
-  { name: "Glade Sprite", latinName: "Tirumala silvatica", habitat: "Forest", wingPattern: "Stripes" },
-  { name: "Sunflare", latinName: "Heliconius solis", habitat: "Garden", wingPattern: "Scales" },
-  { name: "Whisper Moth", latinName: "Danaus susurrus", habitat: "Wetland", wingPattern: "Solid" },
+  { name: "Zambezi Paradise Skipper", latinName: "Abantis zambesiaca", habitat: "Meadow", wingPattern: "Spots", title: "Zambezi Paradise Skipper", summary: "A blue butterfly with spotted wing markings from meadow habitats", paragraphOne: "Abantis zambesiaca is a butterfly in the Hesperiidae family.", paragraphTwo: "This record is classified as blue with spots wing markings and a meadow habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 82, originValue: "Figma butterfly content" },
+  { name: "Plum Judy", latinName: "Abisara echerius", habitat: "Forest", wingPattern: "Stripes", title: "Plum Judy", summary: "An orange butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Abisara echerius is a butterfly in the Riodinidae family. Reference records describe it as occurring in Asia.", paragraphTwo: "This record is classified as orange with stripes wing markings and a forest habitat label.", researchVisibility: "Moderate", contributionsWelcome: "Range confirmations, habitat notes", populationRecords: 2742, originValue: "Figma butterfly content" },
+  { name: "Garden Acraea", latinName: "Acraea horta", habitat: "Garden", wingPattern: "Spots", title: "Garden Acraea", summary: "An orange butterfly with spotted wing markings from garden habitats", paragraphOne: "Acraea horta is a butterfly in the Nymphalidae family. Reference records describe it as occurring in South Africa and Zimbabwe.", paragraphTwo: "This record is classified as orange with spots wing markings and a garden habitat label.", researchVisibility: "High", contributionsWelcome: "Regional sightings, photo/source notes", populationRecords: 5671, originValue: "Figma butterfly content" },
+  { name: "Tawny Coster", latinName: "Acraea terpsicore", habitat: "Meadow", wingPattern: "Spots", title: "Tawny Coster", summary: "An orange butterfly with spotted wing markings from meadow habitats", paragraphOne: "Acraea terpsicore is a butterfly in the Nymphalidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as orange with spots wing markings and a meadow habitat label.", researchVisibility: "High", contributionsWelcome: "Regional sightings, photo/source notes", populationRecords: 14202, originValue: "Figma butterfly content" },
+  { name: "Painted Bamboo Ringlet", latinName: "Aphysoneura pigmentaria", habitat: "Mountain", wingPattern: "Eyespots", title: "Painted Bamboo Ringlet", summary: "A black butterfly with round eyespots on the wings from mountain habitats", paragraphOne: "Aphysoneura pigmentaria is a butterfly in the Nymphalidae family. Reference records describe it as occurring in the DRC, Uganda, Kenya, Tanzania, Malawi, Zambia and Zimbabwe.", paragraphTwo: "This record is classified as black with eyespots wing markings and a mountain habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 105, originValue: "Figma butterfly content" },
+  { name: "Argyrocheila Undifera", latinName: "Argyrocheila undifera", habitat: "Forest", wingPattern: "Spots", title: "Argyrocheila Undifera", summary: "A white butterfly with spotted wing markings from forest habitats", paragraphOne: "Argyrocheila undifera is a butterfly in the Pieridae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as white with spots wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 72, originValue: "Figma butterfly content" },
+  { name: "Aslauga Imitans", latinName: "Aslauga imitans", habitat: "Forest", wingPattern: "Solid", title: "Aslauga Imitans", summary: "A brown butterfly with shimmering scale colours from forest habitats", paragraphOne: "Aslauga imitans is a butterfly in the Lycaenidae family. Reference records describe it as occurring in Ghana, western Cameroon and the Democratic Republic of the Congo.", paragraphTwo: "This record is classified as brown with solid wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 14, originValue: "Figma butterfly content" },
+  { name: "Axiocerses Collinsi", latinName: "Axiocerses collinsi", habitat: "Forest", wingPattern: "Scales", title: "Axiocerses Collinsi", summary: "A red butterfly with shimmering scale colours from forest habitats", paragraphOne: "Axiocerses collinsi is a butterfly in the Lycaenidae family. Reference records describe it as occurring in the coastal forests of Kenya.", paragraphTwo: "This record is classified as red with scales wing markings and a forest habitat label.", researchVisibility: "High", contributionsWelcome: "Regional sightings, photo/source notes", populationRecords: 5390, originValue: "Figma butterfly content" },
+  { name: "Sophus Forester", latinName: "Bebearia sophus", habitat: "Forest", wingPattern: "Stripes", title: "Sophus Forester", summary: "A brown butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Bebearia sophus is a butterfly in the Nymphalidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as coloured with stripes wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 359, originValue: "Figma butterfly content" },
+  { name: "Pioneer White", latinName: "Belenois aurota", habitat: "Meadow", wingPattern: "Stripes", title: "Pioneer White", summary: "A white butterfly with bold striped or banded wings from meadow habitats", paragraphOne: "Belenois aurota is a butterfly in the Pieridae family. Reference records describe it as occurring in South Asia and Africa.", paragraphTwo: "This record is classified as white with stripes wing markings and a meadow habitat label.", researchVisibility: "High", contributionsWelcome: "Regional sightings, photo/source notes", populationRecords: 17718, originValue: "Figma butterfly content" },
+  { name: "Small Marbled Bush Brown", latinName: "Bicyclus auricruda", habitat: "Forest", wingPattern: "Eyespots", title: "Small Marbled Bush Brown", summary: "A brown butterfly with round eyespots on the wings from forest habitats", paragraphOne: "Bicyclus auricruda is a butterfly in the Nymphalidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as coloured with eyespots wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 144, originValue: "Figma butterfly content" },
+  { name: "Chirinda Bush Brown", latinName: "Bicyclus campinus ocelligerus", habitat: "Meadow", wingPattern: "Eyespots", title: "Chirinda Bush Brown", summary: "A brown butterfly with round eyespots on the wings from meadow habitats", paragraphOne: "Bicyclus campinus ocelligerus is a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as brown with eyespots wing markings and a meadow habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 75, originValue: "Figma butterfly content" },
+  { name: "Uniform Bush Brown", latinName: "Bicyclus uniformis", habitat: "Forest", wingPattern: "Eyespots", title: "Uniform Bush Brown", summary: "A brown butterfly with round eyespots on the wings from forest habitats", paragraphOne: "Bicyclus uniformis is a butterfly in the Nymphalidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as yellow with eyespots wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 63, originValue: "Figma butterfly content" },
+  { name: "Brakefieldia Eliasis", latinName: "Brakefieldia eliasis", habitat: "Forest", wingPattern: "Eyespots", title: "Brakefieldia Eliasis", summary: "A brown butterfly with round eyespots on the wings from forest habitats", paragraphOne: "Brakefieldia eliasis is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as yellow with eyespots wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 3, originValue: "Figma butterfly content" },
+  { name: "Brakefieldia Ochracea", latinName: "Brakefieldia ochracea", habitat: "Forest", wingPattern: "Eyespots", title: "Brakefieldia Ochracea", summary: "A brown butterfly with round eyespots on the wings from forest habitats", paragraphOne: "Brakefieldia ochracea is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as brown with eyespots wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 164, originValue: "Figma butterfly content" },
+  { name: "Rainforest Dancing Brown", latinName: "Cassionympha cassius", habitat: "Wetland", wingPattern: "Eyespots", title: "Rainforest Dancing Brown", summary: "A brown butterfly with round eyespots on the wings from wetland habitats", paragraphOne: "Cassionympha cassius is a butterfly in the Nymphalidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as orange with eyespots wing markings and a wetland habitat label.", researchVisibility: "Moderate", contributionsWelcome: "Range confirmations, habitat notes", populationRecords: 3081, originValue: "Figma butterfly content" },
+  { name: "African Migrant", latinName: "Catopsilia florella", habitat: "Garden", wingPattern: "Solid", title: "African Migrant", summary: "A white butterfly with broad, mostly solid wing colour from garden habitats", paragraphOne: "Catopsilia florella is a butterfly in the Pieridae family. Reference records describe it as occurring in Africa, Arabia and the Canary Islands.", paragraphTwo: "This record is classified as green with solid wing markings and a garden habitat label.", researchVisibility: "Moderate", contributionsWelcome: "Range confirmations, habitat notes", populationRecords: 10432, originValue: "Figma butterfly content" },
+  { name: "Cephetola Collinsi", latinName: "Cephetola collinsi", habitat: "Forest", wingPattern: "Solid", title: "Cephetola Collinsi", summary: "An orange butterfly with shimmering scale colours from forest habitats", paragraphOne: "Cephetola collinsi is a butterfly in the Lycaenidae family. Reference records describe it as occurring in Ivory Coast, Ghana, Togo and southern Nigeria.", paragraphTwo: "This record is classified as orange with solid wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 1, originValue: "Figma butterfly content" },
+  { name: "Common Forest Sylph", latinName: "Ceratrichia phocion", habitat: "Forest", wingPattern: "Spots", title: "Common Forest Sylph", summary: "A yellow skipper with spotted wing markings, associated with forest habitats", paragraphOne: "Ceratrichia phocion is a butterfly in the Hesperiidae family.", paragraphTwo: "This record is classified as yellow with spots wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 121, originValue: "Figma butterfly content" },
+  { name: "Blue Striped Prince", latinName: "Charaxes baumanni", habitat: "Meadow", wingPattern: "Scales", title: "Blue Striped Prince", summary: "A brown butterfly with spotted wing markings from meadow habitats", paragraphOne: "Charaxes baumanni is a butterfly in the Nymphalidae family. Reference records describe it as occurring in Sudan, Kenya, the Democratic Republic of the Congo, Uganda, Rwanda, Tanzania, Zambia, Malawi, Mozambique and Zimbabwe.", paragraphTwo: "This record is classified as brown with scales wing markings and a meadow habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 172, originValue: "Figma butterfly content" },
+  { name: "Charaxes Brutus", latinName: "Charaxes brutus angustus", habitat: "Forest", wingPattern: "Spots", title: "Charaxes Brutus", summary: "A multi-coloured butterfly with spotted wing markings from forest habitats", paragraphOne: "Charaxes brutus angustus is a butterfly in the Nymphalidae family. Reference records describe it as occurring in Africa.", paragraphTwo: "This record is classified as coloured with spots wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 352, originValue: "Figma butterfly content" },
+  { name: "Green Demon Charaxes", latinName: "Charaxes cedreatis", habitat: "Forest", wingPattern: "Scales", title: "Green Demon Charaxes", summary: "A brown butterfly with spotted wing markings from forest habitats", paragraphOne: "Charaxes cedreatis is a butterfly in the Nymphalidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as brown with scales wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 475, originValue: "Figma butterfly content" },
+  { name: "Auroral Blue Queen", latinName: "Charaxes doubledayi", habitat: "Forest", wingPattern: "Scales", title: "Auroral Blue Queen", summary: "A blue butterfly with spotted wing markings from forest habitats", paragraphOne: "Charaxes doubledayi is a butterfly in the Nymphalidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as blue with scales wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 68, originValue: "Figma butterfly content" },
+  { name: "Savannah Charaxes", latinName: "Charaxes etesipe", habitat: "Meadow", wingPattern: "Spots", title: "Savannah Charaxes", summary: "A multi-coloured butterfly with spotted wing markings from meadow habitats", paragraphOne: "Charaxes etesipe is a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as coloured with spots wing markings and a meadow habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 723, originValue: "Figma butterfly content" },
+  { name: "Imperial Blue Charaxes", latinName: "Charaxes imperialis", habitat: "Forest", wingPattern: "Stripes", title: "Imperial Blue Charaxes", summary: "A brown butterfly with spotted wing markings from forest habitats", paragraphOne: "Charaxes imperialis is a butterfly in the Nymphalidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as brown with stripes wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 325, originValue: "Figma butterfly content" },
+  { name: "Ornate Green Charaxes", latinName: "Charaxes subornatus", habitat: "Forest", wingPattern: "Solid", title: "Ornate Green Charaxes", summary: "A green butterfly with spotted wing markings from forest habitats", paragraphOne: "Charaxes subornatus is a butterfly in the Nymphalidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as green with solid wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 170, originValue: "Figma butterfly content" },
+  { name: "African White Pearl Emperor", latinName: "Charaxes varanes vologeses", habitat: "Forest", wingPattern: "Spots", title: "African White Pearl Emperor", summary: "An orange butterfly with spotted wing markings from forest habitats", paragraphOne: "Charaxes varanes vologeses is a butterfly in the Nymphalidae family. Reference records describe it as occurring in Africa from Saudi Arabia to South Africa.", paragraphTwo: "This record is classified as orange with spots wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 459, originValue: "Figma butterfly content" },
+  { name: "Cigaritis Crustaria", latinName: "Cigaritis crustaria", habitat: "Forest", wingPattern: "Stripes", title: "Cigaritis Crustaria", summary: "A green butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Cigaritis crustaria is a butterfly in the Lycaenidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as green with stripes wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 41, originValue: "Figma butterfly content" },
+  { name: "Colotis Celimene", latinName: "Colotis celimene sudanicus", habitat: "Meadow", wingPattern: "Spots", title: "Colotis Celimene", summary: "A red butterfly with spotted wing markings from meadow habitats", paragraphOne: "Colotis celimene sudanicus is a butterfly in the Pieridae family. Reference records describe it as occurring in the Afrotropical realm.", paragraphTwo: "This record is classified as red with spots wing markings and a meadow habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 384, originValue: "Figma butterfly content" },
+  { name: "Tailed Meadow Blue", latinName: "Cupidopsis jobates", habitat: "Meadow", wingPattern: "Stripes", title: "Tailed Meadow Blue", summary: "A blue butterfly with spotted wing markings from meadow habitats", paragraphOne: "Cupidopsis jobates is a butterfly in the Lycaenidae family. Reference records describe it as occurring in most of Africa, south of the Sahara.", paragraphTwo: "This record is classified as coloured with stripes wing markings and a meadow habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 836, originValue: "Figma butterfly content" },
+  { name: "Herminia Glider", latinName: "Cymothoe herminia jonhstoni", habitat: "Mountain", wingPattern: "Stripes", title: "Herminia Glider", summary: "A white butterfly with bold striped or banded wings from mountain habitats", paragraphOne: "Cymothoe herminia jonhstoni is a butterfly in the Nymphalidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as white with stripes wing markings and a mountain habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 69, originValue: "Figma butterfly content" },
+  { name: "Blood-red Glider", latinName: "Cymothoe sangaris", habitat: "Forest", wingPattern: "Solid", title: "Blood-red Glider", summary: "A red butterfly with broad, mostly solid wing colour from forest habitats", paragraphOne: "Cymothoe sangaris is a butterfly in the Nymphalidae family. Reference records describe it as occurring in Central Africa.", paragraphTwo: "This record is classified as red with solid wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 450, originValue: "Figma butterfly content" },
+  { name: "Plain Tiger Butterfly", latinName: "Danaus chrysippus", habitat: "Meadow", wingPattern: "Spots", title: "Plain Tiger Butterfly", summary: "An orange butterfly with spotted wing markings from meadow habitats", paragraphOne: "Danaus chrysippus is a butterfly in the Nymphalidae family. Reference records describe it as occurring in drier, wide-open areas.", paragraphTwo: "This record is classified as orange with spots wing markings and a meadow habitat label.", researchVisibility: "High", contributionsWelcome: "Regional sightings, photo/source notes", populationRecords: 55646, originValue: "Figma butterfly content" },
+  { name: "Western Virgin", latinName: "Dapidodigma hymen", habitat: "Forest", wingPattern: "Stripes", title: "Western Virgin", summary: "A brown butterfly with shimmering scale colours from forest habitats", paragraphOne: "Dapidodigma hymen is a butterfly in the Lycaenidae family.", paragraphTwo: "This record is classified as brown with stripes wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 31, originValue: "Figma butterfly content" },
+  { name: "Dixeia Charina", latinName: "Dixeia charina liliana", habitat: "Meadow", wingPattern: "Stripes", title: "Dixeia Charina", summary: "A white butterfly with bold striped or banded wings from meadow habitats", paragraphOne: "Dixeia charina liliana is a butterfly in the Pieridae family. Reference records describe it as occurring in southeastern Africa.", paragraphTwo: "This record is classified as white with stripes wing markings and a meadow habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 1788, originValue: "Figma butterfly content" },
+  { name: "Eastern Cream Flat", latinName: "Eagris lucetia", habitat: "Forest", wingPattern: "Stripes", title: "Eastern Cream Flat", summary: "A white butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Eagris lucetia is a butterfly in the Hesperiidae family.", paragraphTwo: "This record is classified as white with stripes wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 247, originValue: "Figma butterfly content" },
+  { name: "Ceres Forester", latinName: "Euphaedra ceres", habitat: "Forest", wingPattern: "Spots", title: "Ceres Forester", summary: "A green butterfly with spotted wing markings from forest habitats", paragraphOne: "Euphaedra ceres is a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as green with spots wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 456, originValue: "Figma butterfly content" },
+  { name: "Widespread Forester", latinName: "Euphaedra medon", habitat: "Forest", wingPattern: "Spots", title: "Widespread Forester", summary: "A blue butterfly with spotted wing markings from forest habitats", paragraphOne: "Euphaedra medon is a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as blue with spots wing markings and a forest habitat label.", researchVisibility: "Moderate", contributionsWelcome: "Range confirmations, habitat notes", populationRecords: 1123, originValue: "Figma butterfly content" },
+  { name: "Violet Forester", latinName: "Euphaedra violacea", habitat: "Forest", wingPattern: "Scales", title: "Violet Forester", summary: "A purple butterfly with spotted wing markings from forest habitats", paragraphOne: "Euphaedra violacea is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as purple with scales wing markings and a forest habitat label.", researchVisibility: "Moderate", contributionsWelcome: "Range confirmations, habitat notes", populationRecords: 11742, originValue: "Figma butterfly content" },
+  { name: "Zaddach's Mimic Forester", latinName: "Euphaedra zaddachii", habitat: "Forest", wingPattern: "Stripes", title: "Zaddach's Mimic Forester", summary: "An orange butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Euphaedra zaddachii is a butterfly in the Nymphalidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as red with stripes wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 161, originValue: "Figma butterfly content" },
+  { name: "Euptera Hirundo", latinName: "Euptera hirundo", habitat: "Forest", wingPattern: "Spots", title: "Euptera Hirundo", summary: "An orange butterfly with spotted wing markings from forest habitats", paragraphOne: "Euptera hirundo is a butterfly in the Nymphalidae family. Reference records describe it as occurring in Cameroon, Gabon, the Democratic Republic of the Congo, Uganda, Kenya, Zambia and Tanzania.", paragraphTwo: "This record is classified as orange with spots wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 43, originValue: "Figma butterfly content" },
+  { name: "Mottled-green Nymph", latinName: "Euryphura achlys", habitat: "Forest", wingPattern: "Spots", title: "Mottled-green Nymph", summary: "A green butterfly with spotted wing markings from forest habitats", paragraphOne: "Euryphura achlys is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as green with spots wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 202, originValue: "Figma butterfly content" },
+  { name: "Gabelana rosei", latinName: "Gabelana rosei", habitat: "Forest", wingPattern: "Spots", title: "Gabelana rosei", summary: "A toxic, spotted pink butterfly from East African savannas", paragraphOne: "Stephenia caecilia is a butterfly belonging to the Nymphalidae family. The scientific name of this species was first proposed as Papilio caecilia by Johann Christian Fabricius in a publication in 1781.", paragraphTwo: "This record is classified as coloured with spots wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 0, originValue: "Figma butterfly content" },
+  { name: "Glutophrissa White", latinName: "Glutophrissa", habitat: "Forest", wingPattern: "Solid", title: "Glutophrissa White", summary: "A white butterfly with broad, mostly solid wing colour from forest habitats", paragraphOne: "Glutophrissa is listed in biodiversity taxon references as a butterfly in the Pieridae family.", paragraphTwo: "This record is classified as white with solid wing markings and a forest habitat label.", researchVisibility: "Moderate", contributionsWelcome: "Range confirmations, habitat notes", populationRecords: 11885, originValue: "Figma butterfly content" },
+  { name: "Large Striped Swordtail", latinName: "Graphium antheus", habitat: "Forest", wingPattern: "Stripes", title: "Large Striped Swordtail", summary: "A blue butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Graphium antheus is listed in biodiversity taxon references as a butterfly in the Papilionidae family.", paragraphTwo: "This record is classified as blue with stripes wing markings and a forest habitat label.", researchVisibility: "Moderate", contributionsWelcome: "Range confirmations, habitat notes", populationRecords: 2871, originValue: "Figma butterfly content" },
+  { name: "Western Hallelesis", latinName: "Hallelesis halyma", habitat: "Forest", wingPattern: "Eyespots", title: "Western Hallelesis", summary: "A brown butterfly with round eyespots on the wings from forest habitats", paragraphOne: "Hallelesis halyma is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as brown with eyespots wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 86, originValue: "Figma butterfly content" },
+  { name: "Hewitsonia rogerioi", latinName: "Hewitsonia rogerioi", habitat: "Forest", wingPattern: "Stripes", title: "Hewitsonia rogerioi", summary: "A white butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Hewitsonia rogerioi is listed in biodiversity taxon references as a butterfly in the Lycaenidae family.", paragraphTwo: "This record is classified as white with stripes wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 276, originValue: "Figma butterfly content" },
+  { name: "Hypolimnas Salmacis", latinName: "Hypolimnas salmacis magnifica", habitat: "Forest", wingPattern: "Scales", title: "Hypolimnas Salmacis", summary: "A blue butterfly with spotted wing markings from forest habitats", paragraphOne: "Hypolimnas salmacis magnifica is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as blue with scales wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 25, originValue: "Figma butterfly content" },
+  { name: "Black-patch Hairstreak", latinName: "Hypolycaena liara", habitat: "Forest", wingPattern: "Scales", title: "Black-patch Hairstreak", summary: "A purple butterfly with shimmering scale colours from forest habitats", paragraphOne: "Hypolycaena liara is listed in biodiversity taxon references as a butterfly in the Lycaenidae family.", paragraphTwo: "This record is classified as coloured with scales wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 68, originValue: "Figma butterfly content" },
+  { name: "Common Hairstreak", latinName: "Hypolycaena philippus", habitat: "Forest", wingPattern: "Scales", title: "Common Hairstreak", summary: "A purple butterfly with shimmering scale colours from forest habitats", paragraphOne: "Hypolycaena philippus is listed in biodiversity taxon references as a butterfly in the Lycaenidae family.", paragraphTwo: "This record is classified as purple with scales wing markings and a forest habitat label.", researchVisibility: "Moderate", contributionsWelcome: "Range confirmations, habitat notes", populationRecords: 4045, originValue: "Figma butterfly content" },
+  { name: "Giant Sapphire", latinName: "Iolaus alcibiades", habitat: "Forest", wingPattern: "Scales", title: "Giant Sapphire", summary: "A blue butterfly with shimmering scale colours from forest habitats", paragraphOne: "Iolaus alcibiades is listed in biodiversity taxon references as a butterfly in the Lycaenidae family.", paragraphTwo: "This record is classified as blue with scales wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 9, originValue: "Figma butterfly content" },
+  { name: "Lalos Sapphire", latinName: "Iolaus lalos", habitat: "Forest", wingPattern: "Scales", title: "Lalos Sapphire", summary: "A white butterfly with shimmering scale colours from forest habitats", paragraphOne: "Iolaus lalos is listed in biodiversity taxon references as a butterfly in the Lycaenidae family.", paragraphTwo: "This record is classified as white with scales wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 643, originValue: "Figma butterfly content" },
+  { name: "Incredible Sapphire Gem", latinName: "Iridana incredibilis", habitat: "Forest", wingPattern: "Scales", title: "Incredible Sapphire Gem", summary: "A brown butterfly with shimmering scale colours from forest habitats", paragraphOne: "Iridana incredibilis is listed in biodiversity taxon references as a butterfly in the Lycaenidae family.", paragraphTwo: "This record is classified as brown with scales wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 11, originValue: "Figma butterfly content" },
+  { name: "Kollarik's Sapphire Gem", latinName: "Iridana kollariki", habitat: "Forest", wingPattern: "Scales", title: "Kollarik's Sapphire Gem", summary: "An orange butterfly with shimmering scale colours from forest habitats", paragraphOne: "Iridana kollariki is listed in biodiversity taxon references as a butterfly in the Lycaenidae family.", paragraphTwo: "This record is classified as red with scales wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 0, originValue: "Figma butterfly content" },
+  { name: "Central Blue Leaf-pansy", latinName: "Junonia cymodoce lugens", habitat: "Meadow", wingPattern: "Eyespots", title: "Central Blue Leaf-pansy", summary: "A purple butterfly with round eyespots on the wings from meadow habitats", paragraphOne: "Junonia cymodoce lugens is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as purple with eyespots wing markings and a meadow habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 84, originValue: "Figma butterfly content" },
+  { name: "Gregori's Brown Pansy", latinName: "Junonia gregorii", habitat: "Meadow", wingPattern: "Spots", title: "Gregori's Brown Pansy", summary: "A brown butterfly with spotted wing markings from meadow habitats", paragraphOne: "Junonia gregorii is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as red with spots wing markings and a meadow habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 358, originValue: "Figma butterfly content" },
+  { name: "Blue-spot Pansy", latinName: "Junonia oenone", habitat: "Meadow", wingPattern: "Eyespots", title: "Blue-spot Pansy", summary: "A black butterfly with round eyespots on the wings from meadow habitats", paragraphOne: "Junonia oenone is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as black with eyespots wing markings and a meadow habitat label.", researchVisibility: "High", contributionsWelcome: "Regional sightings, photo/source notes", populationRecords: 10498, originValue: "Figma butterfly content" },
+  { name: "Junonia Orythia", latinName: "Junonia orythia madagascarensis", habitat: "Meadow", wingPattern: "Eyespots", title: "Junonia Orythia", summary: "A blue butterfly with round eyespots on the wings from meadow habitats", paragraphOne: "Junonia orythia madagascarensis is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as blue with eyespots wing markings and a meadow habitat label.", researchVisibility: "Moderate", contributionsWelcome: "Range confirmations, habitat notes", populationRecords: 2756, originValue: "Figma butterfly content" },
+  { name: "Eastern Blue Mother-of-Pearl", latinName: "Junonia temora", habitat: "Meadow", wingPattern: "Eyespots", title: "Eastern Blue Mother-of-Pearl", summary: "A blue butterfly with round eyespots on the wings from meadow habitats", paragraphOne: "Junonia temora is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as blue with eyespots wing markings and a meadow habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Taxonomy checks, habitat notes", populationRecords: 362, originValue: "Figma butterfly content" },
+  { name: "Common Harlequin", latinName: "Mimeresia libentina", habitat: "Forest", wingPattern: "Stripes", title: "Common Harlequin", summary: "An orange butterfly with shimmering scale colours from forest habitats", paragraphOne: "Mimeresia libentina is a butterfly in the Lycaenidae family. Reference records describe it as occurring in Sierra Leone, Liberia, Ivory Coast, Ghana, Togo, Nigeria, Cameroon, Equatorial Guinea and Gabon.", paragraphTwo: "This record is classified as orange with stripes wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 99, originValue: "Figma butterfly content" },
+  { name: "Western Sailor", latinName: "Neptis occidentalis", habitat: "Forest", wingPattern: "Scales", title: "Western Sailor", summary: "A black butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Neptis occidentalis is a butterfly in the Nymphalidae family. Reference records describe it as occurring in Nigeria, Cameroon, the Democratic Republic of the Congo, Sudan, Uganda, Kenya and Tanzania.", paragraphTwo: "This record is classified as black with scales wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 12, originValue: "Figma butterfly content" },
+  { name: "Giant African Swallowtail", latinName: "Papilio antimachus", habitat: "Forest", wingPattern: "Stripes", title: "Giant African Swallowtail", summary: "A yellow butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Papilio antimachus is a butterfly in the Papilionidae family.", paragraphTwo: "This record is classified as yellow with stripes wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 229, originValue: "Figma butterfly content" },
+  { name: "Mocker Swallowtail", latinName: "Papilio dardanus", habitat: "Forest", wingPattern: "Stripes", title: "Mocker Swallowtail", summary: "A white butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Papilio dardanus is a butterfly in the Papilionidae family.", paragraphTwo: "This record is classified as yellow with stripes wing markings and a forest habitat label.", researchVisibility: "Moderate", contributionsWelcome: "Range confirmations, habitat notes", populationRecords: 9265, originValue: "Figma butterfly content" },
+  { name: "Citrus Swallowtail", latinName: "Papilio demodocus", habitat: "Garden", wingPattern: "Spots", title: "Citrus Swallowtail", summary: "A black butterfly with spotted wing markings from garden habitats", paragraphOne: "Papilio demodocus is a butterfly in the Papilionidae family.", paragraphTwo: "This record is classified as black with spots wing markings and a garden habitat label.", researchVisibility: "Moderate", contributionsWelcome: "Range confirmations, habitat notes", populationRecords: 13682, originValue: "Figma butterfly content" },
+  { name: "Mechow's Swallowtail", latinName: "Papilio mechowi", habitat: "Forest", wingPattern: "Stripes", title: "Mechow's Swallowtail", summary: "A brown butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Papilio mechowi is a butterfly in the Papilionidae family. Reference records describe it as occurring in Africa.", paragraphTwo: "This record is classified as brown with stripes wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 349, originValue: "Figma butterfly content" },
+  { name: "Emerald Peacock Swallowtail", latinName: "Papilio palinurus", habitat: "Forest", wingPattern: "Scales", title: "Emerald Peacock Swallowtail", summary: "A green butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Papilio palinurus is a butterfly in the Papilionidae family. Reference records describe it as occurring in Southeast Asia, but is regularly kept in butterfly houses around the world.", paragraphTwo: "This record is classified as green with scales wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 504, originValue: "Figma butterfly content" },
+  { name: "Madagascar Giant Swallowtail", latinName: "Pharmacophagus antenor", habitat: "Forest", wingPattern: "Spots", title: "Madagascar Giant Swallowtail", summary: "A black butterfly with spotted wing markings from forest habitats", paragraphOne: "Pharmacophagus antenor is a butterfly in the Papilionidae family.", paragraphTwo: "This record is classified as black with spots wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 284, originValue: "Figma butterfly content" },
+  { name: "Physcaeneura Leda", latinName: "Physcaeneura leda", habitat: "Meadow", wingPattern: "Spots", title: "Physcaeneura Leda", summary: "A white butterfly with spotted wing markings from meadow habitats", paragraphOne: "Physcaeneura leda is a butterfly in the Nymphalidae family. Reference records describe it from sea level to 1,850 meters.", paragraphTwo: "This record is classified as white with spots wing markings and a meadow habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 196, originValue: "Figma butterfly content" },
+  { name: "Square-winged Red Charaxes", latinName: "Polyura pleione", habitat: "Forest", wingPattern: "Stripes", title: "Square-winged Red Charaxes", summary: "A brown butterfly with spotted wing markings from forest habitats", paragraphOne: "Polyura pleione is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as orange with stripes wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 0, originValue: "Figma butterfly content" },
+  { name: "Banded Commodore", latinName: "Precis andremiaja", habitat: "Forest", wingPattern: "Eyespots", title: "Banded Commodore", summary: "A brown butterfly with round eyespots on the wings from forest habitats", paragraphOne: "Precis andremiaja is a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as brown with eyespots wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 294, originValue: "Figma butterfly content" },
+  { name: "Wide-banded Commodore", latinName: "Precis sinuata hecqi", habitat: "Meadow", wingPattern: "Spots", title: "Wide-banded Commodore", summary: "A red butterfly with spotted wing markings from meadow habitats", paragraphOne: "Precis sinuata hecqi is a butterfly in the Nymphalidae family. Reference records describe it as occurring in parts of Africa.", paragraphTwo: "This record is classified as red with spots wing markings and a meadow habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 99, originValue: "Figma butterfly content" },
+  { name: "False Chief", latinName: "Pseudacraea lucretia", habitat: "Forest", wingPattern: "Stripes", title: "False Chief", summary: "A black butterfly with spotted wing markings from forest habitats", paragraphOne: "Pseudacraea lucretia is a butterfly in the Nymphalidae family. Reference records describe it as occurring in Africa.", paragraphTwo: "This record is classified as black with stripes wing markings and a forest habitat label.", researchVisibility: "Moderate", contributionsWelcome: "Range confirmations, habitat notes", populationRecords: 2124, originValue: "Figma butterfly content" },
+  { name: "False Fritillary", latinName: "Pseudargynnis", habitat: "Wetland", wingPattern: "Spots", title: "False Fritillary", summary: "An orange butterfly with spotted wing markings from wetland habitats", paragraphOne: "Pseudargynnis is a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as orange with spots wing markings and a wetland habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Species-level IDs, local sightings", populationRecords: 9, originValue: "Figma butterfly content" },
+  { name: "Mabira Ghost", latinName: "Pseudopontia mabira", habitat: "Forest", wingPattern: "Solid", title: "Mabira Ghost", summary: "A white butterfly with broad, mostly solid wing colour from forest habitats", paragraphOne: "Pseudopontia mabira is a butterfly in the Pieridae family.", paragraphTwo: "This record is classified as white with solid wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 48, originValue: "Figma butterfly content" },
+  { name: "Blue Red-eye", latinName: "Pteroteinon laufella", habitat: "Forest", wingPattern: "Scales", title: "Blue Red-eye", summary: "A white butterfly with bold striped or banded wings from forest habitats", paragraphOne: "Pteroteinon laufella is a butterfly in the Hesperiidae family.", paragraphTwo: "This record is classified as green with scales wing markings and a forest habitat label.", researchVisibility: "Very sparse", contributionsWelcome: "Basic sightings, habitat notes", populationRecords: 63, originValue: "Figma butterfly content" },
+  { name: "Pink Acraea", latinName: "Stephenia caecilia", habitat: "Meadow", wingPattern: "Spots", title: "Pink Acraea", summary: "An orange butterfly with spotted wing markings from meadow habitats", paragraphOne: "Stephenia caecilia is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as orange with spots wing markings and a meadow habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Species-level IDs, local sightings", populationRecords: 0, originValue: "Figma butterfly content" },
+  { name: "Wichgraf's Hillside Brown", latinName: "Stygionympha wichgrafi", habitat: "Mountain", wingPattern: "Eyespots", title: "Wichgraf's Hillside Brown", summary: "A red butterfly with round eyespots on the wings from mountain habitats", paragraphOne: "Stygionympha wichgrafi is a butterfly in the Nymphalidae family. Reference records describe it as occurring in South Africa, Zimbabwe and Mozambique.", paragraphTwo: "This record is classified as red with eyespots wing markings and a mountain habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 909, originValue: "Figma butterfly content" },
+  { name: "Painted Lady", latinName: "Vanessa cardui", habitat: "Garden", wingPattern: "Spots", title: "Painted Lady", summary: "An orange butterfly with spotted wing markings from garden habitats", paragraphOne: "Vanessa cardui is a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as orange with spots wing markings and a garden habitat label.", researchVisibility: "High", contributionsWelcome: "Regional sightings, photo/source notes", populationRecords: 1457932, originValue: "Figma butterfly content" },
+  { name: "Silver Ringlet", latinName: "Ypthima albida albida", habitat: "Mountain", wingPattern: "Eyespots", title: "Silver Ringlet", summary: "A white butterfly with round eyespots on the wings from mountain habitats", paragraphOne: "Ypthima albida albida is a butterfly in the Nymphalidae family. Reference records describe it as occurring in Nigeria, Cameroon, Sudan, the Democratic Republic of the Congo, Uganda, Rwanda, Burundi, Kenya and Tanzania.", paragraphTwo: "This record is classified as white with eyespots wing markings and a mountain habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 247, originValue: "Figma butterfly content" },
+  { name: "Common Ringlet", latinName: "Ypthima doleta", habitat: "Forest", wingPattern: "Eyespots", title: "Common Ringlet", summary: "A white butterfly with round eyespots on the wings from forest habitats", paragraphOne: "Ypthima doleta is listed in biodiversity taxon references as a butterfly in the Nymphalidae family.", paragraphTwo: "This record is classified as white with eyespots wing markings and a forest habitat label.", researchVisibility: "Sparse", contributionsWelcome: "Habitat notes, local sightings", populationRecords: 163, originValue: "Figma butterfly content" },
 ];
 
 const namedButterflyProfiles = namedButterflyDetails.map((profile, index) => ({
@@ -632,8 +632,11 @@ const butterflyProfiles = [
 ];
 
 const archivePositions = positions.slice(0, butterflyProfiles.length);
-const modalParagraphClass = "text-[16px] leading-[1.55] text-[#3f3b39]";
-const modalSmallParagraphClass = "text-[14px] leading-[1.5] text-[#6f7c91] sm:text-[15px]";
+const modalParagraphClass = "text-[16px] leading-[1.55] text-[#3f3b39] 2xl:text-[19px]";
+const modalSmallParagraphClass = "text-[14px] leading-[1.5] text-[#6f7c91] sm:text-[15px] 2xl:text-[17px]";
+const modalItalicTextClass = "text-[#6f7f57]";
+const modalProfileItalicClass = `mt-[10px] text-[16px] italic leading-tight ${modalItalicTextClass} md:text-[18px]`;
+const modalSmallItalicClass = `text-[14px] italic leading-[1.5] ${modalItalicTextClass} sm:text-[15px]`;
 
 function normalizeWingColour(wingColour) {
   return String(wingColour || "").trim().replace(/\s+/g, " ").replace(/^[a-z]/, (char) => char.toUpperCase());
@@ -650,33 +653,45 @@ function colourFamilyForFill(fillColor) {
   return "Orange";
 }
 
+function sizeFromPopulationRecords(records) {
+  const count = Math.max(0, Number(records) || 0);
+  const cappedCount = Math.min(count, 100000);
+  const normalized = Math.log10(cappedCount + 1) / 5;
+  return Math.round(28 + normalized * 38);
+}
+
 function makeButterflies() {
   return archivePositions.map(([top, left, size], index) => {
     const profile = butterflyProfiles[index];
     const wingColour = normalizeWingColour(profile.wingColour);
     const fillColor = wingColourNodeFills[wingColour] || fills[(index * 5 + 2) % fills.length];
-    const habitat = habitatKeys[(index * 7 + 1) % habitatKeys.length];
+    const habitat = habitats[profile.habitat] ? profile.habitat : habitatKeys[(index * 7 + 1) % habitatKeys.length];
+    const populationRecords = Number(profile.populationRecords) || 0;
 
     return {
       id: index + 1,
-      name: `${profile.name} ${String(index + 1).padStart(2, "0")}`,
+      name: profile.name,
+      archiveNumber: String(index + 1).padStart(2, "0"),
       title: profile.title,
       latinName: profile.latinName,
       top,
       left,
-      size,
+      size: sizeFromPopulationRecords(populationRecords),
+      populationRecords,
       fillColor,
       habitat,
-      completeness: 45 + ((index * 13) % 50),
       delay: (index % 9) * 0.12,
       drift: 4 + (index % 5) * 1.6,
       image: profile.image,
       ringColor: habitats[habitat].ringColor,
       sectionLabel: "Butterfly Display",
-      paragraphOne: `${profile.name} is represented with one of the local butterfly files while the node reflects its archive colour group.`,
-      paragraphTwo: `This butterfly is classified as ${profile.wingColour.toLowerCase()} with ${profile.wingPattern.toLowerCase()} markings for the colour and wing-pattern filters.`,
+      summary: profile.summary || "",
+      paragraphOne: profile.paragraphOne || `${profile.name} is represented with one of the local butterfly files while the node reflects its archive colour group.`,
+      paragraphTwo: profile.paragraphTwo || `This butterfly is classified as ${profile.wingColour.toLowerCase()} with ${profile.wingPattern.toLowerCase()} markings for the colour and wing-pattern filters.`,
+      researchVisibility: profile.researchVisibility || "Sparse",
+      contributionsWelcome: profile.contributionsWelcome || "Habitat notes, local sightings",
       originLabel: "Origin",
-      originValue: "Local butterfly file",
+      originValue: profile.originValue || "Local butterfly file",
       wingPattern: profile.wingPattern,
       wingColour,
       mimicry: mimicryOptions[index % mimicryOptions.length].label,
@@ -708,7 +723,7 @@ function ModalShell({ children, onClose, className = "", labelledBy, align = "ce
         transition={{ duration: 0.2 }}
         onClick={(event) => event.stopPropagation()}
       >
-        <button type="button" onClick={onClose} aria-label="Close dialog" className="absolute right-[18px] top-[18px] z-10 grid h-6 w-6 place-items-center text-slate-400 transition active:scale-95">
+        <button type="button" onClick={onClose} aria-label="Close dialog" className="absolute right-[18px] top-[18px] z-10 grid h-8 w-8 place-items-center rounded-full text-slate-400 transition active:scale-95 2xl:h-12 2xl:w-12 2xl:bg-stone-50">
           <CloseIcon size={21} />
         </button>
         {children}
@@ -724,14 +739,14 @@ function FilterChip({ option, group, activeFilters, onToggle, type = "icon" }) {
     <button
       type="button"
       onClick={() => onToggle(group, option.label)}
-      className={`inline-flex min-h-8 items-center gap-1.5 rounded-full border px-2.5 text-[11px] font-medium transition active:scale-95 sm:min-h-9 sm:px-3 sm:text-[12px] ${selected ? "border-slate-400 bg-slate-50 text-slate-950 shadow-inner" : "border-slate-200 bg-white text-slate-600"}`}
+      className={`inline-flex min-h-8 items-center gap-1.5 rounded-full border px-2.5 text-[11px] font-medium transition active:scale-95 sm:min-h-9 sm:px-3 sm:text-[12px] 2xl:min-h-12 2xl:gap-2 2xl:px-4 2xl:text-[15px] ${selected ? "border-slate-400 bg-slate-50 text-slate-950 shadow-inner" : "border-slate-200 bg-white text-slate-600"}`}
     >
       {type === "colour" ? (
-        <span className="h-4 w-4 rounded-full border border-slate-200" style={{ background: option.gradient || option.color }} />
+        <span className="h-4 w-4 rounded-full border border-slate-200 2xl:h-5 2xl:w-5" style={{ background: option.gradient || option.color }} />
       ) : type === "dot" ? (
-        <span className="h-4 w-4 rounded-full border border-slate-200" style={{ backgroundColor: option.color }} />
+        <span className="h-4 w-4 rounded-full border border-slate-200 2xl:h-5 2xl:w-5" style={{ backgroundColor: option.color }} />
       ) : (
-        <span className="min-w-4 text-center text-[14px] leading-none">{option.icon}</span>
+        <span className="min-w-4 text-center text-[14px] leading-none 2xl:min-w-5 2xl:text-[17px]">{option.icon}</span>
       )}
       <span>{option.label}</span>
     </button>
@@ -741,8 +756,8 @@ function FilterChip({ option, group, activeFilters, onToggle, type = "icon" }) {
 function FilterSection({ title, options, group, activeFilters, onToggle, type }) {
   return (
     <section>
-      <h3 className="mb-2 text-[12px] font-semibold leading-tight tracking-[-0.02em] text-slate-600 sm:text-[13px]">{title}</h3>
-      <div className="flex flex-wrap gap-2">
+      <h3 className="mb-2 text-[12px] font-semibold leading-tight tracking-[-0.02em] text-slate-600 sm:text-[13px] 2xl:mb-3 2xl:text-[16px]">{title}</h3>
+      <div className="flex flex-wrap gap-2 2xl:gap-3">
         {options.map((option) => (
           <FilterChip key={option.label} option={option} group={group} activeFilters={activeFilters} onToggle={onToggle} type={type} />
         ))}
@@ -753,14 +768,14 @@ function FilterSection({ title, options, group, activeFilters, onToggle, type })
 
 function AdvancedFilterModal({ activeFilters, onToggle, onReset, onClose }) {
   return (
-    <ModalShell onClose={onClose} labelledBy="advanced-filter-title" align="right" className="mr-0 w-[calc(100vw-36px)] max-w-[380px] rounded-[20px] px-[18px] pb-[18px] pt-[18px] sm:mr-[18px] sm:w-full">
-      <div className="mb-[18px] flex items-center justify-between gap-[18px] border-b border-slate-200 pb-[18px] pr-12">
-        <h2 id="advanced-filter-title" className="m-0 max-w-[calc(100%-88px)] text-[20px] font-bold leading-tight tracking-tight text-slate-950 sm:text-[21px]">Filters</h2>
-        <button type="button" onClick={onReset} className="min-h-8 rounded-full border border-slate-200 bg-white px-3 text-[11px] font-semibold text-slate-600 transition active:scale-95 sm:min-h-9 sm:text-[12px]">
+    <ModalShell onClose={onClose} labelledBy="advanced-filter-title" align="right" className="mr-0 w-[calc(100vw-36px)] max-w-[380px] rounded-[20px] px-[18px] pb-[18px] pt-[18px] sm:mr-[18px] sm:w-full 2xl:mr-8 2xl:max-w-[520px] 2xl:rounded-[24px] 2xl:px-7 2xl:pb-7 2xl:pt-7">
+      <div className="mb-[18px] flex items-center justify-between gap-[18px] border-b border-slate-200 pb-[18px] pr-12 2xl:mb-6 2xl:pb-6 2xl:pr-16">
+        <h2 id="advanced-filter-title" className="m-0 max-w-[calc(100%-88px)] text-[20px] font-bold leading-tight tracking-tight text-slate-950 sm:text-[21px] 2xl:text-[28px]">Filters</h2>
+        <button type="button" onClick={onReset} className="min-h-8 rounded-full border border-slate-200 bg-white px-3 text-[11px] font-semibold text-slate-600 transition active:scale-95 sm:min-h-9 sm:text-[12px] 2xl:min-h-12 2xl:px-5 2xl:text-[15px]">
           Reset Filters
         </button>
       </div>
-      <div className="space-y-[18px]">
+      <div className="space-y-[18px] 2xl:space-y-7">
         <FilterSection title="Butterfly Wing Patterns" options={wingPatternOptions} group="wingPatterns" activeFilters={activeFilters} onToggle={onToggle} />
         <FilterSection title="Habitat" options={habitatFilterOptions} group="habitats" activeFilters={activeFilters} onToggle={onToggle} type="dot" />
         <FilterSection title="Wing Colour" options={wingColourOptions} group="wingColours" activeFilters={activeFilters} onToggle={onToggle} type="colour" />
@@ -820,15 +835,14 @@ function StatIcon({ type }) {
 
 function AboutArchiveModal({ onClose }) {
   return (
-    <ModalShell onClose={onClose} labelledBy="info-archive-title" align="left" className="mb-[40px] ml-0 h-[1088px] w-[360px] max-w-[calc(100vw-36px)] rounded-[18px] px-8 py-10 sm:ml-[18px]">
-      <h2 id="info-archive-title" className="max-w-[calc(100%-52px)] text-[24px] font-semibold leading-[1.12] text-[#1d2a1e] sm:text-[26px]">About the Archive</h2>
+    <ModalShell onClose={onClose} labelledBy="info-archive-title" align="left" className="mb-[40px] ml-0 h-[1088px] w-[360px] max-w-[calc(100vw-36px)] rounded-[18px] px-8 py-10 sm:ml-[18px] 2xl:ml-8 2xl:w-[460px] 2xl:rounded-[24px] 2xl:px-10 2xl:py-12">
+      <h2 id="info-archive-title" className="max-w-[calc(100%-52px)] text-[24px] font-semibold leading-[1.12] text-[#1d2a1e] sm:text-[26px] 2xl:text-[32px]">About the Archive</h2>
       <p className={`mt-[18px] ${modalParagraphClass}`}>
-        This an evolving archive of butterfly records. You will explore connections through colour, habitat, completeness and discovery. Journey through the vibrant world of East African butterflies, where each wing pattern tells a story millions of years in the making and color is never accidental it is strategy.These delicate creatures, with wings painted in nature's most vibrant palette, represent millions of years of adaptation to one of Earth's most diverse ecosystems.
+        This an evolving archive of butterfly records. You will explore connections through colour, habitat and discovery. Journey through the vibrant world of East African butterflies, where each wing pattern tells a story millions of years in the making and color is never accidental it is strategy.These delicate creatures, with wings painted in nature's most vibrant palette, represent millions of years of adaptation to one of Earth's most diverse ecosystems.
       </p>
       <div className="mt-[18px] space-y-[18px]">
         <AboutMetric icon={<StatIcon type="records" />} value={archivePositions.length} label="Species" tint="bg-emerald-50" iconColor="text-emerald-700" />
         <AboutMetric icon={<StatIcon type="habitats" />} value="6" label="Habitats" tint="bg-orange-50" iconColor="text-orange-700" />
-        <AboutMetric icon={<StatIcon type="completeness" />} value="68%" label="Avg. completeness" tint="bg-slate-100" iconColor="text-slate-600" />
       </div>
       <div className={`mt-[18px] border-t border-slate-200 pt-[18px] ${modalParagraphClass}`}>
         Touch any circle to explore. Your path is saved as black breadcrumb dots.
@@ -839,11 +853,11 @@ function AboutArchiveModal({ onClose }) {
 
 function VisualKeyItem({ marker, title, description }) {
   return (
-    <div className="grid grid-cols-[40px_1fr] items-center gap-3">
+    <div className="grid grid-cols-[40px_1fr] items-center gap-3 2xl:grid-cols-[54px_1fr] 2xl:gap-4">
       <div className="flex justify-center">{marker}</div>
       <div>
-        <h5 className="text-[13px] font-semibold leading-tight text-[#4f7a3f]">{title}</h5>
-        <p className={`mt-1.5 text-[16px] leading-[1.55] text-[#3f3b39]`}>{description}</p>
+        <h5 className="text-[13px] font-semibold leading-tight text-[#4f7a3f] 2xl:text-[17px]">{title}</h5>
+        <p className={`mt-1.5 text-[16px] leading-[1.55] text-[#3f3b39] 2xl:text-[19px]`}>{description}</p>
       </div>
     </div>
   );
@@ -851,11 +865,11 @@ function VisualKeyItem({ marker, title, description }) {
 
 function VisualKeyModal({ onClose }) {
   return (
-    <ModalShell onClose={onClose} labelledBy="visual-key-title" align="right" className="mb-[40px] mr-0 w-[calc(100vw-36px)] max-w-[340px] rounded-[20px] px-[18px] pb-[40px] pt-[18px] sm:mr-[18px] sm:w-full">
-      <div className="border-b border-slate-200 pb-[18px] pr-[42px]">
-        <h4 id="visual-key-title" className="max-w-full text-[16px] font-medium leading-[1.22] text-[#1d2a1e] sm:text-[17px]">How to go through the archive</h4>
+    <ModalShell onClose={onClose} labelledBy="visual-key-title" align="right" className="mb-[40px] mr-0 w-[calc(100vw-36px)] max-w-[340px] rounded-[20px] px-[18px] pb-[40px] pt-[18px] sm:mr-[18px] sm:w-full 2xl:mr-8 2xl:max-w-[430px] 2xl:rounded-[24px] 2xl:px-7 2xl:pb-10 2xl:pt-7">
+      <div className="border-b border-slate-200 pb-[18px] pr-[42px] 2xl:pb-6 2xl:pr-16">
+        <h4 id="visual-key-title" className="max-w-full text-[16px] font-medium leading-[1.22] text-[#1d2a1e] sm:text-[17px] 2xl:text-[23px]">How to go through the archive</h4>
       </div>
-      <div className="mt-[18px] space-y-[18px]">
+      <div className="mt-[18px] space-y-[18px] 2xl:mt-6 2xl:space-y-7">
         <VisualKeyItem
           marker={<span className="h-8 w-8 rounded-full bg-gradient-to-br from-[#aaa8ff] to-[#efd0ef]" />}
           title="Wing colour"
@@ -865,6 +879,16 @@ function VisualKeyModal({ onClose }) {
           marker={<span className="h-8 w-8 rounded-full border-[5px] border-slate-200 bg-white" />}
           title="Habitat ring"
           description="The ring colour shows where the species lives"
+        />
+        <VisualKeyItem
+          marker={
+            <span className="flex h-10 w-11 items-center justify-center gap-1.5" aria-hidden="true">
+              <span className="h-4 w-4 rounded-full border-[3px] border-[#d7ded4] bg-[#f6fbf4]" />
+              <span className="h-8 w-8 rounded-full border-[5px] border-[#8fb07f] bg-[#eef7ea]" />
+            </span>
+          }
+          title="Ring Size"
+          description="GBIF observation density proxy"
         />
         <VisualKeyItem
           marker={
@@ -883,6 +907,7 @@ function VisualKeyModal({ onClose }) {
 function SpecimenScientificModal({ specimen, onClose }) {
   const [zoomOpen, setZoomOpen] = useState(false);
   const [zoomedIn, setZoomedIn] = useState(true);
+  const [contributionOpen, setContributionOpen] = useState(false);
 
   if (!specimen) return null;
 
@@ -890,559 +915,176 @@ function SpecimenScientificModal({ specimen, onClose }) {
     setZoomOpen(false);
     setZoomedIn(true);
   };
+  const archiveBasePath = window.location.pathname.replace(/\/[^/]*$/, "/");
+  const contributionUrl = `${window.location.origin}${archiveBasePath}contribute.html?species=${encodeURIComponent(specimen.name)}&latin=${encodeURIComponent(specimen.latinName)}`;
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=320x320&margin=16&data=${encodeURIComponent(contributionUrl)}`;
 
-  const isGardenProfile = specimen.habitat === "Garden";
-  const isForestProfile = specimen.habitat === "Forest";
-  const isMeadowProfile = specimen.habitat === "Meadow";
-  const isMountainProfile = specimen.habitat === "Mountain";
-  const isWetlandProfile = specimen.habitat === "Wetland";
-  const isUnknownProfile = specimen.habitat === "Unknown";
-  const isHabitatProfile = isGardenProfile || isForestProfile || isMeadowProfile || isMountainProfile || isWetlandProfile || isUnknownProfile;
+  const patternIcons = {
+    Spots: "●",
+    Stripes: "▬",
+    Eyespots: "◉",
+    Scales: "◇",
+    Solid: "■",
+  };
+  const colourStyles = {
+    Blue: { background: "#3b82f6" },
+    Orange: { background: "#f97316" },
+    Yellow: { background: "#fde047" },
+    Coloured: { background: "linear-gradient(135deg, #6366f1, #ec4899)" },
+    White: { background: "#ffffff", borderColor: "#dbe4ef" },
+    Green: { background: "#22c55e" },
+    Purple: { background: "#a855f7" },
+    Brown: { background: "#92400e" },
+    Red: { background: "#ef4444" },
+    Black: { background: "#1f2937" },
+  };
+  const habitatIcons = {
+    Forest: "♣",
+    Meadow: "⌁",
+    Wetland: "≈",
+    Garden: "✿",
+    Mountain: "△",
+    Unknown: "?",
+  };
+  const tags = [
+    { type: "pattern", icon: patternIcons[specimen.wingPattern] || "●", label: specimen.wingPattern + " wings" },
+    { type: "colour", label: specimen.wingColour + " color", style: colourStyles[specimen.wingColour] || { background: "#94a3b8" } },
+    { type: "habitat", icon: habitatIcons[specimen.habitat] || "?", label: specimen.habitat + " habitat" },
+  ];
 
   return (
-    <motion.div className="fixed inset-0 z-[120] flex items-center justify-center overflow-auto bg-black/10 p-[18px]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose}>
-      <div
-        className="w-full max-w-[calc(100vw-36px)]"
-        style={{
-          width: isHabitatProfile ? "min(1120px, calc(100vw - 36px))" : "min(780px, calc(100vw - 36px))",
-        }}
+    <motion.div className="fixed inset-0 z-[120] flex items-center justify-center overflow-auto bg-black/10 p-[18px] 2xl:p-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose}>
+      <motion.section
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="specimen-detail-title"
+        className="relative grid max-h-[88vh] w-[min(1120px,calc(100vw-36px))] gap-[28px] overflow-auto rounded-[22px] bg-white p-[24px] font-sans shadow-[0_26px_70px_rgba(15,23,42,0.24)] md:grid-cols-[330px_1fr] md:items-center md:p-[34px] 2xl:w-[min(1380px,calc(100vw-64px))] 2xl:grid-cols-[410px_1fr] 2xl:gap-[46px] 2xl:rounded-[28px] 2xl:p-[46px]"
+        initial={{ opacity: 0, y: 20, scale: 0.96 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 20, scale: 0.96 }}
+        transition={{ duration: 0.22 }}
+        onClick={(event) => event.stopPropagation()}
       >
-        <motion.section role="dialog" aria-modal="true" aria-labelledby="specimen-detail-title" className={`relative max-h-[88vh] w-full overflow-auto bg-white font-sans shadow-[0_26px_70px_rgba(15,23,42,0.24)] ${isHabitatProfile ? "grid gap-[24px] rounded-[22px] p-[24px] md:grid-cols-[390px_1fr] md:items-center md:p-[34px]" : "grid gap-[18px] rounded-[24px] p-[18px] pt-[58px] md:grid-cols-[280px_1fr] md:items-center"}`} initial={{ opacity: 0, y: 20, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 20, scale: 0.96 }} transition={{ duration: 0.22 }} onClick={(event) => event.stopPropagation()}>
-          <button type="button" onClick={onClose} aria-label="Close specimen details" className="absolute right-[18px] top-[18px] z-40 grid h-6 w-6 place-items-center text-slate-400 transition active:scale-95"><CloseIcon size={21} /></button>
-          {isGardenProfile ? (
-            <>
-              <div className="relative mx-auto w-full max-w-[340px]">
-                <div className="absolute -left-10 bottom-0 h-36 w-36 rounded-full bg-[#e9f1df]" aria-hidden="true" />
-                <button
-                  type="button"
-                  aria-label={`Zoom ${specimen.name}`}
-                  onClick={() => {
-                    setZoomOpen(true);
-                    setZoomedIn(true);
-                  }}
-                  className="relative aspect-square w-full overflow-hidden rounded-full border-[8px] bg-stone-100 shadow-[0_18px_42px_rgba(45,75,38,0.18)] transition active:scale-[0.98]"
-                  style={{ borderColor: specimen.ringColor || habitats[specimen.habitat]?.ringColor || "#4f843e" }}
-                >
-                  <img src={specimen.image} alt={specimen.name} className="h-full w-full object-cover transition duration-300 hover:scale-105" />
-                </button>
-                <div className="absolute bottom-4 right-5 grid h-14 w-14 place-items-center rounded-full bg-white text-[#4f7a3f] shadow-[0_12px_28px_rgba(15,23,42,0.18)]" aria-hidden="true">
-                  <LeafIcon />
-                </div>
-              </div>
+        <button type="button" onClick={onClose} aria-label="Close specimen details" className="absolute right-[18px] top-[18px] z-40 grid h-8 w-8 place-items-center rounded-full bg-white text-slate-400 shadow-[0_8px_24px_rgba(15,23,42,0.12)] transition active:scale-95 2xl:right-6 2xl:top-6 2xl:h-12 2xl:w-12"><CloseIcon size={21} /></button>
 
-              <div className="text-left">
-                <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#4f7a3f]">
-                  <ButterflyOutlineIcon />
-                  Butterfly Profile
-                </div>
-                <h3 id="specimen-detail-title" className="mt-[14px] text-[24px] font-semibold leading-[1.12] text-[#1d2a1e] md:text-[30px]">
-                  Meet the Common Mormon
-                </h3>
-                <div className="mt-[10px] text-[16px] italic leading-tight text-[#b47a42] md:text-[18px]">
-                  A garden butterfly with bold white wing markings
-                </div>
-                <p className={`mt-[16px] max-w-[760px] ${modalParagraphClass}`}>
-                  This butterfly is easy to spot because of the bright white band across its dark wings. It is often seen near gardens, paths, and flowering plants.
-                </p>
-
-                <div className="mt-[18px]">
-                  <div className="flex items-center gap-2 text-[15px] font-bold text-[#4f7a3f]">
-                    <LeafIcon />
-                    Quick clues
-                  </div>
-                  <div className="mt-[12px] grid gap-3 sm:grid-cols-3">
-                    {[
-                      { label: "Dark wings", icon: "dark" },
-                      { label: "White band", icon: "band" },
-                      { label: "Swallowtail shape", icon: "swallowtail" },
-                    ].map((clue) => (
-                      <div key={clue.label} className="flex min-h-[46px] items-center gap-3 rounded-[10px] border border-slate-200 bg-white px-3 text-[13px] font-medium text-stone-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
-                        <ClueIcon type={clue.icon} />
-                        {clue.label}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mt-[18px] grid gap-[16px] border-y border-stone-200 py-[16px] sm:grid-cols-2">
-                  <div className="grid grid-cols-[34px_1fr_46px] items-center gap-3 text-[#4f7a3f]">
-                    <PinIcon />
-                    <div className="text-stone-700">
-                      <div className="text-[13px]">Found in</div>
-                      <div className="mt-1 text-[16px] font-bold text-[#1d2a1e]">Garden collection</div>
-                    </div>
-                    <span className="text-[#4f7a3f]" aria-hidden="true"><FlowerIcon /></span>
-                  </div>
-                  <div className="border-stone-200 sm:border-l sm:pl-[18px]">
-                    <div className="flex items-start gap-3 text-[#4f7a3f]">
-                      <CircleInfoIcon />
-                      <div className="flex-1 text-stone-700">
-                        <div className="text-[13px]">Status</div>
-                        <div className="mt-1 text-[16px] font-bold text-[#1d2a1e]">49% completed</div>
-                        <div className="mt-3 h-4 overflow-hidden rounded-full bg-stone-200">
-                          <div className="grid h-full w-[49%] place-items-center rounded-full bg-[#5f9449] text-[10px] font-bold text-white">49%</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-[12px] flex items-center gap-3 text-[14px] text-[#4f7a3f]">
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-[#e9f1df]" aria-hidden="true"><LeafIcon /></span>
-                  <span>Scientific name: <i className="text-stone-800">Papilio polytes</i></span>
-                </div>
-              </div>
-            </>
-          ) : isForestProfile ? (
-            <>
-              <div className="relative mx-auto w-full max-w-[340px]">
-                <div className="absolute -left-10 bottom-0 h-36 w-36 rounded-full bg-[#e9f1df]" aria-hidden="true" />
-                <button
-                  type="button"
-                  aria-label={`Zoom ${specimen.name}`}
-                  onClick={() => {
-                    setZoomOpen(true);
-                    setZoomedIn(true);
-                  }}
-                  className="relative aspect-square w-full overflow-hidden rounded-full border-[8px] bg-stone-100 shadow-[0_18px_42px_rgba(45,75,38,0.18)] transition active:scale-[0.98]"
-                  style={{ borderColor: specimen.ringColor || habitats[specimen.habitat]?.ringColor || "#047857" }}
-                >
-                  <img src={specimen.image} alt={specimen.name} className="h-full w-full object-cover transition duration-300 hover:scale-105" />
-                </button>
-                <div className="absolute bottom-4 right-5 grid h-14 w-14 place-items-center rounded-full bg-white text-[#4f7a3f] shadow-[0_12px_28px_rgba(15,23,42,0.18)]" aria-hidden="true">
-                  <ForestIcon />
-                </div>
-              </div>
-
-              <div className="text-left">
-                <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#4f7a3f]">
-                  <ButterflyOutlineIcon />
-                  Butterfly Profile
-                </div>
-                <h3 id="specimen-detail-title" className="mt-[14px] text-[24px] font-semibold leading-[1.12] text-[#1d2a1e] md:text-[30px]">
-                  Meet the Purple Emperor
-                </h3>
-                <div className="mt-[10px] text-[16px] italic leading-tight text-[#b47a42] md:text-[18px]">
-                  A forest butterfly with iridescent purple wing flashes
-                </div>
-                <p className={`mt-[16px] max-w-[760px] ${modalParagraphClass}`}>
-                  This butterfly is often spotted in woodland clearings, oak forests, and shaded paths. Its dark wings shimmer with violet-purple tones when caught by sunlight filtering through the trees.
-                </p>
-
-                <div className="mt-[18px]">
-                  <div className="flex items-center gap-2 text-[15px] font-bold text-[#4f7a3f]">
-                    <LeafIcon />
-                    Quick clues
-                  </div>
-                  <div className="mt-[12px] grid gap-3 sm:grid-cols-3">
-                    {[
-                      { label: "Dark wings", icon: "dark" },
-                      { label: "Purple shimmer", icon: "shimmer" },
-                      { label: "Forest habitat", icon: "forest" },
-                    ].map((clue) => (
-                      <div key={clue.label} className="flex min-h-[46px] items-center gap-3 rounded-[10px] border border-slate-200 bg-white px-3 text-[13px] font-medium text-stone-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
-                        <ClueIcon type={clue.icon} />
-                        {clue.label}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mt-[18px] grid gap-[16px] border-y border-stone-200 py-[16px] sm:grid-cols-2">
-                  <div className="grid grid-cols-[34px_1fr_46px] items-center gap-3 text-[#4f7a3f]">
-                    <PinIcon />
-                    <div className="text-stone-700">
-                      <div className="text-[13px]">Found in</div>
-                      <div className="mt-1 text-[16px] font-bold text-[#1d2a1e]">Forest collection</div>
-                    </div>
-                    <span className="text-[#4f7a3f]" aria-hidden="true"><ForestIcon /></span>
-                  </div>
-                  <div className="border-stone-200 sm:border-l sm:pl-[18px]">
-                    <div className="flex items-start gap-3 text-[#4f7a3f]">
-                      <CircleInfoIcon />
-                      <div className="flex-1 text-stone-700">
-                        <div className="text-[13px]">Status</div>
-                        <div className="mt-1 text-[16px] font-bold text-[#1d2a1e]">53% completed</div>
-                        <div className="mt-3 h-4 overflow-hidden rounded-full bg-stone-200">
-                          <div className="grid h-full w-[53%] place-items-center rounded-full bg-[#047857] text-[10px] font-bold text-white">53%</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-[12px] flex items-center gap-3 text-[14px] text-[#4f7a3f]">
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-[#e9f1df]" aria-hidden="true"><LeafIcon /></span>
-                  <span>Scientific name: <i className="text-stone-800">Apatura iris</i></span>
-                </div>
-              </div>
-            </>
-          ) : isUnknownProfile ? (
-            <>
-              <div className="relative mx-auto w-full max-w-[340px]">
-                <div className="absolute -left-10 bottom-0 h-36 w-36 rounded-full bg-[#eef1e5]" aria-hidden="true" />
-                <button
-                  type="button"
-                  aria-label={`Zoom ${specimen.name}`}
-                  onClick={() => {
-                    setZoomOpen(true);
-                    setZoomedIn(true);
-                  }}
-                  className="relative aspect-square w-full overflow-hidden rounded-full border-[8px] bg-stone-100 shadow-[0_18px_42px_rgba(75,85,99,0.18)] transition active:scale-[0.98]"
-                  style={{ borderColor: specimen.ringColor || habitats[specimen.habitat]?.ringColor || "#d4d4d8" }}
-                >
-                  <img src={specimen.image} alt={specimen.name} className="h-full w-full object-cover transition duration-300 hover:scale-105" />
-                </button>
-                <div className="absolute bottom-4 right-5 grid h-14 w-14 place-items-center rounded-full bg-white text-[#4f7a3f] shadow-[0_12px_28px_rgba(15,23,42,0.18)]" aria-hidden="true">
-                  <UnknownHabitatIcon />
-                </div>
-              </div>
-
-              <div className="text-left">
-                <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#4f7a3f]">
-                  <ButterflyOutlineIcon />
-                  Butterfly Profile
-                </div>
-                <h3 id="specimen-detail-title" className="mt-[14px] text-[24px] font-semibold leading-[1.12] text-[#1d2a1e] md:text-[30px]">
-                  Meet the Mystery Swallowtail
-                </h3>
-                <div className="mt-[10px] text-[16px] italic leading-tight text-[#7b704c] md:text-[18px]">
-                  A rare butterfly with an unknown habitat range
-                </div>
-                <p className={`mt-[16px] max-w-[760px] ${modalParagraphClass}`}>
-                  Very little is known about this elusive butterfly. It has only been recorded a handful of times, and researchers are still unsure whether it prefers forest edges, open meadows, or wet lowlands.
-                </p>
-
-                <div className="mt-[18px]">
-                  <div className="flex items-center gap-2 text-[15px] font-bold text-[#4f7a3f]">
-                    <LeafIcon />
-                    Quick clues
-                  </div>
-                  <div className="mt-[12px] grid gap-3 sm:grid-cols-3">
-                    {[
-                      { label: "Elusive species", icon: "search" },
-                      { label: "Variable markings", icon: "variable" },
-                      { label: "Unknown habitat", icon: "unknown" },
-                    ].map((clue) => (
-                      <div key={clue.label} className="flex min-h-[46px] items-center gap-3 rounded-[10px] border border-slate-200 bg-white px-3 text-[13px] font-medium text-stone-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
-                        <ClueIcon type={clue.icon} />
-                        {clue.label}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mt-[18px] grid gap-[16px] border-y border-stone-200 py-[16px] sm:grid-cols-2">
-                  <div className="grid grid-cols-[34px_1fr_46px] items-center gap-3 text-[#4f7a3f]">
-                    <PinIcon />
-                    <div className="text-stone-700">
-                      <div className="text-[13px]">Found in</div>
-                      <div className="mt-1 text-[16px] font-bold text-[#1d2a1e]">Unclassified collection</div>
-                    </div>
-                    <span className="text-[#4f7a3f]" aria-hidden="true"><UnknownHabitatIcon /></span>
-                  </div>
-                  <div className="border-stone-200 sm:border-l sm:pl-[18px]">
-                    <div className="flex items-start gap-3 text-[#4f7a3f]">
-                      <CircleInfoIcon />
-                      <div className="flex-1 text-stone-700">
-                        <div className="text-[13px]">Status</div>
-                        <div className="mt-1 text-[16px] font-bold text-[#1d2a1e]">18% completed</div>
-                        <div className="mt-3 h-4 overflow-hidden rounded-full bg-stone-200">
-                          <div className="grid h-full w-[18%] place-items-center rounded-full bg-[#6b7f55] text-[10px] font-bold text-white">18%</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-[12px] flex items-center gap-3 text-[14px] text-[#4f7a3f]">
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-[#e9f1df]" aria-hidden="true"><LeafIcon /></span>
-                  <span>Scientific name: <i className="text-stone-800">Unidentified specimen</i></span>
-                </div>
-              </div>
-            </>
-          ) : isMeadowProfile ? (
-            <>
-              <div className="relative mx-auto w-full max-w-[340px]">
-                <div className="absolute -left-10 bottom-0 h-36 w-36 rounded-full bg-[#efecd8]" aria-hidden="true" />
-                <button
-                  type="button"
-                  aria-label={`Zoom ${specimen.name}`}
-                  onClick={() => {
-                    setZoomOpen(true);
-                    setZoomedIn(true);
-                  }}
-                  className="relative aspect-square w-full overflow-hidden rounded-full border-[8px] bg-stone-100 shadow-[0_18px_42px_rgba(45,75,38,0.18)] transition active:scale-[0.98]"
-                  style={{ borderColor: specimen.ringColor || habitats[specimen.habitat]?.ringColor || "#d97706" }}
-                >
-                  <img src={specimen.image} alt={specimen.name} className="h-full w-full object-cover transition duration-300 hover:scale-105" />
-                </button>
-                <div className="absolute bottom-4 right-5 grid h-14 w-14 place-items-center rounded-full bg-white text-[#4f7a3f] shadow-[0_12px_28px_rgba(15,23,42,0.18)]" aria-hidden="true">
-                  <GrassIcon />
-                </div>
-              </div>
-
-              <div className="text-left">
-                <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#4f7a3f]">
-                  <ButterflyOutlineIcon />
-                  Butterfly Profile
-                </div>
-                <h3 id="specimen-detail-title" className="mt-[14px] text-[24px] font-semibold leading-[1.12] text-[#1d2a1e] md:text-[30px]">
-                  Meet the Meadow Brown
-                </h3>
-                <div className="mt-[10px] text-[16px] italic leading-tight text-[#a38627] md:text-[18px]">
-                  A meadow butterfly with warm brown eye-spotted wings
-                </div>
-                <p className={`mt-[16px] max-w-[760px] ${modalParagraphClass}`}>
-                  This butterfly is a familiar sight in open meadows and grassy field edges. It flutters low over wild grasses and flowers, blending beautifully with sunlit summer grasslands.
-                </p>
-
-                <div className="mt-[18px]">
-                  <div className="flex items-center gap-2 text-[15px] font-bold text-[#4f7a3f]">
-                    <LeafIcon />
-                    Quick clues
-                  </div>
-                  <div className="mt-[12px] grid gap-3 sm:grid-cols-3">
-                    {[
-                      { label: "Brown wings", icon: "dark" },
-                      { label: "Orange patches", icon: "patch" },
-                      { label: "Meadow habitat", icon: "meadow" },
-                    ].map((clue) => (
-                      <div key={clue.label} className="flex min-h-[46px] items-center gap-3 rounded-[10px] border border-slate-200 bg-white px-3 text-[13px] font-medium text-stone-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
-                        <ClueIcon type={clue.icon} />
-                        {clue.label}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mt-[18px] grid gap-[16px] border-y border-stone-200 py-[16px] sm:grid-cols-2">
-                  <div className="grid grid-cols-[34px_1fr_46px] items-center gap-3 text-[#4f7a3f]">
-                    <PinIcon />
-                    <div className="text-stone-700">
-                      <div className="text-[13px]">Found in</div>
-                      <div className="mt-1 text-[16px] font-bold text-[#1d2a1e]">Meadow collection</div>
-                    </div>
-                    <span className="text-[#4f7a3f]" aria-hidden="true"><GrassIcon /></span>
-                  </div>
-                  <div className="border-stone-200 sm:border-l sm:pl-[18px]">
-                    <div className="flex items-start gap-3 text-[#4f7a3f]">
-                      <CircleInfoIcon />
-                      <div className="flex-1 text-stone-700">
-                        <div className="text-[13px]">Status</div>
-                        <div className="mt-1 text-[16px] font-bold text-[#1d2a1e]">58% completed</div>
-                        <div className="mt-3 h-4 overflow-hidden rounded-full bg-stone-200">
-                          <div className="grid h-full w-[58%] place-items-center rounded-full bg-[#8a8d34] text-[10px] font-bold text-white">58%</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-[12px] flex items-center gap-3 text-[14px] text-[#4f7a3f]">
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-[#efecd8]" aria-hidden="true"><LeafIcon /></span>
-                  <span>Scientific name: <i className="text-stone-800">Maniola jurtina</i></span>
-                </div>
-              </div>
-            </>
-          ) : isWetlandProfile ? (
-            <>
-              <div className="relative mx-auto w-full max-w-[340px]">
-                <div className="absolute -left-10 bottom-0 h-36 w-36 rounded-full bg-[#e9f1df]" aria-hidden="true" />
-                <button
-                  type="button"
-                  aria-label={`Zoom ${specimen.name}`}
-                  onClick={() => {
-                    setZoomOpen(true);
-                    setZoomedIn(true);
-                  }}
-                  className="relative aspect-square w-full overflow-hidden rounded-full border-[8px] bg-stone-100 shadow-[0_18px_42px_rgba(45,75,38,0.18)] transition active:scale-[0.98]"
-                  style={{ borderColor: specimen.ringColor || habitats[specimen.habitat]?.ringColor || "#3b82f6" }}
-                >
-                  <img src={specimen.image} alt={specimen.name} className="h-full w-full object-cover transition duration-300 hover:scale-105" />
-                </button>
-                <div className="absolute bottom-4 right-5 grid h-14 w-14 place-items-center rounded-full bg-white text-[#4f7a3f] shadow-[0_12px_28px_rgba(15,23,42,0.18)]" aria-hidden="true">
-                  <WetlandIcon />
-                </div>
-              </div>
-
-              <div className="text-left">
-                <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#4f7a3f]">
-                  <ButterflyOutlineIcon />
-                  Butterfly Profile
-                </div>
-                <h3 id="specimen-detail-title" className="mt-[14px] text-[24px] font-semibold leading-[1.12] text-[#1d2a1e] md:text-[30px]">
-                  Meet the Marsh Fritillary
-                </h3>
-                <div className="mt-[10px] text-[16px] italic leading-tight text-[#778062] md:text-[18px]">
-                  A wetland butterfly with bright orange checkered wings
-                </div>
-                <p className={`mt-[16px] max-w-[760px] ${modalParagraphClass}`}>
-                  This butterfly is commonly found in damp meadows, marsh edges, and wet grasslands. Its bright patterned wings stand out among reeds, sedges, and moisture-loving flowers.
-                </p>
-
-                <div className="mt-[18px]">
-                  <div className="flex items-center gap-2 text-[15px] font-bold text-[#4f7a3f]">
-                    <LeafIcon />
-                    Quick clues
-                  </div>
-                  <div className="mt-[12px] grid gap-3 sm:grid-cols-3">
-                    {[
-                      { label: "Orange pattern", icon: "orangeDot" },
-                      { label: "Checkered wings", icon: "checkered" },
-                      { label: "Wetland habitat", icon: "wetland" },
-                    ].map((clue) => (
-                      <div key={clue.label} className="flex min-h-[46px] items-center gap-3 rounded-[10px] border border-slate-200 bg-white px-3 text-[13px] font-medium text-stone-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
-                        <ClueIcon type={clue.icon} />
-                        {clue.label}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mt-[18px] grid gap-[16px] border-y border-stone-200 py-[16px] sm:grid-cols-2">
-                  <div className="grid grid-cols-[34px_1fr_46px] items-center gap-3 text-[#4f7a3f]">
-                    <PinIcon />
-                    <div className="text-stone-700">
-                      <div className="text-[13px]">Found in</div>
-                      <div className="mt-1 text-[16px] font-bold text-[#1d2a1e]">Wetland collection</div>
-                    </div>
-                    <span className="text-[#4f7a3f]" aria-hidden="true"><WetlandIcon /></span>
-                  </div>
-                  <div className="border-stone-200 sm:border-l sm:pl-[18px]">
-                    <div className="flex items-start gap-3 text-[#4f7a3f]">
-                      <CircleInfoIcon />
-                      <div className="flex-1 text-stone-700">
-                        <div className="text-[13px]">Status</div>
-                        <div className="mt-1 text-[16px] font-bold text-[#1d2a1e]">41% completed</div>
-                        <div className="mt-3 h-4 overflow-hidden rounded-full bg-stone-200">
-                          <div className="grid h-full w-[41%] place-items-center rounded-full bg-[#3b82f6] text-[10px] font-bold text-white">41%</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-[12px] flex items-center gap-3 text-[14px] text-[#4f7a3f]">
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-[#e9f1df]" aria-hidden="true"><LeafIcon /></span>
-                  <span>Scientific name: <i className="text-stone-800">Euphydryas aurinia</i></span>
-                </div>
-              </div>
-            </>
-          ) : isMountainProfile ? (
-            <>
-              <div className="relative mx-auto w-full max-w-[340px]">
-                <div className="absolute -left-10 bottom-0 h-36 w-36 rounded-full bg-[#e8eef2]" aria-hidden="true" />
-                <button
-                  type="button"
-                  aria-label={`Zoom ${specimen.name}`}
-                  onClick={() => {
-                    setZoomOpen(true);
-                    setZoomedIn(true);
-                  }}
-                  className="relative aspect-square w-full overflow-hidden rounded-full border-[8px] bg-stone-100 shadow-[0_18px_42px_rgba(51,65,85,0.18)] transition active:scale-[0.98]"
-                  style={{ borderColor: specimen.ringColor || habitats[specimen.habitat]?.ringColor || "#64748b" }}
-                >
-                  <img src={specimen.image} alt={specimen.name} className="h-full w-full object-cover transition duration-300 hover:scale-105" />
-                </button>
-                <div className="absolute bottom-4 right-5 grid h-14 w-14 place-items-center rounded-full bg-white text-[#4f7a3f] shadow-[0_12px_28px_rgba(15,23,42,0.18)]" aria-hidden="true">
-                  <MountainIcon />
-                </div>
-              </div>
-
-              <div className="text-left">
-                <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#4f7a3f]">
-                  <ButterflyOutlineIcon />
-                  Butterfly Profile
-                </div>
-                <h3 id="specimen-detail-title" className="mt-[14px] text-[24px] font-semibold leading-[1.12] text-[#1d2a1e] md:text-[30px]">
-                  Meet the Apollo Butterfly
-                </h3>
-                <div className="mt-[10px] text-[16px] italic leading-tight text-[#778062] md:text-[18px]">
-                  A mountain butterfly with striking red eye spots
-                </div>
-                <p className={`mt-[16px] max-w-[760px] ${modalParagraphClass}`}>
-                  This butterfly is often seen on sunny alpine slopes and rocky mountain meadows. Its pale wings and red markings make it easy to notice among high-altitude wildflowers.
-                </p>
-
-                <div className="mt-[18px]">
-                  <div className="flex items-center gap-2 text-[15px] font-bold text-[#4f7a3f]">
-                    <LeafIcon />
-                    Quick clues
-                  </div>
-                  <div className="mt-[12px] grid gap-3 sm:grid-cols-3">
-                    {[
-                      { label: "White wings", icon: "swallowtail" },
-                      { label: "Red eye spots", icon: "redEye" },
-                      { label: "Mountain habitat", icon: "mountain" },
-                    ].map((clue) => (
-                      <div key={clue.label} className="flex min-h-[46px] items-center gap-3 rounded-[10px] border border-slate-200 bg-white px-3 text-[13px] font-medium text-stone-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
-                        <ClueIcon type={clue.icon} />
-                        {clue.label}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mt-[18px] grid gap-[16px] border-y border-stone-200 py-[16px] sm:grid-cols-2">
-                  <div className="grid grid-cols-[34px_1fr_46px] items-center gap-3 text-[#4f7a3f]">
-                    <PinIcon />
-                    <div className="text-stone-700">
-                      <div className="text-[13px]">Found in</div>
-                      <div className="mt-1 text-[16px] font-bold text-[#1d2a1e]">Mountain collection</div>
-                    </div>
-                    <span className="text-[#4f7a3f]" aria-hidden="true"><MountainIcon /></span>
-                  </div>
-                  <div className="border-stone-200 sm:border-l sm:pl-[18px]">
-                    <div className="flex items-start gap-3 text-[#4f7a3f]">
-                      <CircleInfoIcon />
-                      <div className="flex-1 text-stone-700">
-                        <div className="text-[13px]">Status</div>
-                        <div className="mt-1 text-[16px] font-bold text-[#1d2a1e]">36% completed</div>
-                        <div className="mt-3 h-4 overflow-hidden rounded-full bg-stone-200">
-                          <div className="grid h-full w-[36%] place-items-center rounded-full bg-[#64748b] text-[10px] font-bold text-white">36%</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-[12px] flex items-center gap-3 text-[14px] text-[#4f7a3f]">
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-[#e9f1df]" aria-hidden="true"><LeafIcon /></span>
-                  <span>Scientific name: <i className="text-stone-800">Parnassius apollo</i></span>
-                </div>
-              </div>
-            </>
-          ) : (
-            <>
+        <div className="mx-auto w-full max-w-[310px] text-center 2xl:max-w-[390px]">
           <button
             type="button"
-            aria-label={`Zoom ${specimen.name}`}
+            aria-label={"Zoom " + specimen.name}
             onClick={() => {
               setZoomOpen(true);
               setZoomedIn(true);
             }}
-            className="mx-auto aspect-square w-[min(68vw,250px)] overflow-hidden rounded-full border-[13px] shadow-[0_20px_54px_rgba(15,23,42,0.16)] transition active:scale-[0.98] md:w-full md:border-[15px]"
+            className="aspect-square w-full overflow-hidden rounded-full border-[8px] bg-stone-100 shadow-[0_18px_42px_rgba(45,75,38,0.18)] transition active:scale-[0.98]"
             style={{ borderColor: specimen.ringColor || habitats[specimen.habitat]?.ringColor || "#047857" }}
           >
             <img src={specimen.image} alt={specimen.name} className="h-full w-full object-cover transition duration-300 hover:scale-105" />
           </button>
+          <div className="mt-[22px] text-[12px] font-semibold uppercase tracking-[0.18em] text-slate-500 2xl:mt-7 2xl:text-[14px]">Scientific name</div>
+          <div className="mt-[10px] text-[18px] italic leading-tight text-[#1d2a1e] 2xl:text-[22px]">{specimen.latinName}</div>
+        </div>
 
-          <div className="text-left">
-            <div className="text-[11px] font-bold uppercase tracking-[0.24em] text-slate-500">Scientific Display</div>
-            <h2 id="specimen-detail-title" className="mt-[18px] text-[28px] font-black leading-[1.04] tracking-[-0.04em] text-slate-950 md:text-[32px]">{specimen.name}</h2>
-            <div className="mt-[18px] text-[17px] italic leading-tight text-slate-600">{specimen.latinName}</div>
-            <p className={`mt-[18px] max-w-[420px] ${modalParagraphClass}`}>{specimen.paragraphOne}</p>
-            <p className={`mt-[18px] max-w-[420px] ${modalParagraphClass}`}>{specimen.paragraphTwo}</p>
-            <div className="mt-[18px] max-w-[370px] border-t border-slate-200 pt-[18px]">
-              <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-slate-500">{specimen.originLabel}: {specimen.originValue}</div>
-              <div className="mt-[18px] text-[14px] font-medium text-slate-700">{specimen.habitat} · {specimen.completeness}% complete</div>
-            </div>
+        <div className="min-w-0 text-left">
+          <div className="inline-flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.24em] text-[#6f7f57] 2xl:text-[13px]">
+            <span className="grid h-7 w-7 place-items-center text-[#5f7f50] [&_svg]:h-6 [&_svg]:w-6" aria-hidden="true">
+              <ButterflyOutlineIcon />
+            </span>
+            <span>Butterfly Profile</span>
           </div>
-            </>
-          )}
-        </motion.section>
-      </div>
+          <h3 id="specimen-detail-title" className="mt-[14px] text-[28px] font-semibold leading-[1.08] text-[#1d2a1e] md:text-[34px] 2xl:text-[46px]">
+            {specimen.name}
+          </h3>
+          <div className="mt-[16px] max-w-[680px] text-[18px] italic leading-[1.35] text-[#6f7f57] 2xl:max-w-[820px] 2xl:text-[23px]">
+            {specimen.summary}
+          </div>
+          <p className={"mt-[22px] max-w-[720px] " + modalParagraphClass}>
+            {specimen.paragraphOne}
+          </p>
+          <div className="mt-[28px] inline-flex items-center gap-2.5 text-[15px] font-bold leading-none text-[#5f7f50] 2xl:text-[18px]">
+            <span className="grid h-7 w-7 place-items-center text-[#5f7f50]" aria-hidden="true">
+              <LeafIcon />
+            </span>
+            <span>Quick clues</span>
+          </div>
+          <div className="mt-[14px] grid gap-3 sm:grid-cols-3">
+            {tags.map((tag) => (
+              <div key={tag.label} className="flex min-h-[46px] items-center justify-center gap-3 rounded-[10px] border border-slate-200 bg-white px-4 text-center text-[14px] font-semibold text-stone-800 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] 2xl:min-h-[58px] 2xl:text-[17px]">
+                {tag.type === "colour" ? (
+                  <span className="h-5 w-5 rounded-full border border-white shadow-[0_0_0_1px_rgba(148,163,184,0.45)]" style={tag.style} aria-hidden="true" />
+                ) : (
+                  <span className="grid h-5 w-5 place-items-center text-[18px] leading-none text-slate-600" aria-hidden="true">{tag.icon}</span>
+                )}
+                <span>{tag.label}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-[20px] flex flex-wrap items-center gap-3 text-[12px] leading-none 2xl:mt-7 2xl:text-[15px]">
+            <div className="inline-flex min-h-[34px] items-center gap-3 rounded-[8px] bg-stone-100 px-4 text-stone-950">
+              <span className="font-bold">Research visibility</span>
+              <span className="italic">{specimen.researchVisibility}</span>
+            </div>
+            <div className="inline-flex min-h-[34px] items-center gap-3 rounded-[8px] bg-stone-100 px-4 text-stone-950">
+              <span className="font-bold">Contributions welcome</span>
+              <span className="italic">{specimen.contributionsWelcome}</span>
+            </div>
+            <button
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                setContributionOpen(true);
+              }}
+              className="ml-auto rounded-full px-2 py-1 text-[11px] font-semibold text-stone-400 transition hover:bg-stone-100 hover:text-[#5f7f50] active:scale-95 2xl:min-h-11 2xl:px-5 2xl:text-[14px]"
+            >
+              Upload...
+            </button>
+          </div>
+        </div>
+      </motion.section>
+
+      <AnimatePresence>
+        {contributionOpen && (
+          <motion.div
+            className="fixed inset-0 z-[170] flex items-center justify-center bg-black/20 p-[18px]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={(event) => {
+              event.stopPropagation();
+              setContributionOpen(false);
+            }}
+          >
+            <motion.section
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="contribution-title"
+              className="relative w-[min(92vw,420px)] rounded-[18px] border border-slate-200 bg-white px-6 pb-6 pt-7 text-center shadow-[0_26px_70px_rgba(15,23,42,0.22)]"
+              initial={{ opacity: 0, y: 12, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 12, scale: 0.96 }}
+              transition={{ duration: 0.18 }}
+              onClick={(event) => event.stopPropagation()}
+            >
+              <button type="button" onClick={() => setContributionOpen(false)} aria-label="Close contribution QR" className="absolute right-4 top-4 grid h-8 w-8 place-items-center rounded-full bg-stone-50 text-slate-400 transition active:scale-95"><CloseIcon size={21} /></button>
+              <div className="mx-auto mb-3 grid h-10 w-10 place-items-center rounded-full bg-[#e9eadf] text-[#5f7f50]" aria-hidden="true">
+                <LeafIcon />
+              </div>
+              <h4 id="contribution-title" className="text-[22px] font-bold leading-tight text-[#1d2a1e]">Contribute to this butterfly</h4>
+              <p className="mx-auto mt-2 max-w-[320px] text-[14px] leading-[1.55] text-slate-500">
+                Scan with a phone to edit notes or upload a sighting image for <span className="font-semibold text-[#5f7f50]">{specimen.name}</span>.
+              </p>
+              <div className="mx-auto mt-5 grid h-[230px] w-[230px] place-items-center rounded-[14px] border border-slate-200 bg-white p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
+                <img src={qrUrl} alt={`QR code to contribute to ${specimen.name}`} className="h-full w-full" />
+              </div>
+              <a href={contributionUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-10 items-center justify-center rounded-full bg-[#4b6e40] px-5 text-[13px] font-bold text-white transition active:scale-95">
+                Open contribution form
+              </a>
+              <p className="mt-3 text-[11px] leading-[1.45] text-slate-400">
+                Phone scanning works when this site is opened from a phone-accessible address, not only 127.0.0.1.
+              </p>
+            </motion.section>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <AnimatePresence>
         {zoomOpen && (
@@ -1480,11 +1122,11 @@ function SpecimenScientificModal({ specimen, onClose }) {
 function FloatingModalButtons({ onAbout, onKey }) {
   return (
     <>
-      <div className="absolute bottom-20 left-3 z-40 md:bottom-6 md:left-6">
+      <div className="absolute bottom-20 left-3 z-40 md:bottom-6 md:left-6 2xl:bottom-8 2xl:left-8">
         <button
           type="button"
           onClick={onAbout}
-          className="grid h-[54px] w-[54px] place-items-center rounded-full border border-stone-200 bg-white text-slate-950 shadow-[0_14px_36px_rgba(61,48,32,0.14)] transition active:scale-95 md:h-[58px] md:w-[58px]"
+          className="grid h-[54px] w-[54px] place-items-center rounded-full border border-stone-200 bg-white text-slate-950 shadow-[0_14px_36px_rgba(61,48,32,0.14)] transition active:scale-95 md:h-[58px] md:w-[58px] 2xl:h-[76px] 2xl:w-[76px] 2xl:[&_svg]:h-9 2xl:[&_svg]:w-9"
           aria-label="Open info archive"
           title="Info archive"
         >
@@ -1492,11 +1134,11 @@ function FloatingModalButtons({ onAbout, onKey }) {
         </button>
       </div>
 
-      <div className="absolute bottom-20 right-3 z-40 md:bottom-6 md:right-6">
+      <div className="absolute bottom-20 right-3 z-40 md:bottom-6 md:right-6 2xl:bottom-8 2xl:right-8">
         <button
           type="button"
           onClick={onKey}
-          className="grid h-[54px] w-[54px] place-items-center rounded-full border border-stone-200 bg-white text-slate-950 shadow-[0_14px_36px_rgba(61,48,32,0.14)] transition active:scale-95 md:h-[58px] md:w-[58px]"
+          className="grid h-[54px] w-[54px] place-items-center rounded-full border border-stone-200 bg-white text-slate-950 shadow-[0_14px_36px_rgba(61,48,32,0.14)] transition active:scale-95 md:h-[58px] md:w-[58px] 2xl:h-[76px] 2xl:w-[76px] 2xl:[&_svg]:h-9 2xl:[&_svg]:w-9"
           aria-label="Open habitat menu"
           title="Habitat menu"
         >
@@ -1578,20 +1220,20 @@ function HoverSpecimenPreview({ specimen }) {
   if (!specimen) return null;
 
   return (
-    <motion.div className="pointer-events-none absolute z-40 hidden -translate-x-1/2 -translate-y-1/2 rounded-full border-[12px] bg-orange-500 shadow-[0_22px_55px_rgba(15,23,42,0.18)] md:block" style={{ top: `${specimen.top}%`, left: `${specimen.left}%`, width: 220, height: 220, borderColor: specimen.ringColor || "#f97316" }} initial={{ opacity: 0, scale: 0.65 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.65 }} transition={{ type: "spring", stiffness: 280, damping: 22 }}>
+    <motion.div className="archive-hover-preview pointer-events-none absolute z-40 hidden rounded-full border-[12px] bg-orange-500 shadow-[0_22px_55px_rgba(15,23,42,0.18)] md:block" style={{ top: `${specimen.top}%`, left: `${specimen.left}%`, width: 220, height: 220, borderColor: specimen.ringColor || "#f97316", transform: "translate(-50%, -50%) scale(var(--archive-preview-scale, 1))" }} initial={{ opacity: 0, scale: 0.65 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.65 }} transition={{ type: "spring", stiffness: 280, damping: 22 }}>
       <img src={specimen.image} alt="" className="h-full w-full rounded-full object-cover" draggable="false" />
     </motion.div>
   );
 }
 
 function ButterflyCircle({ butterfly, selected, hidden, onSelect, onPreviewStart, onPreviewEnd }) {
-  const touchSize = Math.max(butterfly.size + 28, 64);
+  const touchSize = Math.max(butterfly.size + 34, 72);
 
   return (
     <motion.button
-      aria-label={`${butterfly.name}, ${butterfly.habitat}, ${butterfly.completeness}% complete`}
-      className={`absolute z-20 grid place-items-center rounded-full touch-manipulation outline-none ring-offset-4 transition-opacity focus-visible:ring-4 focus-visible:ring-emerald-200 ${hidden ? "pointer-events-none opacity-10" : "opacity-100"}`}
-      style={{ top: `${butterfly.top}%`, left: `${butterfly.left}%`, width: touchSize, height: touchSize, marginLeft: -touchSize / 2, marginTop: -touchSize / 2, WebkitTapHighlightColor: "transparent" }}
+      aria-label={`Open ${butterfly.name}, ${butterfly.habitat}`}
+      className={`absolute z-20 grid cursor-pointer select-none place-items-center rounded-full touch-manipulation outline-none ring-offset-4 transition-opacity focus-visible:ring-4 focus-visible:ring-emerald-200 ${hidden ? "pointer-events-none opacity-10" : "opacity-100"}`}
+      style={{ top: `${butterfly.top}%`, left: `${butterfly.left}%`, width: touchSize, height: touchSize, transform: "translate(-50%, -50%) scale(var(--archive-touch-scale, 1))", WebkitTapHighlightColor: "transparent" }}
       initial={{ opacity: 0, scale: 0.2 }}
       animate={{ opacity: hidden ? 0.1 : 1, scale: selected ? 1.08 : 1, y: [0, -butterfly.drift, 0, butterfly.drift * 0.35, 0] }}
       transition={{ opacity: { duration: 0.25 }, scale: { type: "spring", stiffness: 240, damping: 18 }, y: { duration: 4 + (butterfly.id % 6) * 0.45, repeat: Infinity, ease: "easeInOut", delay: butterfly.delay } }}
@@ -1627,7 +1269,7 @@ function TrailControls({ trailCount, onClear, onOpen }) {
 
   return (
     <motion.div
-      className="absolute bottom-4 left-1/2 z-40 flex max-w-[calc(100vw-24px)] -translate-x-1/2 items-center gap-2 rounded-full border border-stone-200 bg-white px-2.5 py-2 shadow-[0_18px_45px_rgba(0,0,0,0.22)] backdrop-blur md:bottom-5"
+      className="absolute bottom-4 left-1/2 z-40 flex max-w-[calc(100vw-24px)] -translate-x-1/2 items-center gap-2 rounded-full border border-stone-200 bg-white px-2.5 py-2 shadow-[0_18px_45px_rgba(0,0,0,0.22)] backdrop-blur md:bottom-5 2xl:bottom-8 2xl:gap-3 2xl:px-4 2xl:py-3"
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
@@ -1637,7 +1279,7 @@ function TrailControls({ trailCount, onClear, onOpen }) {
       <button
         type="button"
         onClick={onOpen}
-        className={`grid h-9 w-9 shrink-0 place-items-center rounded-full text-[16px] font-medium leading-none transition active:scale-95 ${
+        className={`grid h-9 w-9 shrink-0 place-items-center rounded-full text-[16px] font-medium leading-none transition active:scale-95 2xl:h-12 2xl:w-12 2xl:text-[20px] ${
           hasCatches ? "bg-[#14843a] text-white" : "bg-[#dff5e9] text-[#07813d]"
         }`}
         aria-label="Open caught butterflies"
@@ -1648,7 +1290,7 @@ function TrailControls({ trailCount, onClear, onOpen }) {
       <button
         type="button"
         onClick={onOpen}
-        className="max-w-[150px] truncate whitespace-nowrap rounded-full px-1 text-[15px] font-medium tracking-[-0.02em] text-black transition active:scale-95 sm:max-w-none"
+        className="max-w-[150px] truncate whitespace-nowrap rounded-full px-1 text-[15px] font-medium tracking-[-0.02em] text-black transition active:scale-95 sm:max-w-none 2xl:px-2 2xl:text-[18px]"
       >
         Catching: {trailCount} caught
       </button>
@@ -1657,7 +1299,7 @@ function TrailControls({ trailCount, onClear, onOpen }) {
         type="button"
         onClick={onClear}
         disabled={!hasCatches}
-        className={`inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full px-4 text-[14px] font-medium tracking-[-0.02em] transition active:scale-95 ${
+        className={`inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full px-4 text-[14px] font-medium tracking-[-0.02em] transition active:scale-95 2xl:min-h-12 2xl:gap-2 2xl:px-6 2xl:text-[17px] ${
           hasCatches ? "bg-[#fff1f1] text-[#e60000]" : "cursor-not-allowed bg-[#f3f5fa] text-slate-500"
         }`}
         aria-label="Clear caught butterflies"
@@ -1673,16 +1315,23 @@ function TrailControls({ trailCount, onClear, onOpen }) {
 function TrailHistoryModal({ trail, onClose, onClear, onSelect }) {
   const uniqueTrail = trail.filter((item, index, items) => items.findIndex((candidate) => candidate.id === item.id) === index);
   const hasTrail = uniqueTrail.length > 0;
+  const patternDescriptions = {
+    Eyespots: "eye-spotted",
+    Scales: "softly scaled",
+    Solid: "solid-toned",
+    Spots: "spotted",
+    Stripes: "striped",
+  };
 
   return (
     <ModalShell
       onClose={onClose}
       labelledBy="trail-history-title"
       align="center"
-      className="w-[calc(100vw-36px)] max-w-[560px] rounded-[24px] px-[22px] pb-[20px] pt-[30px] sm:px-[28px] sm:pb-[24px] sm:pt-[34px]"
+      className="w-[calc(100vw-36px)] max-w-[560px] rounded-[24px] px-[22px] pb-[20px] pt-[30px] sm:px-[28px] sm:pb-[24px] sm:pt-[34px] 2xl:max-w-[720px] 2xl:px-9 2xl:pb-8 2xl:pt-10"
     >
       <div className="border-b border-slate-100 pb-[18px] pr-[42px]">
-        <h4 id="trail-history-title" className="max-w-[calc(100%-52px)] text-[20px] font-medium leading-[1.12] text-[#1d2a1e] sm:text-[22px]">
+        <h4 id="trail-history-title" className="max-w-[calc(100%-52px)] text-[20px] font-medium leading-[1.12] text-[#1d2a1e] sm:text-[22px] 2xl:text-[30px]">
           Your Butterfly Collection
         </h4>
         <p className={`mt-[14px] max-w-[520px] ${modalParagraphClass}`}>
@@ -1701,21 +1350,18 @@ function TrailHistoryModal({ trail, onClose, onClear, onSelect }) {
                   onSelect(item);
                   onClose();
                 }}
-                className="grid w-full grid-cols-[62px_1fr_18px] items-center gap-[12px] border-b border-slate-100 py-[12px] text-left transition active:scale-[0.99] hover:bg-stone-50 sm:grid-cols-[70px_1fr_20px] sm:gap-[14px]"
+                className="grid w-full grid-cols-[62px_1fr_18px] items-center gap-[12px] border-b border-slate-100 py-[12px] text-left transition active:scale-[0.99] hover:bg-stone-50 sm:grid-cols-[70px_1fr_20px] sm:gap-[14px] 2xl:grid-cols-[86px_1fr_28px] 2xl:gap-5 2xl:py-4"
               >
                 <span
-                  className="h-[56px] w-[56px] overflow-hidden rounded-full border-[4px] bg-stone-100 sm:h-[62px] sm:w-[62px]"
+                  className="h-[56px] w-[56px] overflow-hidden rounded-full border-[4px] bg-stone-100 sm:h-[62px] sm:w-[62px] 2xl:h-[80px] 2xl:w-[80px]"
                   style={{ borderColor: item.ringColor || habitats[item.habitat].ringColor }}
                 >
                   <img src={item.image} alt="" className="h-full w-full object-cover" draggable="false" />
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="block truncate text-[17px] font-bold leading-tight text-slate-950 sm:text-[19px]">{item.name}</span>
-                  <span className={`mt-1 block truncate ${modalSmallParagraphClass}`}>
-                    {item.habitat} · {item.completeness}% complete
-                  </span>
-                  <span className="mt-2 block h-1.5 overflow-hidden rounded-full bg-slate-100">
-                    <span className="block h-full rounded-full bg-[#aebdac]" style={{ width: `${item.completeness}%` }} />
+                  <span className="block truncate text-[17px] font-bold leading-tight text-slate-950 sm:text-[19px] 2xl:text-[23px]">{item.name}</span>
+                  <span className={`mt-1 block ${modalSmallItalicClass}`}>
+                    A {item.habitat.toLowerCase()} butterfly with {item.wingColour.toLowerCase()} {patternDescriptions[item.wingPattern] || item.wingPattern.toLowerCase()} wings
                   </span>
                 </span>
                 <span className="text-[26px] font-light leading-none text-slate-300" aria-hidden="true">›</span>
@@ -1759,7 +1405,7 @@ function MigrationPage() {
     <iframe
       title="Butterfly Migration Atlas"
       src={butterflyMigrationInteractivePath}
-      className="block h-screen w-screen border-0"
+      className="fixed inset-0 block h-screen w-screen border-0"
     />
   );
 }
@@ -1833,7 +1479,7 @@ function EastAfricaButterflyArchive() {
 
   const handleSelect = (butterfly) => {
     setHovered(null);
-    setSelected(null);
+    setSelected(butterfly);
     setArmedSpecimenId(null);
     setTrail((current) => {
       if (current.some((item) => item.id === butterfly.id)) return current;
@@ -1863,9 +1509,9 @@ function EastAfricaButterflyArchive() {
   }
 
   return (
-    <main className="relative h-screen min-h-[680px] overflow-hidden bg-white font-sans text-slate-950 md:min-h-[780px]">
-      <header className="absolute inset-x-0 top-0 z-50 grid h-[82px] grid-cols-[1fr_auto] items-center border-b border-stone-200 bg-white/92 px-4 backdrop-blur md:h-[96px] md:px-6">
-        <div className="font-serif text-[20px] font-medium tracking-tight text-slate-950 md:text-[25px]">
+    <main className="relative h-screen min-h-[680px] overflow-hidden bg-white font-sans text-slate-950 md:min-h-[780px] 2xl:min-h-[900px]">
+      <header className="absolute inset-x-0 top-0 z-50 grid h-[82px] grid-cols-[1fr_auto] items-center gap-[22px] border-b border-slate-200 bg-white/94 px-4 backdrop-blur md:h-[106px] md:px-[50px] 2xl:h-[122px] 2xl:px-[72px]">
+        <div className="whitespace-nowrap font-serif text-[20px] font-bold tracking-normal text-[#111] max-[1500px]:text-[18px] 2xl:text-[26px]">
           East African Butterfly Archive
         </div>
 
@@ -1873,14 +1519,14 @@ function EastAfricaButterflyArchive() {
           <button
             type="button"
             onClick={() => setPage("migration")}
-            className="inline-flex min-h-[48px] items-center rounded-full bg-[#eaf2e9] px-5 text-[15px] font-bold text-[#4b6e40] shadow-sm transition active:scale-95 md:min-h-[56px] md:px-7 md:text-[16px]"
+            className="inline-flex min-h-[48px] items-center rounded-full bg-[#eef6ee] px-5 text-[14px] font-extrabold text-[#4b6e40] transition hover:bg-[#e5f1e6] active:scale-95 md:min-h-[62px] md:px-7 md:text-[14px] 2xl:min-h-[72px] 2xl:px-9 2xl:text-[16px]"
           >
             Migration
           </button>
 
           <button
             type="button"
-            className="min-h-[48px] min-w-[68px] rounded-full bg-[#4b6e40] px-5 text-[15px] font-bold text-white shadow-[0_6px_14px_rgba(47,76,39,0.24)] transition active:scale-95 md:min-h-[56px] md:min-w-[86px] md:px-7 md:text-[17px]"
+            className="min-h-[48px] min-w-[68px] rounded-full bg-[#4b6e40] px-5 text-[14px] font-extrabold text-white shadow-[0_6px_14px_rgba(47,76,39,0.24)] transition active:scale-95 md:min-h-[62px] md:min-w-[86px] md:px-7 md:text-[14px] 2xl:min-h-[72px] 2xl:min-w-[108px] 2xl:px-9 2xl:text-[16px]"
             onClick={resetAllFilters}
             aria-label="Reset filters"
           >
@@ -1889,7 +1535,7 @@ function EastAfricaButterflyArchive() {
 
           <button
             type="button"
-            className="grid h-12 w-12 place-items-center rounded-full bg-[#eaf2e9] text-[#4b6e40] shadow-sm transition active:scale-95 md:h-[56px] md:w-[56px]"
+            className="grid h-12 w-12 place-items-center rounded-full bg-[#eef6ee] text-[#4b6e40] transition hover:bg-[#e5f1e6] active:scale-95 md:h-[62px] md:w-[62px] 2xl:h-[72px] 2xl:w-[72px] 2xl:[&_svg]:h-7 2xl:[&_svg]:w-7"
             aria-label="Open filter menu"
             aria-expanded={filterModalOpen}
             onClick={() => setFilterModalOpen(true)}
@@ -1900,12 +1546,12 @@ function EastAfricaButterflyArchive() {
       </header>
 
       {!anyModalOpen && (
-        <div className="absolute left-1/2 top-[116px] z-10 hidden -translate-x-1/2 text-[21px] font-medium text-[#8aa0c1] md:block">
+        <div className="absolute left-1/2 top-[126px] z-10 hidden -translate-x-1/2 text-[21px] font-medium text-[#8aa0c1] md:block 2xl:top-[148px] 2xl:text-[26px]">
           {archivePositions.length} Species
         </div>
       )}
 
-      <section className="absolute inset-0 pt-[82px] md:pt-[96px]" aria-label="Interactive butterfly archive map">
+      <section className="absolute inset-0 pt-[82px] md:pt-[106px] 2xl:pt-[122px]" aria-label="Interactive butterfly archive map">
         <div
           className="absolute inset-0"
           onDoubleClick={(event) => {

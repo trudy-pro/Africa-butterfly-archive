@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate" />
+    <title>Contribute Butterfly Notes</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: #ffffff;
+        color: #1d2a1e;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      main {
+        width: min(100%, 680px);
+        margin: 0 auto;
+        padding: 34px 18px 44px;
+      }
+      .header {
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 20px;
+      }
+      .eyebrow {
+        align-items: center;
+        color: #5f7f50;
+        display: flex;
+        font-size: 12px;
+        font-weight: 800;
+        gap: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+      .eyebrow svg { flex: 0 0 auto; }
+      h1 {
+        font-size: clamp(30px, 8vw, 44px);
+        letter-spacing: -0.02em;
+        line-height: 1.02;
+        margin: 18px 0 8px;
+      }
+      .latin {
+        color: #6f7f57;
+        font-size: 18px;
+        font-style: italic;
+        margin: 0;
+      }
+      form {
+        display: grid;
+        gap: 16px;
+        margin-top: 22px;
+      }
+      label {
+        display: grid;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 800;
+        color: #5f695c;
+      }
+      input, textarea {
+        width: 100%;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        background: #ffffff;
+        color: #1d2a1e;
+        font: inherit;
+        font-size: 16px;
+        padding: 13px 14px;
+      }
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+      input[type="file"] {
+        padding: 12px;
+      }
+      .preview {
+        display: none;
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        background: #ffffff;
+      }
+      .preview img {
+        display: block;
+        width: 100%;
+        max-height: 360px;
+        object-fit: cover;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 4px;
+      }
+      button, a.button {
+        align-items: center;
+        border: 0;
+        border-radius: 999px;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 15px;
+        font-weight: 800;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        text-decoration: none;
+      }
+      .primary {
+        background: #4b6e40;
+        color: white;
+      }
+      .secondary {
+        background: #eef6ee;
+        color: #4b6e40;
+      }
+      .note {
+        color: #777568;
+        font-size: 13px;
+        line-height: 1.55;
+        margin-top: 18px;
+      }
+      .saved {
+        display: none;
+        border-radius: 12px;
+        background: #eef6ee;
+        color: #4b6e40;
+        font-size: 14px;
+        font-weight: 800;
+        margin-top: 12px;
+        padding: 12px 14px;
+      }
+    </style>
+  </head>
+  <body class="notranslate">
+    <main>
+      <section class="header">
+        <div class="eyebrow">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15.5 15.7C10 8.4 5.5 5.7 3.1 8.3.7 10.9 3.4 18.9 9.7 18.7c2.7-.1 4.5-1.3 5.8-3Z" />
+            <path d="M16.5 15.7c5.5-7.3 10-10 12.4-7.4 2.4 2.6-.3 10.6-6.6 10.4-2.7-.1-4.5-1.3-5.8-3Z" />
+            <path d="M16 14.8v7.4" />
+          </svg>
+          Butterfly contribution
+        </div>
+        <h1 id="speciesName">Butterfly record</h1>
+        <p class="latin" id="latinName"></p>
+      </section>
+
+      <form id="contributionForm">
+        <label>
+          Habitat or sighting notes
+          <textarea id="notes" placeholder="Describe where, when, and how you saw it."></textarea>
+        </label>
+        <label>
+          Location
+          <input id="location" type="text" placeholder="Village, reserve, GPS, or region" />
+        </label>
+        <label>
+          Date observed
+          <input id="dateObserved" type="date" />
+        </label>
+        <label>
+          Upload image
+          <input id="imageInput" type="file" accept="image/*" />
+        </label>
+        <div class="preview" id="previewBox">
+          <img id="previewImage" alt="Uploaded butterfly preview" />
+        </div>
+        <div class="actions">
+          <button class="primary" type="submit">Save draft</button>
+          <a class="button secondary" id="downloadLink" href="#" download="butterfly-contribution.json">Download JSON</a>
+        </div>
+        <div class="saved" id="savedMessage">Draft saved on this device.</div>
+      </form>
+
+      <p class="note">
+        This prototype saves contributions on the phone/browser and can download a JSON draft. To collect submissions automatically, connect this form to Google Forms, Airtable, or a small upload server.
+      </p>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const species = params.get("species") || "Butterfly record";
+      const latin = params.get("latin") || "";
+      document.getElementById("speciesName").textContent = species;
+      document.getElementById("latinName").textContent = latin;
+
+      let imageData = "";
+      const imageInput = document.getElementById("imageInput");
+      const previewBox = document.getElementById("previewBox");
+      const previewImage = document.getElementById("previewImage");
+      const downloadLink = document.getElementById("downloadLink");
+      const savedMessage = document.getElementById("savedMessage");
+
+      function buildPayload() {
+        return {
+          species,
+          latinName: latin,
+          notes: document.getElementById("notes").value,
+          location: document.getElementById("location").value,
+          dateObserved: document.getElementById("dateObserved").value,
+          imageData,
+          submittedAt: new Date().toISOString()
+        };
+      }
+
+      function updateDownloadLink() {
+        const payload = buildPayload();
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+        downloadLink.href = URL.createObjectURL(blob);
+        downloadLink.download = `${species.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "butterfly"}-contribution.json`;
+      }
+
+      imageInput.addEventListener("change", () => {
+        const file = imageInput.files && imageInput.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+          imageData = String(reader.result || "");
+          previewImage.src = imageData;
+          previewBox.style.display = "block";
+          updateDownloadLink();
+        };
+        reader.readAsDataURL(file);
+      });
+
+      document.getElementById("contributionForm").addEventListener("input", updateDownloadLink);
+      document.getElementById("contributionForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const payload = buildPayload();
+        localStorage.setItem(`butterfly-contribution:${species}`, JSON.stringify(payload));
+        updateDownloadLink();
+        savedMessage.style.display = "block";
+      });
+
+      updateDownloadLink();
+    </script>
+  </body>
+</html>

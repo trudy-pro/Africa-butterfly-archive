@@ -1,8 +1,8 @@
-# East Africa Butterfly Archive — Version 2
+# East Africa Butterfly Archive — Version 3
 
 **Historical development snapshot — not the final release.**
 
-React/JSX specimen archive with migration content and image assets.
+Refined browser-based interactive butterfly archive, including expanded specimen interactions and migration assets.
 
 ## Running this snapshot
 
