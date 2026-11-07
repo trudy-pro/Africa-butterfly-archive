@@ -1,32 +1,90 @@
 # Design and engineering evolution
 
-The labels below describe preserved source snapshots, not the dates on which Git commits were made. Screenshots and original design rationale can be added after visual comparison and review.
+This document records three historical stages of the **East Africa Butterfly Archive**. The version labels represent archived source snapshots, **not** the dates the work was originally created or committed to GitHub.
 
-## Version 1 — First interface prototype
+The currently deployed final application has **not yet been added** to this repository. The `main` branch contains the Version 3 application code plus documentation.
 
-- HTML/CSS/JavaScript application.
-- Separate `index.html`, `styles.css`, and `script.js`.
-- Starting point for exploring the interactive butterfly archive.
+## Version comparison
 
-## Version 2 — React-based exploration
+| | Version 1 | Version 2 | Version 3 | `main` |
+|---|---|---|---|---|
+| **Approach** | HTML/CSS/JavaScript prototype | React rebuild | Refined React app | Version 3 app with additional documentation |
+| **Files** | 5 | 107 | 129 | 131 |
+| **Approximate source size** | 46 KB | 73 MB | 134 MB | 134 MB |
+| **Main implementation** | `index.html`, `script.js`, `styles.css` | `index.html` loads `app.jsx`, using CDN-hosted React, Tailwind CSS and Babel | Substantial changes to `app.jsx` (~1,150 lines changed) | App code unchanged from Version 3 |
+| **Pages and interactions** | Map, filters, About, Key and navigation trail | Archive plus migration display | Archive plus a contribution form (`contribute.html`) | Same as Version 3 |
+| **Butterfly imagery** | No butterfly image collection | 81 images added | 11 additional images; 69 image files replaced | Same as Version 3 |
+| **Migration exploration** | Not included | Initial migration files, including `butterfly-migration/public/` and `botswana.js` | Additional `revised migration/` display (~1,600 lines) | Same as Version 3 |
+| **Device support** | Desktop-oriented | Desktop-oriented | Touch-screen-oriented changes indicated by source version label | Same as Version 3 |
+| **Deployment configuration** | No hosting configuration in snapshot | `netlify.toml` added | Netlify configuration present | Same as Version 3 |
+| **Documentation** | Basic README | Updated README | Updated README | Expanded README, `docs/EVOLUTION.md`, `docs/SOURCES.md` |
 
-- JSX application with specimen images and migration-related files.
-- A new, substantially different implementation from Version 1.
-- Includes Netlify configuration and resources required for browser rendering.
+Counts and approximate sizes are from the supplied repository comparison; they describe the snapshots rather than measured UX or performance outcomes.
 
-## Version 3 — Refined interactions
+## Version 1 — Initial prototype
 
-- Additional JSX application features and a larger source archive.
-- Includes contribution-related HTML and migration visual resources.
-- The relationship between this snapshot and the final deployed website has not yet been verified.
+**Technology:** HTML, CSS and JavaScript.
 
-## Additional snapshots
+The initial version focused on an exploratory map interface with filters, About and Key sections, and a navigation trail. It established the first approach to navigating butterfly-related information before the application was rebuilt.
 
-The `assets.zip` and `archive-butterflies.zip` uploads were preserved on separate experimental branches because their placement in the chronological sequence is not established.
+**Design questions for retrospective documentation:** What worked in the map-first navigation? Which limitations led to a change in structure or technology? These motivations have not yet been documented.
 
-## Still to document
+[Browse Version 1](../../tree/version-1)
 
-- Screenshots for each version.
-- Specific interaction changes and their design rationale.
-- User testing or observed outcomes, if any.
-- Source of the finished Netlify application.
+## Version 2 — React rebuild and image archive
+
+**Technology:** React with JSX, Tailwind CSS and Babel loaded from CDNs.
+
+The application was reconstructed around a React-based archive. This stage added a collection of butterfly images and an initial migration display.
+
+### Changes from Version 1
+
+- **108 files changed** in the comparison.
+- The earlier `script.js` and `styles.css` were removed as part of the transition.
+- **81 butterfly images** were added.
+- Migration-related source files and Netlify configuration appeared.
+
+This is a major **implementation and information-presentation change**, not simply a styling update. The precise design reasons still need to be recorded from original notes or the creator's recollection.
+
+[Browse Version 2](../../tree/version-2) · [Compare Version 1 → Version 2](../../compare/version-1...version-2)
+
+## Version 3 — Refinement, contribution and touch interaction
+
+The third version substantially updated the React application and expanded the available interactions.
+
+### Changes from Version 2
+
+- **97 files changed** in the comparison.
+- `app.jsx` underwent extensive changes (approximately **1,150 changed lines**).
+- A separate **`contribute.html`** page was added for butterfly-note submissions.
+- A new **`revised migration/`** display was introduced.
+- **11 butterfly images** were added and **69 existing image files** replaced.
+- Source labels indicate work toward a **touch-screen experience**.
+
+The increased archive size does not by itself prove that images are higher-resolution; the image formats and dimensions would need to be inspected separately.
+
+[Browse Version 3](../../tree/version-3) · [Compare Version 2 → Version 3](../../compare/version-2...version-3)
+
+## Current `main` branch
+
+The application code on `main` matches Version 3. Its additional changes are documentation files, including this history and a source inventory.
+
+[Browse current `main`](../../tree/main) · [Compare Version 3 → main](../../compare/version-3...main)
+
+## Additional experimental snapshots
+
+Two uploaded source/asset collections are preserved as separate branches because they have overlapping content and their chronological relationship to Versions 1–3 is not fully established.
+
+- [Experimental assets snapshot](../../tree/experiment-assets-snapshot)
+- [Experimental archive assets](../../tree/experiment-archive-assets)
+
+They are **not** represented as Versions 4 and 5 without further evidence.
+
+## What comes next
+
+- Add labelled screenshots showing the actual UI in Versions 1, 2 and 3.
+- Document the design reasoning behind the React rebuild, migration visualisation, contribution flow and touch-screen changes.
+- Note verified usability findings or technical outcomes where evidence is available.
+- Add the source corresponding to the final [Netlify application](https://africa-butterfly-archive.netlify.app/) when available and verified; only then designate its release as final.
+
+**A note on history:** These snapshots were assembled retrospectively. GitHub comparisons establish code differences between preserved versions, not the dates or motivations of the original development work.
