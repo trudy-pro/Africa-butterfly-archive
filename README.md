@@ -2,7 +2,25 @@
 
 **Historical development archive — final source not yet uploaded.**
 
-This repository preserves successive prototype implementations of an interactive East African butterfly archive. The final published website is at [Africa Butterfly Archive](https://africa-butterfly-archive.netlify.app/), but the matching final source code has not yet been included.
+This repository preserves successive prototype implementations of **African Butterfly Archive**, an experimental digital archive developed for both a **touchscreen installation** and a publicly accessible website. The final published website is at [Africa Butterfly Archive](https://africa-butterfly-archive.netlify.app/), but the matching final source code has not yet been included.
+
+## Project objective
+
+Natural-history archives are often presented as static collections. African Butterfly Archive explores how digital and spatial media can transform an archive into a dynamic, participatory experience.
+
+Through simple scientific observations and visual representations of **wing patterns, colours, habitats and migrations**, the project invites non-scientists to discover African butterflies and explore how natural histories can be organised, perceived and remembered.
+
+The broader ambition is to make natural-history information more accessible and support collective participation in learning, memory and open science.
+
+## Touchscreen installation and website
+
+**The project was presented as an interactive touchscreen installation**, alongside its web-based experience. Rather than only looking at a display, visitors could approach the screen, touch butterfly images and explore species using visual characteristics such as colours, wings and habitats.
+
+The touchscreen was both a visual display and an interactive surface, making navigation personal, physical and playful. The website extended the archive beyond the installation setting.
+
+**Participation was part of the design concept:** visitors were envisioned as contributors who could submit found butterflies for classification and inclusion in the archive. Historical source snapshots include a contribution page, but an end-to-end working upload, classification and publication workflow has not been independently verified.
+
+The installation explored the intersection of **nature, memory and technology** and the possibility of a living archive that visitors actively explore and help shape.
 
 ## Browse development versions
 
@@ -36,6 +54,8 @@ python3 -m http.server 8080
 Then open http://localhost:8080/. Some features may rely on external services; local verification is still required.
 
 ## Documentation
+
+- [Project concept and touchscreen installation](docs/INSTALLATION.md)
 
 - [Development history](docs/EVOLUTION.md)
 - [Source inventory](docs/SOURCES.md)
