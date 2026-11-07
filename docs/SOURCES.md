@@ -6,6 +6,6 @@
 | `version May 22.zip` | `version-2` | Full snapshot |
 | `Version May 28.zip` | `version-3` | Full snapshot |
 | `assets.zip` | `experiment-assets-snapshot` | Incomplete/ancillary copy |
-| `archive-butterflies.zip` | `experiment-archive-assets` | Supporting large asset/code folder |
+| `archive-butterflies.zip` | `version-4` (original branch: `experiment-archive-assets`) | Designated Version 4 by project creator; source and asset snapshot, not yet verified as a complete runnable application |
 
 macOS metadata (`__MACOSX`, `.DS_Store`) and files that typically contain private environment settings were excluded. Original ZIP archives should be retained separately as backups.
