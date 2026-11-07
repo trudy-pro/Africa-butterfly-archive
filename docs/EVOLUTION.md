@@ -1,6 +1,6 @@
 # Design and engineering evolution
 
-This document records three historical stages of the **East Africa Butterfly Archive**. The version labels represent archived source snapshots, **not** the dates the work was originally created or committed to GitHub.
+This document records four labelled historical stages of the **East Africa Butterfly Archive**. The version labels represent archived source snapshots, **not** the dates the work was originally created or committed to GitHub.
 
 The currently deployed final application has **not yet been added** to this repository. The `main` branch contains the Version 3 application code plus documentation.
 
@@ -65,6 +65,14 @@ The increased archive size does not by itself prove that images are higher-resol
 
 [Browse Version 3](../../tree/version-3) · [Compare Version 2 → Version 3](../../compare/version-2...version-3)
 
+## Version 4 — Archive assets and code snapshot
+
+**Source:** `archive-butterflies.zip`, preserved on the [`version-4`](../../tree/version-4) branch. The original [`experiment-archive-assets`](../../tree/experiment-archive-assets) branch remains available as a duplicate reference to the supplied snapshot.
+
+The uploaded archive contains butterfly assets and supporting code under `archive-butterflies/`. It has been identified by the project creator as **Version 4**. It has not yet been verified as a complete standalone application, and no specific new features or comparative improvements are claimed for it without further inspection.
+
+[Browse Version 4](../../tree/version-4)
+
 ## Current `main` branch
 
 The application code on `main` matches Version 3. Its additional changes are documentation files, including this history and a source inventory.
@@ -73,12 +81,12 @@ The application code on `main` matches Version 3. Its additional changes are doc
 
 ## Additional experimental snapshots
 
-Two uploaded source/asset collections are preserved as separate branches because they have overlapping content and their chronological relationship to Versions 1–3 is not fully established.
+The `assets.zip` upload remains on a separate experimental branch. The `archive-butterflies.zip` upload has now been designated Version 4 by the project creator. Its original experimental branch is retained for traceability.
 
 - [Experimental assets snapshot](../../tree/experiment-assets-snapshot)
-- [Experimental archive assets](../../tree/experiment-archive-assets)
+- [Version 4 source archive (original branch)](../../tree/experiment-archive-assets)
 
-They are **not** represented as Versions 4 and 5 without further evidence.
+Version 5 has not yet been identified. Version 4's exact code differences and chronological relationship to Version 3 still require verification.
 
 ## What comes next
 
