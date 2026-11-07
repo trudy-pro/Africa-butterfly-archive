@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>East Africa Butterfly Archive</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">Butterfly archive</div>
+      <div class="section-title">Natural History</div>
+
+      <div class="top-actions">
+        <label class="search-field">
+          <span class="search-icon" aria-hidden="true"></span>
+          <input id="searchInput" type="search" placeholder="Search species, habitat..." aria-label="Search species or habitat" />
+        </label>
+
+        <button id="resetFilterButton" class="active-filter-pill" type="button" aria-label="Reset filters">All</button>
+
+        <button id="openFilterButton" class="round-action green" type="button" aria-label="Open filters">
+          <span class="sliders-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="species-count">70 Species</div>
+
+    <section class="archive-stage" aria-label="Interactive butterfly archive map">
+      <div id="trailLayer" class="trail-layer"></div>
+      <div id="previewLayer" class="preview-layer"></div>
+      <div id="nodeLayer" class="node-layer"></div>
+    </section>
+
+    <div class="bottom-left">
+      <button id="openAboutButton" class="floating-pill" type="button">
+        <span class="pill-icon dark">i</span>
+        About the archive
+      </button>
+    </div>
+
+    <div class="trail-control" role="status" aria-live="polite">
+      <button id="openTrailButton" class="trail-status" type="button" aria-label="Open navigation trail">
+        <span id="trailDots" class="trail-status-dots" aria-hidden="true"></span>
+        <span id="trailText">Touch butterflies to build a trail</span>
+      </button>
+
+      <button id="clearTrailButton" class="clear-button" type="button" disabled>
+        Clear trail
+      </button>
+    </div>
+
+    <div class="bottom-right">
+      <button id="openKeyButton" class="floating-pill" type="button">
+        <span class="pill-icon dark key-mark" aria-hidden="true"></span>
+        Visual key
+      </button>
+    </div>
+
+    <div id="modalRoot"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
