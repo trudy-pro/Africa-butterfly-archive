@@ -33,55 +33,13 @@
         }
       }
 
-      :root {
-        --archive-touch-scale: 1;
-        --archive-preview-scale: 1;
-      }
-
-      html,
-      body,
-      #root {
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-      }
-
       body {
         font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        touch-action: manipulation;
-        -webkit-text-size-adjust: 100%;
-        -webkit-touch-callout: none;
-        overscroll-behavior: none;
-        user-select: none;
-      }
-
-      button,
-      a {
-        touch-action: manipulation;
-      }
-
-      @media (hover: none) and (pointer: coarse) {
-        button,
-        a {
-          min-height: 44px;
-          min-width: 44px;
-        }
-
-        .archive-hover-preview {
-          display: none !important;
-        }
-      }
-
-      @media (min-width: 1600px) and (min-height: 850px) {
-        :root {
-          --archive-touch-scale: 1.22;
-          --archive-preview-scale: 1.18;
-        }
       }
     </style>
   </head>
   <body>
     <div id="root"></div>
-    <script type="text/babel" src="./assets/archive-butterflies/app.jsx?v=touch-screen-20260528"></script>
+    <script type="text/babel" src="./assets/archive-butterflies/app.jsx?v=revised-migration-page-20260525"></script>
   </body>
 </html>
