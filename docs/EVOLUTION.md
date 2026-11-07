@@ -4,6 +4,14 @@ This document records five labelled historical stages of the **East Africa Butte
 
 The currently deployed final application has **not yet been added** to this repository. The `main` branch contains the Version 3 application code plus documentation.
 
+## Context: touchscreen installation
+
+This was not exclusively a web application. The project was also realised as a **touchscreen installation**, in which visitors engaged directly with butterfly imagery and explored species through visual characteristics. Its companion website extended the archive beyond the installation environment.
+
+The installation aimed to make natural-history exploration playful and accessible to non-specialists. Collective participation, including submitting found butterflies, formed part of the wider design concept; the actual implementation of the complete contribution workflow still requires verification.
+
+See [Project concept and touchscreen installation](INSTALLATION.md).
+
 ## Version comparison
 
 | | Version 1 | Version 2 | Version 3 | `main` |
@@ -59,7 +67,7 @@ The third version substantially updated the React application and expanded the a
 - A separate **`contribute.html`** page was added for butterfly-note submissions.
 - A new **`revised migration/`** display was introduced.
 - **11 butterfly images** were added and **69 existing image files** replaced.
-- Source labels indicate work toward a **touch-screen experience**.
+- Source labels indicate **touch-screen-oriented refinements**; the project was also realised as a touchscreen installation, although the specific installed build has not yet been matched to a version tag.
 
 The increased archive size does not by itself prove that images are higher-resolution; the image formats and dimensions would need to be inspected separately.
 
@@ -100,6 +108,7 @@ The exact code differences and chronological relationships of Versions 4 and 5 t
 
 - Add labelled screenshots showing the actual UI in Versions 1, 2 and 3.
 - Document the design reasoning behind the React rebuild, migration visualisation, contribution flow and touch-screen changes.
+- Add photographs of the touchscreen installation, its display specifications if available, and the exact application version shown.
 - Note verified usability findings or technical outcomes where evidence is available.
 - Add the source corresponding to the final [Netlify application](https://africa-butterfly-archive.netlify.app/) when available and verified; only then designate its release as final.
 
