@@ -12,17 +12,17 @@ This repository preserves successive prototype implementations of an interactive
 | [Version 2](../../tree/version-2) | React-based archive, migration work and assets | Historical snapshot |
 | [Version 3](../../tree/version-3) | Refined archive and migration-related UI | Historical snapshot |
 | [Version 4](../../tree/version-4) | `archive-butterflies.zip` — preserved butterfly source and assets | Archive snapshot; completeness not verified |
-| Version 5 | Not yet identified | Pending review |
+| [Version 5](../../tree/version-5) | `assets.zip` — supplementary code and assets snapshot | Experimental snapshot; completeness not verified |
 | Version 6 — final | Actual deployed application source | Not yet uploaded |
 
 The tags preserve original snapshot contents. Compare them with GitHub's **Compare** view; they were committed retrospectively and do not claim original development timestamps.
 
 ## Supporting experiments
 
-- [`experiment-assets-snapshot`](../../tree/experiment-assets-snapshot) — supplied small supporting assets/source archive.
+- [`experiment-assets-snapshot`](../../tree/experiment-assets-snapshot) — original branch retained as the source of Version 5.
 - [`experiment-archive-assets`](../../tree/experiment-archive-assets) — original branch retained as the source of Version 4.
 
-Version 4 is now identified as the uploaded `archive-butterflies.zip` snapshot. This establishes its **version label**, but does not yet prove that it is a complete runnable application or chronologically newer than Version 3. The remaining `experiment-assets-snapshot` is still unassigned.
+Versions 4 and 5 are identified from the supplied archives. These are **version labels**, not proof of complete runnable applications or a verified development sequence. The remaining `experiment-assets-snapshot` is identified as Version 5.
 
 ## Run locally
 
